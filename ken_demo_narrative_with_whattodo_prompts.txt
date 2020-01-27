@@ -1225,3 +1225,38 @@ Ken Bocchino: Inside of his other tooling.
 00:55:27.330 --> 00:55:38.400
 Ken Bocchino: So, with this we end our Acme financial customer case study, and we hope this has demonstrated some of the new and and Cape cool capabilities that we're now exposing with engine x three.
 
+
+
+
+## Hosts notes:
+
+10.1.20.9 devportal.dev.acmefinancial.net
+10.1.20.8 trading.dev.acmefinancial.net
+10.1.20.8 trading-api.dev.acmefinancial.net
+10.1.20.8 www.dev.acmefinancial.net
+10.1.20.8 merch.dev.acmefinancial.net
+
+
+10.1.10.5 trading.acmefinancial.net
+10.1.10.6 trading-api.acmefinancial.net
+10.1.10.5 www.acmefinancial.net
+10.1.10.6 merch.acmefinancial.net
+
+10.1.10.5 mortgage.acmefinancial.net
+10.1.10.6 ratecalculator.acmefinancial.net
+10.1.10.5 servicecenter.acmefinancial.net
+10.1.10.16 accounts.internal.acmefinancial.net
+10.1.10.17 ticketprocessing.internal.acmefinancial.net
+
+10.1.10.7 devportal.acmefinancial.net
+
+
+#trading login 
+#user admin
+#pw iloveblue
+
+#trading-api.dev.acmefinancial.net
+
+#"incomingPattern": "^/blog/(.*)$"
+
+#"rewritePattern": "/blog/wordpress/wwwsite/$1?"
