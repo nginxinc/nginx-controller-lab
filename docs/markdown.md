@@ -222,24 +222,86 @@ Samantha's developers are able to specify all the details and endpoints and rout
 1. Login
    1. Using Postman
    2. Expand the Common Tasks section
-   3. Select Login to Controller - admin
+   3. Select `Login to Controller - admin`
 2. Add the OpenAPI3 API definition
    1. Expand the Retail-Dev Environment
    2. Expand the Application - trading.acmefinancial.net
-   3. Select Import OAS API Definition - trading-api
+   3. Select `Import OAS API Definition - trading-api`
    4. Select Send to PUT the API specification
 3. Link the API specification to a Gateway
    1. Within the Application - trading.acmefinancial.net section of Postman
-   2. Select Create and Application Published API - Trading-api
+   2. Select `Create an Application Published API - Trading-api`
    3. Note the reference to the gateway and to the apiDefinition
    4. Select Send to PUT the configuration
 4. Define the path for the API and reference the API definition
    1. Within the Application - trading.acmefinancial.net section of Postman
-   2. Select Create Comp - trading - api
+   2. Select `Create Comp - trading - api`
    3. Note the additional publishedApiRef section
    4. Select Send to PUT the Component
    5. Change the PUT to GET to check the state of the change
 
-### Authenticating with a JWT token
+### Defining JWT token authentication with the API
 
 Defining the secure part of the API with different workload group servers and authentication with a JWT token. This ensures that API calls have a security policy that's using an identity provider.
+In this case the token is a barrier type token to make sure that no one can just randomly trade stocks without knowing some secret to access the API.
+
+1. Create a new identity provider
+   1. Within the Application - trading.acmefinancial.net section of Postman
+   2. Select `Create an Identity Provider - trading JWT Inline Keys`
+   3. Note the reference to the Environment
+   4. Select Send to PUT the configuration
+2. Define the component to use JWT authentication
+   1. Within the Application - trading.acmefinancial.net section of Postman
+   2. Select `Create comp - trading - api-secure`
+   3. Note the ingress URIs and security sections of the JSON
+   4. Select Send to PUT the configuration
+   5. Change the call to GET to check the status of the configuration being applied
+3. Test the mobile API without using authentication
+   1. Using Postman
+   2. Expand the temp section
+   3. Select `testing jwt`
+   4. Select the ![Auth tab](_static/auth_tab.png) in the Postman window
+   5. Change the type to ![No Auth](_static/no_auth.png)
+   6. Select Send
+   7. Note that 401 Authorization Required is returned
+4. Test the mobile API with a JWT Token
+   1. Continuing from the steps above
+   2. Select the ![Auth tab](_static/auth_tab.png) in the Postman window
+   3. Change the type to ![Bearer Token](_static/bearer_token.png)
+   4. The token should be present - if not use: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1NzMxNDQxMjksImV4cCI6MTYwNDY4MDEyOSwiYXVkIjoiRm91YWQiLCJzdWIiOiJCb2JUaGVTcG9uZ2UiLCJSb2xlIjoidXNlciJ9.ykcdfE6B993gBDxcsLzIJVp6XTqaTSywr6HuUNfyimw
+   5. Select Send
+   6. Note that the API call suceeds
+5. View the trasaction in the Trading GUI
+   1. Return to the browser tab with the trading API
+   2. Refresh the display
+   3. Note the list of Last Transactions for a new one from today
+
+### Reviewing configuration state through the API at a higher level
+
+Just like everything else we can go and do a get and see if we're in a fully configured state. And we can see that state from a higher level order. So we can actually take a look at the configuration state across an Application or Environment.
+Within the retail-dev environment. So we want to see a list of all of our components and gateways and what children we have within the space, how many components, How many apps, etc.
+
+1. Return the objects within an Environment
+   1. Using Postman
+   2. Open the Retail-Dev Environment
+   3. Open Application - trading.acmefinancial.net
+   4. Select `Create Env - retail-dev`
+   5. Change the PUT to a GET
+   6. Note the URL, it refers to the retail-dev Environment object
+   7. Select Send to GET the object
+   8. Note the applications, certificates, and gateways in their resprctive reference sections
+   9. In the state section note the `childrenConfigState` that refers to any of the child objects and their status
+   10. Note the `selfConfigState` which refers to the Environment itself
+
+## Adding a new Marketing Application and Components
+
+Samantha is looking to expand on the marketing sites that are promoting the various technologies that the ACME Financial organization has been able to produce.
+She wants to build a brand new application component within the marketing page www.acnefinancial.net and introduce the new blog capability so they can start blogging about the trading application.
+So let's return to Controller as Samantha and take a look at some of the additional feature functionality with the ADC use cases
+
+1. let's log off as David
+   1. Returing to the Controller GUI
+   2. Select ![admin istrator](_static/admin_istrator.png) in the top right
+   3. Select ![Log Out](_static/log_out.png)
+2. login as Samantha
+
