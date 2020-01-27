@@ -60,7 +60,9 @@ Follow these steps to complete this task:
     4. at the bottom of the edit screen select VIEW API REQUEST to review the API used to create or modify this App object.  ![view_api_request](_static/view_api_request.png)
     5. Note the API call, the JSON body, and the copy to clipboard icon all added to enable quick and easy GUI discovery and translation to automation.
 
-## Extending the Trading application through exposing referral and upload capabilities.
+## Extending the Trading application through exposing referral and upload capabilities
+
+### Using the GUI
 
 Samantha is responsible for the trading application has found that it's been extremely successful and adopted by the retail customers are looking to move fast.
 App teams are running a rolling out new parts of the application using modern application development processes. So what we're going to see is the deployment of new financial transfer functions.
@@ -99,6 +101,113 @@ A referral program as well as some upload capabilities within the, within the co
     Controller is responsible for getting the desired configuration that we specified thorugh the GUI or the API and getting it to the actual NGINX instance to process traffic.
 
 3. review the new section of the Trading application
-   1. Return to the tradigin application browser tab and refresh the page
+   1. Return to the trading application browser tab and refresh the page
    2. Note the new capability that has been added to the right hand side of the applicaton.
 
+Very quickly, you were able to establish a new traffic path configuration and didn't have to directly configure an NGINX instance or understand nginx.conf syntax. Through monitoring and analytics you can see this new component capable of adding value to the business and business unit.
+
+### Using the API
+
+Now, this is great. Samantha explored Contorller and discovered what she can do the GUI.  But most likely she is going to move forwarding to plumbing these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
+
+1. Login as Samantha using the API
+   1. From the desktop open Postman
+   2. the Collection NGINX Controller 3.0 UDF Demo & Lab should already be loaded
+   3. Open the Common Tasks section and select Login to Controller - retail dev
+   4. Select Send
+
+    You are now logged into the API as Samantha.  Controller returned a cookie that will be used for authenticating then executing the following commands.
+
+2. Enable the Referrals capability
+   1. In Postman open the section Retail-Dev Environment
+   2. open the Application - trading.acmefinancial.com section
+   3. Select Create Comp - trading - referrals
+   4. In the right hand frame of Postman, select the Body tab
+   5. Review the JSON
+   6. PUT the configuration by selecting Send
+   7. Change the command to GET and Send
+   8. View the status of the configuration being applied in the currentStatus section and that the selfConfigState is in configuring
+   9. Repeat the GET until configured equals 1
+
+    Controller follows an API first methodology which means that the GUI is using the same APIs as you are.
+    In this configuration PUT body you can see the desiredState of ingress (the incomming URI) and backend (the workloadGroups and servers).
+    Through the GET you can see the eventually consistent behavior of the system as the configuration is then built and applied to the referenced NGINX instances.
+
+3. review the new section of the Trading application
+   1. Return to the trading application browser tab and refresh the page
+   2. Note the new ![referrals](_static/referrals.png) capability that has been added to the applicaton.  Previously there was a ![coming_soon](_static/coming_soon.png) placeholder.
+
+## Analytics of your application
+
+In the previous scenario, we should we saw the expansion of the trading application. Now, let's take a look at what statistics are available within NGINX Controller for this application.
+
+1. Viewing analytics in the GUI
+   1. Using the Controller GUI tab of the web browser
+   2. Using the navigation bar select the Analytics menu
+   3. Select the retail-dev Dashboard
+   4. Note the traffic that you created during the previous steps
+
+    Currently, Controller 3.0 we have the ability to see all the stats available to Samantha via a dashboard. You can edit and add additional statistics, you can see some of the traffic you have been generating while through the lab.
+    This will be expanded into App centricity in later releases.
+
+2. Viewing metrics with the API
+   1. Using Postman
+   2. Open the Analytics section
+   3. Select `get metrics with filter`
+   4. Review the query settings of resolution of 30 minutes for the aggregation of SUM of 500 errors with a filter to NGINX instance 4 or 6
+   5. Select Send
+
+    The return is time series data that are a summary of status 500 messages counted every 30 minutes.  The API offers flexibility to craft a number of different queries using filters, resolution over time periods, and aggreagations.
+
+## Adding a gateway for the mobile trading application
+
+The trading application has been a great product with a web broswer GUI. The business unit wants to expand this to a new mobile application so that ACME Financial retail customers can do trades on the go.
+To enable this noe mobile API for customers ACME Financial needs to expose a brand new gateway to the public Internet for Samantha's mobile application to receive API calls.
+Within ACME Financial the request workflow requires David to get involved when any new endpoint is exposed to the public internet and to ensure security for API calls coming into the bank.
+Samantha will partner with David to ask for a new gateway with a new certificate to make sure that trading API interaction is secure.
+Let's work through the process of David establishing a new gateway for Samantha.
+
+### Reviewing Role Based Access Control
+
+1. Logging in as David
+   1. In the Controller GUI tab of the web browser
+   2. Select the retail dev user in the top right corner then
+   3. Select logout
+   4. Login as David using the username: admin@acmefinancial.net with the passord Admin123!@#
+2. Review Role Based Access Control
+   1. Review what David can access across Apps, Components, Environments
+   2. Note that he can view all Environments, including Samantha's retail-dev and Olivia's lending-prod
+   3. Select Platform from the navigation bar
+   4. Select Roles
+   5. Explore the Roles (viewing various ones) to note how a Role grants or restricts access using the API endpoints and objects.
+   6. Select Users
+   7. Explore what users are associated with what Roles
+
+    As you saw, Controller can limit access to various users, such as Samantha so that she's able to self-service within her environment's and configure and specific data path instances.
+    This keeps peace of mind for David that no business units collide within configuration of shared or dedicated NGINX instances and align with that many business unit needs and resource allocations.
+
+### Adding a new Gateway
+
+1. Add a Gateway using the GUI
+   1. In the Controller GUI tab of the web browser
+   2. Select the Services menu from the navigation bar
+   3. Select Gateways
+   4. Select Overview
+   5. Select ![create](_static/create.png)
+   6. Enter the Name: trading-api.acmefinancial.net
+   7. Select the environment:  Retail Dev
+   8. Select Next
+   9. Select the Instance Reference: dev-nginx-1
+   10. Select Next
+   11. Add the URI: https://trading-api.acmefinancial.net
+   12. Select Done
+   13. For the Certificate Reference select ![Create New](_static/create_new.png)
+   14. Name the new certificate: trading-api.acmefinancial.net
+   15. Browse to the trading-api.dev.acmefinancial.net.crt certificate
+   16. Browse to the trading-api.dev.acmefinancial.net.key key
+   17. Select Submit to create the new certificate
+   18. Select Next
+   19. Select Next
+   20. Select Publish
+
+    
