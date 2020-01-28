@@ -364,7 +364,7 @@ Let's take a look at what's happening there. Starting off with a little debuggin
    3. Open the Shopping Cart
    4. Refresh the shopping cart a few times and notice that the cart does not empty any longer
 
-## 500 errors with a large call center application
+## Triaging and handling 500 errors with a large call center application
 
 Let's take a look at some of the problems with a large call center application that Olivia is responsible for. 
 It's a complicated three tier application with internal services that are communicating between each other.
@@ -380,13 +380,13 @@ It looks like some of the issues might be with the ticket processing service, bu
 3. Test the web site
    1. Using Postman
    2. Expand the Traffic Tests section
-   3. Select the ticketprocessing.internal.acmefinancial.net call
+   3. Select the ticketprocessing.internal.acmefinancial.net request
    4. Select Send a few times
    5. Note that you will randomly receive a 500 response
 4. Review statsus codes
    1. Open Analytics from the Navigation bar
    2. Select the Lending-Prod dashboard
-   3. Scroll to the bottom and you will find the internal syste, - 500 service errors graph
+   3. Scroll to the bottom and you will find the internal system - 500 service errors graph
    4. Note the spikes of 500 errors
 5. Identify where the 500 error is coming from
    1. Returning to Postman
@@ -429,3 +429,29 @@ It looks like some of the issues might be with the ticket processing service, bu
 A better configuration.  Servers are no longer tagged as down permanently in the configuration. The system is tagging the servers as down.
 Adding monitoring to this configuration so that instead of just having to manually up down things we can let NGINX be responsible for health checking
 actively or passively based on the configuration of monitoring ensuring health and availability of the service.
+
+## Protecting your application with rate limiting
+
+There are reports to the mortgage team that some folks have had the inability to login.
+The mortgage team has reported: "hey, our service is seeing some massive spike and CPU load."
+So let's provide some relief to the mortgage team and take a look at the configuration of the mortgage application again we can see
+
+The mortgage application in our pipeline has a couple different components, a web login and web API endpoints and we see the configuration right now via get
+
+1. GET the configuration
+   1. Using Postman
+   2. Expand the Lending-Prod Environment section
+   3. Expand Application - mortgage.acmefinancial.net
+   4. Select Create Component - login
+   5. Note the URI and that the service is fully encrypted to the workloads
+2. Review rate limiting
+   1. Select Create Component -login - with rate 
+   2. Note the Security section and the rateLimit
+      The rate limit is set low ( 1 second ) to provide some relief.
+   3. Select Send to PUT the configuration change
+3. Test the Rate Limit configuration
+   1. Open a tab in the web browser
+   2. enter the URL: https://mortgage.acmefinancial.net/login
+   3. Refresh the page quickly a few times
+   4. Note the 429 that is returned if you refresh the page too quickly
+
