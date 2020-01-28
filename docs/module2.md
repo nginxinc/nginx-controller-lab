@@ -1,4 +1,4 @@
-## Extending the Trading application through exposing referral and upload capabilities
+## Extending the Trading application by exposing referral and upload capabilities
 
 ### Using the GUI
 
@@ -8,26 +8,26 @@ A referral program as well as some upload capabilities within the, within the co
 
 1. Explore the trading application
    1. Using Google Chrome, open a new tab
-   2. Enter 'https://trading.dev.acmefinancial.net` as the URL
+   2. Enter `https://trading.dev.acmefinancial.net` as the URL
    3. Select Login
-   4. enter the username: admin with the password iloveblue
+   4. enter the username: `admin` with the password `iloveblue`
    5. Note the dashboard, as we enable new features the dashboard will change, displaying these new capabilities.
 
 2. Define a new Transfers Component of the trading.acmefinancial.net application
    1. In the Controller GUI return to the Apps section
-   2. Select the App trading.acmefinancial.net
+   2. Select the App `trading.acmefinancial.net`
    3. Select the View icon ![view](_static/view.png) to see the full list of Components for the App
    4. Select Create Component ![create_component](_static/create_component.png)
-   5. enter the name: trading-transfers
+   5. enter the name: `trading-transfers`
    6. enter the display name: Trading Transfers Component
    7. Select Next
-   8. Select the Gateway: trading.acmefinancial.net
+   8. Select the Gateway: `trading.acmefinancial.net`
    9. Select Next
-   10. Enter the URI: /api
+   10. Enter the URI: `/api`
    11. Select Next (skipping Methods, and Advanced sections)
    12. Add a workload group
-   13. Workload Group Name: app2-servers
-   14. Add Backend Workload URI: http://10.1.20.21:9804
+   13. Workload Group Name: `app2-servers`
+   14. Add Backend Workload URI: `http://10.1.20.21:9804`
    15. Select Publish to create the transfers capability. ![publish](_static/publish.png)
    16. Observe the Status of the Component change from Configuring to Configured to indicate it is live.
 
