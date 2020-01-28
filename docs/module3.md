@@ -8,8 +8,8 @@ In the previous scenario, we should we saw the expansion of the trading applicat
    3. Select the retail-dev Dashboard
    4. Note the traffic that you created during the previous steps
 
-    Currently, Controller 3.0 we have the ability to see all the stats available to Samantha via a dashboard. You can edit and add additional statistics, you can see some of the traffic you have been generating while through the lab.
-    This will be expanded into App centricity in later releases.
+    In Controller 3.0 we have the ability to see all the statistics available to Samantha via a dashboard. You can edit and add additional statistics. You can see some of the traffic you have been generating while through the lab.
+    This will be expanded into App centricity in future releases.
 
 2. Viewing metrics with the API
    1. Using Postman
