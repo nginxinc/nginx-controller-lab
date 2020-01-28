@@ -20,7 +20,8 @@ Follow these steps to complete this task:
 1. Login to Controller as Samantha
    1. Open the Controller web interface and logon using the username: retail-dev@ACMEfinancial.net with the password:  Admin123!@#
 2. Review Samantha's view within Controller
-   1. Select the navigation bar in the upper left of the screen. ![](_static/navigation_root.png)
+   1. Select the navigation bar in the upper left of the screen. 
+   ![](_static/navigation_root.png)
    2. Select the Services menu. ![](_static/navigation_services.png)
       1. Under Services Samantha is restricted to three Apps supporting ACME Financial.
    3. Select the App named trading.acmefinancial.net
