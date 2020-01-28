@@ -106,7 +106,7 @@ Very quickly, you were able to establish a new traffic path configuration and di
 
 ### Using the API
 
-Now, this is great. Samantha explored Contorller and discovered what she can do the GUI.  But most likely she is going to move forwarding to plumbing these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
+Now, this is great. Samantha explored Controller and discovered what she can do the GUI.  But most likely she is going to move forwarding to plumbing these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
 
 1. Login as Samantha using the API
    1. From the desktop open Postman
@@ -122,8 +122,8 @@ Now, this is great. Samantha explored Contorller and discovered what she can do 
    3. Select `Create Comp - trading - referrals`
    4. In the right hand frame of Postman, select the Body tab
    5. Review the JSON
-   6. PUT the configuration by selecting Send
-   7. Change the command to GET and Send
+   6. Change the method from GET to PUT and click Send
+   7. Change the method back to GET and Send
    8. View the status of the configuration being applied in the currentStatus section and that the selfConfigState is in configuring
    9. Repeat the GET until configured equals 1
 
