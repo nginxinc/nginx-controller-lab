@@ -20,9 +20,8 @@ Follow these steps to complete this task:
 1. Login to Controller as Samantha
    1. Open the Controller web interface and logon using the username: retail-dev@ACMEfinancial.net with the password:  Admin123!@#
 2. Review Samantha's view within Controller
-   1. Select the navigation bar in the upper left of the screen. 
-   ![](_static/navigation_root.png)
-   2. Select the Services menu. ![](_static/navigation_services.png)
+   1. Select the navigation bar in the upper left of the screen. ![navigatoin root](_static/navigation_root.png)
+   2. Select the Services menu. ![services](_static/navigation_services.png)
       1. Under Services Samantha is restricted to three Apps supporting ACME Financial.
    3. Select the App named trading.acmefinancial.net
       1. Note the tray that opens on the right, showing the Components that have been configured for the application.
@@ -34,7 +33,7 @@ Follow these steps to complete this task:
 
     Samantha is also becoming accustomed to the new API for controller. She is going to be able to use this new UX experience to both work visually with the product as well as seeing how to automate and use the new API that's available with Controller.
 
-    1. From the Controller UI, select the help icon in the Navigation bar.  ![](_static/navigation_help.png)
+    1. From the Controller UI, select the help icon in the Navigation bar.  ![help](_static/navigation_help.png)
 
         A new tab opens presenting the in-box documentation
 
