@@ -1,12 +1,11 @@
-F5 Agility Labs - Index
-=======================
+NGINX Controller 3.0 Lab
+========================
 
 Welcome
 -------
 
-Welcome to the |classbold| lab at F5 Agility |year|
+Welcome to the NGINX Controller 3.0 Lab
 
-|repoinfo|
 
 .. toctree::
    :maxdepth: 2
@@ -16,5 +15,3 @@ Welcome to the |classbold| lab at F5 Agility |year|
 
    intro*
    class*/class*
-   examples
-   markdown
