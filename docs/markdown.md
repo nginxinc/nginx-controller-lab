@@ -112,16 +112,16 @@ Now, this is great. Samantha explored Contorller and discovered what she can do 
 
 1. Login as Samantha using the API
    1. From the desktop open Postman
-   2. the Collection NGINX Controller 3.0 UDF Demo & Lab should already be loaded
-   3. Open the Common Tasks section and select Login to Controller - retail dev
+   2. the Collection `NGINX Controller 3.0 UDF Demo & Lab` should already be loaded
+   3. Open the Common Tasks section and select `Login to Controller - retail dev`
    4. Select Send
 
     You are now logged into the API as Samantha.  Controller returned a cookie that will be used for authenticating then executing the following commands.
 
 2. Enable the Referrals capability
-   1. In Postman open the section Retail-Dev Environment
-   2. open the Application - trading.acmefinancial.com section
-   3. Select Create Comp - trading - referrals
+   1. In Postman open the section `Retail-Dev Environment`
+   2. open the `Application - trading.acmefinancial.com` section
+   3. Select `Create Comp - trading - referrals`
    4. In the right hand frame of Postman, select the Body tab
    5. Review the JSON
    6. PUT the configuration by selecting Send
@@ -169,12 +169,13 @@ Let's work through the process of David establishing a new gateway for Samantha.
 
 ### Reviewing Role Based Access Control
 
-1. Logging in as David
+1. Log out as Samantha
    1. In the Controller GUI tab of the web browser
    2. Select the retail dev user in the top right corner then
    3. Select logout
-   4. Login as David using the username: admin@acmefinancial.net with the passord Admin123!@#
-2. Review Role Based Access Control
+2. Log in as David
+   1. Login as David using the username: admin@acmefinancial.net with the passord Admin123!@#
+3. Review Role Based Access Control
    1. Review what David can access across Apps, Components, Environments
    2. Note that he can view all Environments, including Samantha's retail-dev and Olivia's lending-prod
    3. Select Platform from the navigation bar
@@ -293,15 +294,88 @@ Within the retail-dev environment. So we want to see a list of all of our compon
    9. In the state section note the `childrenConfigState` that refers to any of the child objects and their status
    10. Note the `selfConfigState` which refers to the Environment itself
 
-## Adding a new Marketing Application and Components
+## Extending www.acmefinancial.net with a blog Component
 
 Samantha is looking to expand on the marketing sites that are promoting the various technologies that the ACME Financial organization has been able to produce.
 She wants to build a brand new application component within the marketing page www.acnefinancial.net and introduce the new blog capability so they can start blogging about the trading application.
-So let's return to Controller as Samantha and take a look at some of the additional feature functionality with the ADC use cases
+So let's return to Controller as Samantha and take a look at some of the additional feature functionality with the ADC use cases of URI rewrite.
 
-1. let's log off as David
+1. Log out as David
    1. Returing to the Controller GUI
    2. Select ![admin istrator](_static/admin_istrator.png) in the top right
    3. Select ![Log Out](_static/log_out.png)
-2. login as Samantha
+2. Log in as Samantha
+   1. Login as Samantha using the username: retain-dev@acmefinancial.net with the passord Admin123!@#
+3. Review the Components added via the API
+   1. Select Services from the navigation menu
+   2. Select Apps
+   3. Select trading.acmefinancial.net
+   4. Review the componnets added through the API, note the commonality between the API and GUI
+4. Add blog page to the main ACME Financial site with a URI rewrite
+   1. Return to the list of all Apps
+   2. Select www.acmefinancial.net
+   3. Select View
+   4. Select Create Component
+   5. Name: blog
+   6. Gateway: www.acmefinancial.net
+   7. URI: /blog
+   8. Add Workload Group: wordpress
+   9. Add Backend Workload URIs:
+      1. http://10.1.20.21:8003
+      2. http://10.1.20.22:8003
+   10. Add URI Rewrite:
+       1. incoming pattern: ^/blog/(.*)$
+       2. rewrite pattern: /blog/wordpress/wwwsite/$1?
+   11. Publish
+5. Test the URI rewrite
+    1. In a new tab in the web browser enter: http://www.dev.acmefinancial.net/blog/biganouncement
+    2. In the returned web page note that the path is being rewritten to: /blog/wordpress/wwwsite/biganouncement
 
+## The www.acmefinancial.net is having issues
+
+Let's at the merchandise site that's ACME Financial retail has. They have embraced this whole ACME corporate branding and new hipsters that love these kinds of chochky branded materials.  ACME Financial decided to put up a merchandise site.
+But support has been receiving some complaints. In end to end testing of the ACME store in the development environment it was identified that the shopping cart experience is not ideal.
+Let's take a look at what's happening there. Starting off with a little debugging session.
+
+1. View the symptom
+   1. Open a tab in the web browser
+   2. Go to the site: https://merch.dev.acmefinancial.net
+   3. Browse the site and add something to your shopping cart
+   4. Open the Shopping Cart
+   5. Refresh the shopping cart a few times and notice that the cart empties
+      1. The cart state is tracked in a cookie and the cookie is not shared across the backend servers
+2. View the JSON of the Component
+   1. Using Postman
+   2. Expand `Retail-Dev Environment`
+   3. Expand `Application - merch.acmefinancial.net`
+   4. Select `Create Component - shop - no persist`
+   5. Review the JSON body
+      1. this is the existing configuration from Samantha's pipeline
+      2. Note that no persistence is defined to aide in loadbalancing across workloads
+3. Verify new developer cookie persistence settings
+   1. Select `Create Component - shop`
+   2. Review the JSON body
+   3. Note the `sessionPersistence` section
+   4. Select Send to PUT the new configuration
+   5. Change the method to GET to check for the configuration to be applied
+4. View the solution
+   1. Return to the browser tab with https://merch.dev.acmefinancial.net
+   2. Browse the site and add something to your shopping cart
+   3. Open the Shopping Cart
+   4. Refresh the shopping cart a few times and notice that the cart does not empty any longer
+
+## 500 errors with a large call center application
+
+Let's take a look at some of the problems with a large call center application that Olivia is responsible for. 
+It's a complicated three tier application with internal services that are communicating between each other.
+Olivia is getting some reports from the call center agents at the service center application is having issues.  We are going to troubleshoot and understand what might be going on.
+It looks like some of the issues might be with the ticket processing service, but let's take a look at what the Controller dashboards could show us about the application and components.
+
+1. Log out as Samantha
+   1. Returing to the Controller GUI
+   2. Select retail dev in the top right
+   3. Select ![Log Out](_static/log_out.png)
+2. Log in as Olivia
+   1. Login as Olivia using the username: lending-admin@acmefinancial.net with the passord Admin123!@#
+3. Select the servicecenter.acmefinancial.net
+   1. 

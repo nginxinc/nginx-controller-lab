@@ -3,146 +3,88 @@ WEBVTT
 # demo start
 86
 00:16:59.820 --> 00:17:05.550
-Ken Bocchino: Thanks, Sean I'm really excited to showcase what we've been doing with Ajax controllers video release.
+Thanks, Sean I'm really excited to showcase what we've been doing with Ajax controllers video release.
 
 87
 00:17:05.940 --> 00:17:20.610
-Ken Bocchino: And she do that will take a little bit of an advantage of a customer case study. Now obviously acne financial isn't a real company, but we would welcome working with this team here to find the first customer to work with us on documenting how they use controller three
+And she do that will take a little bit of an advantage of a customer case study. Now obviously acne financial isn't a real company, but we would welcome working with this team here to find the first customer to work with us on documenting how they use controller three
 
 88
 00:17:21.660 --> 00:17:30.330
-Ken Bocchino: With this demonstration, like to highlight that we are making this UDS environment available, I believe, with the blueprint available today.
+With this demonstration, like to highlight that we are making this UDS environment available, I believe, with the blueprint available today.
 
-89
-00:17:31.050 --> 00:17:39.330
-Ken Bocchino: However, we're going to be increasing the documentation and details and lab training around that UDS environment. So this is something you can get your hands on to to work with your
-
-90
-00:17:39.690 --> 00:17:47.520
-Ken Bocchino: Understanding of controller as well as with your customers. So we'll start off with a quick overview of accident financial was founded in 1965
-
-91
-00:17:48.420 --> 00:18:04.920
-Ken Bocchino: But during the 1980 recession here in America was Acme financial spun off to provide lending assistance for its customers. This created a lending bu and in 2001 asked me financial increased to start focusing on the retail personal finance space.
-
-92
-00:18:06.090 --> 00:18:12.750
-Ken Bocchino: In 2020 that retail space started to define a new trading platform. So we'll spend a little bit of time.
-
-93
-00:18:13.740 --> 00:18:19.680
-Ken Bocchino: Working within that space of two business units, the lending business unit and the retail space.
-
-94
-00:18:20.490 --> 00:18:30.270
-Ken Bocchino: Within the team that we work with to engage with controller was David a network engineer responsible for the overall engine X controller platform.
-
-95
-00:18:30.810 --> 00:18:39.180
-Ken Bocchino: Responsible for some of the security and network routing core routing requirements within the DevOps space in the lending be you.
-
-96
-00:18:39.720 --> 00:18:49.800
-Ken Bocchino: Olivia a DevOps engineers responsible for curating the pipelines and the engine X configuration. No more app centric delivery fashion within the
-
-97
-00:18:50.550 --> 00:18:56.880
-Ken Bocchino: within that space as well is Tony an app developer responsible for some of the core service center applications.
-
-98
-00:18:57.600 --> 00:19:12.420
-Ken Bocchino: In the other part of the organization in the retail BU. We have Samantha who's been responsible for the DevOps engineering around building pipeline and getting the new trading and other apps available to that market space.
+ACME Financial was founded in 1965.
+During the 1980 recession in America, ACME financial spun off to provide lending assistance for its customers. This created a lending business unit and in 2001 asked me financial increased to start focusing on the retail personal finance space.
+In 2020 that retail space started to define a new trading platform. So we'll spend a little bit of time.
+Working within that space of two business units, the lending business unit and the retail space.
+Within the team that we work with to engage with controller was David a network engineer responsible for the overall NGINX controller platform.
+Responsible for some of the security and network routing core routing requirements within the DevOps space in the lending be you.
+Olivia a DevOps engineers responsible for curating the pipelines and the NGINX configuration. No more app centric delivery fashion within the
+within that space as well is Tony an app developer responsible for some of the core service center applications.
+In the other part of the organization in the retail BU. We have Samantha who's been responsible for the DevOps engineering around building pipeline and getting the new trading and other apps available to that market space.
 
 99
 00:19:14.820 --> 00:19:24.090
-Ken Bocchino: So we're walking through a couple different scenarios of how this active financial organization is engaging with with engine X controller.
+So we're walking through a couple different scenarios of how this active financial organization is engaging with with NGINX controller.
 
-100
-00:19:25.350 --> 00:19:33.780
-Ken Bocchino: Now, Samantha responsible for the trading application has found that it's been extremely successful and adopted by the retail customers are looking to move fast.
-
-101
-00:19:34.140 --> 00:19:39.600
-Ken Bocchino: In engaging with their, their market and bringing new functionality to this new trading platform.
-
-102
-00:19:39.930 --> 00:19:49.320
-Ken Bocchino: App teams are running a rolling out new parts of the application using modern application development processes. So what we're going to see is the deployment of new financial transfer functions.
-
-103
-00:19:49.680 --> 00:19:58.290
-Ken Bocchino: A referral program as well as some upload capabilities within the, within the controller space. So let's go ahead and connect into
+Samantha is responsible for the trading application has found that it's been extremely successful and adopted by the retail customers are looking to move fast.
+App teams are running a rolling out new parts of the application using modern application development processes. So what we're going to see is the deployment of new financial transfer functions.
+A referral program as well as some upload capabilities within the, within the controller space. So let's go ahead and begin these changes.
 
 # login to Controller as Samantha
-retail-dev@acmefinancial.net
+retail-dev@ACMEfinancial.net
 
 104
 00:19:59.730 --> 00:20:09.210
-Ken Bocchino: Two and connect into the Acme financial organization and start off by looking at the process of Samantha logging into the environment.
-
-105
-00:20:26.100 --> 00:20:33.150
-Ken Bocchino: So the first thing that we're going to start off as Samantha is a dashboard of overall how her part of the controller platform is operating
+Two and connect into the ACME financial organization and start off by looking at the process of Samantha logging into the environment.
+So the first thing that we're going to start off as Samantha is a dashboard of overall how her part of the controller platform is operating
 
 # review the dashboard
 # Move to Services space
 
-106
-00:20:33.720 --> 00:20:41.790
-Ken Bocchino: We can then move from this analytic space into the services space. This is the app centric view within controller three that oh
-
-107
-00:20:42.150 --> 00:20:48.450
-Ken Bocchino: In which we're seeing just her applications, the one that she's been deployed inside of this retail dev environment.
+We can then move from this analytic space into the services space. This is the app centric view within controller three that oh
+In which we're seeing just her applications, the one that she's been deployed inside of this retail dev environment.
 
 # review the components of the application
 
 # she only has access to her applications.
 
-108
-00:20:48.930 --> 00:20:52.560
-Ken Bocchino: And specifically will be spending a little bit time with this trading application.
-
-# trading.ACMEFinancial.net
-
-109
-00:20:53.010 --> 00:21:02.820
-Ken Bocchino: We can see at a glance the configuration state of the trading application and then go in and see what makes this application tick. What are the various components and pieces.
+We can see at a glance the configuration state of the trading application and then go in and see what makes this application tick. What are the various components and pieces.
 
 110
 00:21:03.390 --> 00:21:16.950
-Ken Bocchino: That come together for Samantha, to be able to say to her business partner trading is running as we expect it to run right now it's a simple application with one component. And we can actually go and log into this training application in development.
+That come together for Samantha, to be able to say to her business partner trading is running as we expect it to run right now it's a simple application with one component. And we can actually go and log into this training application in development.
 
 # adding a new API to the trading applicaiton through controller
 
 # login to the trading application in development
-https://trading.dev.acmefinancial.net
+https://trading.dev.ACMEfinancial.net
 
 
 111
 00:21:19.470 --> 00:21:20.550
-Ken Bocchino: So we go and login
+So we go and login
 
 # login as 'admin'
 
 
 112
 00:21:22.620 --> 00:21:33.210
-Ken Bocchino: And we now see a dashboard of the trading, application and development with a couple different pieces that are being worked on by experience component teams and there's some placeholders here that will come back and visit as we deploy more
+And we now see a dashboard of the trading, application and development with a couple different pieces that are being worked on by experience component teams and there's some placeholders here that will come back and visit as we deploy more
 
 # notice what the dashboard looks like, we will be enabling new capabilities.
 
 113
 00:21:33.570 --> 00:21:41.280
-Ken Bocchino: functionality to the application. Now, Samantha is just getting familiar. You know, when we walk work with her earlier. She's just getting familiar with.
+functionality to the application. Now, Samantha is just getting familiar. You know, when we walk work with her earlier. She's just getting familiar with.
 
 114
 00:21:41.730 --> 00:21:58.020
-Ken Bocchino: The automation. The new API for controller. She is going to be able to use this new UX experience to both work visually with the product as well as seeing how to automate and use the new API that's available on three dot O
+The automation. The new API for controller. She is going to be able to use this new UX experience to both work visually with the product as well as seeing how to automate and use the new API that's available on three dot O
 
 115
 00:21:58.650 --> 00:22:02.790
-Ken Bocchino: That quick way to do that is a number of different ways that you'll see throughout the entire demo.
+That quick way to do that is a number of different ways that you'll see throughout the entire demo.
 
 # onboard documentation on the Controller
 <host>/docs
@@ -152,122 +94,82 @@ Select API reference and version in top left
 
 116
 00:22:03.420 --> 00:22:09.690
-Ken Bocchino: But one more specific way which is that we have onboard documentation on the controller itself, providing various
+But one more specific way which is that we have onboard documentation on the controller itself, providing various
 
-117
-00:22:10.650 --> 00:22:27.270
-Ken Bocchino: Scenario walk through, as well as a full API reference of how to use the various endpoints that are now exposed and treat auto to wait for this load and Olivia. Sorry. Samantha can walk through the various endpoints to be able to go login create and deploy new services.
-
-118
-00:22:28.290 --> 00:22:45.630
-Ken Bocchino: The two main points that will be working with is the gateway and component and points within the, within the or the information architecture and all these are documented with examples and samples, as well as different items needed for the various parameters that are available by a controller.
+Scenario walk through, as well as a full API reference of how to use the various endpoints that are now exposed and treat auto to wait for this load and Olivia. Sorry. Samantha can walk through the various endpoints to be able to go login create and deploy new services.
+The two main points that will be working with is the gateway and component and points within the, within the or the information architecture and all these are documented with examples and samples, as well as different items needed for the various parameters that are available by a controller.
 
 # focus on the gateway and component endpoint
 
 119
 00:22:47.160 --> 00:22:52.050
-Ken Bocchino: The other way that you can see and interact with this is to maybe look at an existing component
+The other way that you can see and interact with this is to maybe look at an existing component
 
 120
 00:22:53.070 --> 00:22:58.200
-Ken Bocchino: And see how that's configured within, within the trading application.
+And see how that's configured within, within the trading application.
 
 # return to GUI to review the component
 If you edit there is the API Spec section.
 
 121
 00:22:58.710 --> 00:23:09.060
-Ken Bocchino: All the various inputs and configuration throughout this product now have an API spec section, which allows Samantha or any other user to quickly understand what was done via the API.
+All the various inputs and configuration throughout this product now have an API spec section, which allows Samantha or any other user to quickly understand what was done via the API.
 
 122
 00:23:09.390 --> 00:23:15.270
-Ken Bocchino: And transition when they feel it's necessary or right for them into an automation approach to using the product.
+And transition when they feel it's necessary or right for them into an automation approach to using the product.
 
 # add a new component to the trading application
 
-123
-00:23:16.290 --> 00:23:32.190
-Ken Bocchino: Let's go back to our scenario and really start taking a look at the extension of the trading application. Let's go ahead and start by adding a new transfers component to the trading application. We can do this simply by creating a new component naming it
+Let's go back to our scenario and really start taking a look at the extension of the trading application. Let's go ahead and start by adding a new transfers component to the trading application. We can do this simply by creating a new component naming it
 
 # create, name, Display name, 
 
-124
-00:23:35.490 --> 00:23:44.430
-Ken Bocchino: And providing some additional metadata. These are de lighters to, you know, give a better display name start organizing based on tags giving description and other information that would be useful.
+And providing some additional metadata. These are de lighters to, you know, give a better display name start organizing based on tags giving description and other information that would be useful.
 
 125
 00:23:44.910 --> 00:23:54.450
-Ken Bocchino: For Samantha's co workers and other teams that might be using this environment, we can place this component on a gateway and the gateway can be either established by
+For Samantha's co workers and other teams that might be using this environment, we can place this component on a gateway and the gateway can be either established by
 
 # select the gateway to apply the config to.
 
 126
 00:23:55.710 --> 00:24:04.260
-Ken Bocchino: A dev ops team or in this Acme financial organization David's responsible for the network and certificate management within the financial organization.
-
-127
-00:24:04.590 --> 00:24:18.630
-Ken Bocchino: And so he's established this trading API, our trading gateway for Samantha to add new component to we can add the UI or the ingress needs of the of the component in this case slash API.
-
-128
-00:24:20.790 --> 00:24:36.660
-Ken Bocchino: And this UI space is really flexible and powerful for various scenarios or use cases within controller, whether it's basic UI routing si routing a combination of SI F CDN and your I routing or just what we're doing here, very basic UI routing.
+A dev ops team or in this ACME financial organization David's responsible for the network and certificate management within the financial organization.
+And so he's established this trading API, our trading gateway for Samantha to add new component to we can add the UI or the ingress needs of the of the component in this case slash API.
+And this UI space is really flexible and powerful for various scenarios or use cases within controller, whether it's basic UI routing si routing a combination of SI F CDN and your I routing or just what we're doing here, very basic UI routing.
 
 Define the ingress for a very basic URI routing scenario
 URI - /api
 
-
-129
-00:24:38.370 --> 00:24:44.670
-Ken Bocchino: We can specify various methods advanced options, but we're just getting the basics done here, which is to route traffic that
+We can specify various methods advanced options, but we're just getting the basics done here, which is to route traffic that
 
 # add workload group - set of upstreams
 transfers
 
-130
-00:24:44.970 --> 00:24:54.240
-Ken Bocchino: Needs to get to that component to the codes, the servers in which that code is on. So we have a workload group which is effectively the collection of servers or upstream
+Needs to get to that component to the codes, the servers in which that code is on. So we have a workload group which is effectively the collection of servers or upstream
 
-131
-00:24:55.350 --> 00:25:01.050
-Ken Bocchino: servers that are on the back end of Samantha's application will call this the
-
-132
-00:25:06.450 --> 00:25:18.570
-Ken Bocchino: The transfer servers and we'll go and add the UI of the back end server for this and this new method of viewer is allows us to put a lot of complicated information in one space.
+servers that are on the back end of Samantha's application will call this the
+The transfer servers and we'll go and add the UI of the back end server for this and this new method of viewer is allows us to put a lot of complicated information in one space.
 
 add a URI for the backend workloads
 http://10.1.20.21:9804
 
 
-133
-00:25:19.080 --> 00:25:33.480
-Ken Bocchino: So that we can provide a lot of flexibility and future extension on what protocols and capabilities that we support here. So we're adding the back end workload server. And we can go ahead and go through the rest of this process of deploying
+So that we can provide a lot of flexibility and future extension on what protocols and capabilities that we support here. So we're adding the back end workload server. And we can go ahead and go through the rest of this process of deploying
 
 # complete and deploy
 # note API Spec
 
-134
-00:25:34.500 --> 00:25:44.490
-Ken Bocchino: This component. Again, we end with what exactly we did in the UI and how it would reflect in the API. We'll go ahead and publish this new component
-
-135
-00:25:45.030 --> 00:25:50.340
-Ken Bocchino: And when we do so, we will see, we're back into that inventory of what components make up the trading application.
-
-136
-00:25:50.970 --> 00:26:00.480
-Ken Bocchino: Controllers responsible for getting the desired configuration that we specified by the UI or the API and getting it to the actual engine X instance to process traffic.
+This component. Again, we end with what exactly we did in the UI and how it would reflect in the API. We'll go ahead and publish this new component
+And when we do so, we will see, we're back into that inventory of what components make up the trading application.
+Controllers responsible for getting the desired configuration that we specified by the UI or the API and getting it to the actual NGINX instance to process traffic.
 
 # controller is doing X, wait for configured state.
 
-137
-00:26:01.020 --> 00:26:06.360
-Ken Bocchino: Now that we see that we've progressed from the configuring states to configured state, we can go back to the application.
-
-138
-00:26:06.990 --> 00:26:14.520
-Ken Bocchino: reload it and see. Now our new component is up an active with in the actual trading application. So, you know,
+Now that we see that we've progressed from the configuring states to configured state, we can go back to the application.
+reload it and see. Now our new component is up an active with in the actual trading application. So, you know,
 
 # return to web page and refresh.
 Notice new options on right of the screen.
@@ -275,11 +177,11 @@ Notice new options on right of the screen.
 
 139
 00:26:14.910 --> 00:26:29.880
-Ken Bocchino: Very quickly, we're able to establish new traffic path new configuration we didn't have to go config an engine X instance. And we can see this new component capable of new value to the business. THE RETAIL BE within with an acne financial
+Very quickly, we're able to establish new traffic path new configuration we didn't have to go config an NGINX instance. And we can see this new component capable of new value to the business. THE RETAIL BE within with an acne financial
 
 140
 00:26:31.110 --> 00:26:47.100
-Ken Bocchino: Now, this is great and Samantha explored what she can do here via the q&a but likely she's going to plumb all this into her pipeline and so it's going to open a pipeline tool that Olivia might use. And let's go ahead and login as sorry as Samantha. My apologies.
+Now, this is great and Samantha explored what she can do here via the q&a but likely she's going to plumb all this into her pipeline and so it's going to open a pipeline tool that Olivia might use. And let's go ahead and login as sorry as Samantha. My apologies.
 
 # open postman
 login as Samantha
@@ -287,67 +189,51 @@ Login to Contoller - retail dev
 
 141
 00:26:48.390 --> 00:26:54.450
-Ken Bocchino: And be able to deploy the additional components that make up the trading application in its future state.
+And be able to deploy the additional components that make up the trading application in its future state.
 
 142
 00:26:55.320 --> 00:27:06.480
-Ken Bocchino: Let's go through the same process or similar processes. The as the UI, but now in the API. So we can go to our retail dev pipeline space and we see some additional
+Let's go through the same process or similar processes. The as the UI, but now in the API. So we can go to our retail dev pipeline space and we see some additional
 
 # Retail-Dev environment
- - Application - trading.acmefinancial.net
+ - Application - trading.ACMEfinancial.net
  
 143
 00:27:07.170 --> 00:27:14.670
-Ken Bocchino: Additional components we can deploy similar process of the actual API that was used by the gooey is being used by the pipeline.
+Additional components we can deploy similar process of the actual API that was used by the gooey is being used by the pipeline.
 
 # 9) create Comp - trading - referrals
 Review the JSON
 
-144
-00:27:14.970 --> 00:27:22.050
-Ken Bocchino: It's an API first methodology which means that the UI is using the same cause that the API can be leveraged to do
-
-145
-00:27:22.530 --> 00:27:35.910
-Ken Bocchino: And see within this configuration. We have our desired state of ingress back end. And we'll get into some other scenarios additional inline policies that can be configured for components. So we go ahead and send this configuration.
+It's an API first methodology which means that the UI is using the same cause that the API can be leveraged to do
+And see within this configuration. We have our desired state of ingress back end. And we'll get into some other scenarios additional inline policies that can be configured for components. So we go ahead and send this configuration.
 
 # ingress, backend
 PUT the configuration
 
-146
-00:27:38.460 --> 00:27:40.590
-Ken Bocchino: Let me do a put instead of a get
-
-147
-00:27:42.330 --> 00:27:48.330
-Ken Bocchino: And we can see we are getting into that same configured states are configuring states which will progress to a configured state.
+Let me do a put instead of a get
+And we can see we are getting into that same configured states are configuring states which will progress to a configured state.
 
 # convert to get to poll for configured state
 
-148
-00:27:48.960 --> 00:28:06.030
-Ken Bocchino: Once controller reaches all the engine X instances that this component needs to be on based on where the gateway is placed. We've now added this new referrals component to our application and we can now see via the application. We have a new referrals component
+Once controller reaches all the NGINX instances that this component needs to be on based on where the gateway is placed. We've now added this new referrals component to our application and we can now see via the application. We have a new referrals component
 
 # return to browser and application, refresh.
 Notice new referrals box where 'coming soon' used to be
 
-149
-00:28:11.010 --> 00:28:24.990
-Ken Bocchino: So let's go back and take a look at some of the other different things that we wanted to showcase your in the scenario, we should we saw the expansion of the trading application. But now let's take a look at what statistics are now available within engine x or this application.
+So let's go back and take a look at some of the other different things that we wanted to showcase your in the scenario, we should we saw the expansion of the trading application. But now let's take a look at what statistics are now available within NGINX or this application.
 
-150
-00:28:26.790 --> 00:28:39.990
-Ken Bocchino: So we can go back either via the UI or the API to look at the analytics that are accessible to to smash them, we can see our retail dev dashboard that's been established into figured
+So we can go back either via the UI or the API to look at the analytics that are accessible to to smash them, we can see our retail dev dashboard that's been established into figured
 
 Select the retail-dev analytics dashboard
 
 151
 00:28:41.190 --> 00:28:50.010
-Ken Bocchino: And we can see engine X statistics at instance base level. And of course, this will be expanded into App centricity and later releases.
+And we can see NGINX statistics at instance base level. And of course, this will be expanded into App centricity and later releases.
 
 152
 00:28:50.310 --> 00:29:02.520
-Ken Bocchino: But right now in three.oh we have the ability to see all the stats available to Samantha via dashboard. So you can edit and add additional statistics, but you can see some of the traffic. We've been generating while we've been going through this demo.
+But right now in three.oh we have the ability to see all the stats available to Samantha via dashboard. So you can edit and add additional statistics, but you can see some of the traffic. We've been generating while we've been going through this demo.
 
 # postman
 analytics
@@ -356,42 +242,25 @@ get metrics with filter
 
 153
 00:29:04.320 --> 00:29:15.420
-Ken Bocchino: Additionally, she can go via API new in three.io to be able to look at the various metrics that are accessible within the environment, so she can do a query for various engine X instance
+Additionally, she can go via API new in three.io to be able to look at the various metrics that are accessible within the environment, so she can do a query for various NGINX instance
 
 154
 00:29:16.710 --> 00:29:30.780
-Ken Bocchino: Metrics. So here status 500 message messages and get back time series data via the API with various filters various resolutions and time series windows for her to pull that into her own environment.
-
+Metrics. So here status 500 message messages and get back time series data via the API with various filters various resolutions and time series windows for her to pull that into her own environment.
 Time series data.  In tis case filtering on status of 500
 
 155
 00:29:32.790 --> 00:29:39.570
-Ken Bocchino: So transitioning on. Let's talk a little bit about an expansion of this trading application. It's been a great product.
-
-156
-00:29:39.990 --> 00:29:50.190
-Ken Bocchino: accessible via GUI, but we want to expand this to a new mobile application so that this mobile application can do trades on the go for our Acme financial retail customers.
-
-157
-00:29:50.670 --> 00:29:57.750
-Ken Bocchino: But to do that, what we're trying. What we need to do is expose a brand new gateway within the public Internet for
-
-
-158
-00:29:58.650 --> 00:30:11.280
-Ken Bocchino: Samantha's application to receive API calls. Now within acne, financial, there is a necessity for David to get involved with this new public internet and security needed for API calls coming into the bank.
-
-159
-00:30:11.970 --> 00:30:19.530
-Ken Bocchino: So she'll partner with David to ask for a new gateway with a new certificate to make sure that trading API interaction is secure.
-
-160
-00:30:20.970 --> 00:30:29.580
-Ken Bocchino: So let's go through the process of David coming into the system and establishing a new gateway for Samantha will go and log off as Samantha.
+So transitioning on. Let's talk a little bit about an expansion of this trading application. It's been a great product.
+accessible via GUI, but we want to expand this to a new mobile application so that this mobile application can do trades on the go for our ACME financial retail customers.
+But to do that, what we're trying. What we need to do is expose a brand new gateway within the public Internet for
+Samantha's application to receive API calls. Now within acne, financial, there is a necessity for David to get involved with this new public internet and security needed for API calls coming into the bank.
+So she'll partner with David to ask for a new gateway with a new certificate to make sure that trading API interaction is secure.
+So let's go through the process of David coming into the system and establishing a new gateway for Samantha will go and log off as Samantha.
 
 # logoff GUI as Smanantha
 # login to GUI as David
-admin@acmefinaincial.net
+admin@ACMEfinaincial.net
 
 
 161
@@ -400,112 +269,109 @@ log back in as David
 
 162
 00:30:39.870 --> 00:30:46.230
-Ken Bocchino: And see what David can see within the platform. We haven't logged in as David before. So let's go ahead and take a look at what he gets to see access
+And see what David can see within the platform. We haven't logged in as David before. So let's go ahead and take a look at what he gets to see access
 
 # review what David has access to in the Apps, Components, environemtns.
 Can see Olivias and Samanthas environments
 
 163
 00:30:47.130 --> 00:30:54.450
-Ken Bocchino: So seeing the same application inventory pages, we can see that David's able to see Samantha's retail dev environment as well.
+So seeing the same application inventory pages, we can see that David's able to see Samantha's retail dev environment as well.
 
 164
 00:30:54.840 --> 00:31:05.430
-Ken Bocchino: Olivia's lending prod environment, he's able to have a full view of what applications and infrastructure is providing a services app services to the various parts of his business.
+Olivia's lending prod environment, he's able to have a full view of what applications and infrastructure is providing a services app services to the various parts of his business.
 
 165
 00:31:05.910 --> 00:31:16.050
-Ken Bocchino: Additionally, as you saw, we can limit access to various users, such as Samantha so that she's able to self service and configure and shared data path instances.
-
-166
-00:31:16.500 --> 00:31:28.230
-Ken Bocchino: But still keep peace of mind for David to that no business units collide within configuration of the same engine X instances are individual engine X instances that many business units might have
+Additionally, as you saw, we can limit access to various users, such as Samantha so that she's able to self service and configure and shared data path instances.
+But still keep peace of mind for David to that no business units collide within configuration of the same NGINX instances are individual NGINX instances that many business units might have
 
 167
 00:31:29.610 --> 00:31:44.010
-Ken Bocchino: So let's start off with the process of deploying a brand new gateway for the trading API, we can see an overview of the various gateways that already exists across the entire enterprise and we go and create a brand new one for the trading API.
+So let's start off with the process of deploying a brand new gateway for the trading API, we can see an overview of the various gateways that already exists across the entire enterprise and we go and create a brand new one for the trading API.
 
 # select Services, Gatways, overview
 
 168
 00:31:45.150 --> 00:31:46.740
-Ken Bocchino: Bear with me as I go through that process.
+Bear with me as I go through that process.
 
 169
 00:31:48.120 --> 00:31:53.280
-Ken Bocchino: I'm just to make sure I'm going to name this the right way. So let me just go and grab that that name that we're going to be using
+I'm just to make sure I'm going to name this the right way. So let me just go and grab that that name that we're going to be using
 
 # Create
-Name: trading-api.acmefinancial.net
+Name: trading-api.ACMEfinancial.net
 select environment: Retail Dev
 
 170
 00:31:58.350 --> 00:32:02.310
-Ken Bocchino: So I'm going to name this trading API. I'm going to select what environment. This is going to be placed in
+So I'm going to name this trading API. I'm going to select what environment. This is going to be placed in
 
 171
 00:32:03.630 --> 00:32:12.960
-Ken Bocchino: And then I'll need to specify where I want that gateway to be. And here's the list of all of our instances across the environment and we're going to put this on the dev engine X instance
+And then I'll need to specify where I want that gateway to be. And here's the list of all of our instances across the environment and we're going to put this on the dev NGINX instance
 
 Select Instance: dev-nginx-1
 next:
 
 172
 00:32:13.560 --> 00:32:28.020
-Ken Bocchino: Specify more instances of for resiliency or specific instance if I want to dedicate this gateway to route that traffic on to specify the ingress, you are. I have this application or this gateway.
+Specify more instances of for resiliency or specific instance if I want to dedicate this gateway to route that traffic on to specify the ingress, you are. I have this application or this gateway.
 
 173
 00:32:30.240 --> 00:32:34.260
-Ken Bocchino: And you see here I'm providing the protocol and FQDN for SNI routing.
+And you see here I'm providing the protocol and FQDN for SNI routing.
 
-URI: https://trading-api.acmefinancial.net
+URI: https://trading-api.ACMEfinancial.net
 
 174
 00:32:35.310 --> 00:32:37.050
-Ken Bocchino: But specifically for the dev space.
+But specifically for the dev space.
 
 # slect Done
 
 175
 00:32:38.340 --> 00:32:46.020
-Ken Bocchino: Click Done. And now I need to tie some certificate to this. And what's great in three dot O is that we've built in certificate management to the product.
+Click Done. And now I need to tie some certificate to this. And what's great in three dot O is that we've built in certificate management to the product.
 
 176
 00:32:46.380 --> 00:32:55.770
-Ken Bocchino: I don't need to go and put files on those various instances controller can be responsible for getting the certificate materials securely to the internet censuses wherever they may be so I can
+I don't need to go and put files on those various instances controller can be responsible for getting the certificate materials securely to the internet censuses wherever they may be so I can
 
 
 177
 00:32:56.430 --> 00:33:03.180
-Ken Bocchino: See that I have a couple different certificates that I already have imported and use it. Various gateways. But I want to create a new certificate
+See that I have a couple different certificates that I already have imported and use it. Various gateways. But I want to create a new certificate
 
 178
 00:33:03.540 --> 00:33:12.840
-Ken Bocchino: So, in line with my configuration of the gateway. I can go and create a brand new and certificate for the trading API, I can put it into that retail Devon's
+So, in line with my configuration of the gateway. I can go and create a brand new and certificate for the trading API, I can put it into that retail Devon's
 
 # create a new certificate
-Name: trading-api.acmefinancial.net 
+Name: trading-api.ACMEfinancial.net 
 
 179
 00:33:13.350 --> 00:33:26.700
-Ken Bocchino: Space and I can browse or drag and drop the certificate materials to the controller. So let's bring in the engine x or sorry, the trading API dev certificate here I can see I'm missing a key. So let me go browse for that key.
+Space and I can browse or drag and drop the certificate materials to the controller. So let's bring in the NGINX or sorry, the trading API dev certificate here I can see I'm missing a key. So let me go browse for that key.
 
 browse to trading-api dev certificate
 browse to the key
 
 180
 00:33:29.190 --> 00:33:38.490
-Ken Bocchino: And now I have all the certificate materials needed and I could have specified PAC 12 or pieces of Pam, or at a remote file that might have been put on the actual engine X instance
+And now I have all the certificate materials needed and I could have specified PAC 12 or pieces of Pam, or at a remote file that might have been put on the actual NGINX instance
 
 # remote file is already on teh nginx instance.
 
 181
 00:33:39.030 --> 00:33:48.360
-Ken Bocchino: I can actually see if if I chose to start working on automating this process again what the API call would have been for David to make that even easier in the future.
+I can actually see if if I chose to start working on automating this process again what the API call would have been for David to make that even easier in the future.
 
 182
 00:33:49.230 --> 00:34:02.790
-Ken Bocchino: All nodes submit creating that certificate and you can see as I'm going through the process of creating my gateway that certificate is now referenced. I could configure specific protocols or ciphers that are supported. But I'm going to just go ahead and move forward in this demo.
+All nodes submit creating that certificate and you can see as I'm going through the process of creating my gateway that certificate is now referenced. I could configure specific protocols or ciphers that are supported. But I'm going to just go ahead and move forward in this demo.
 
 # submit certificate
 Note that it is automatically referenced in the configuration now that certificate creation is complete.
@@ -513,58 +379,49 @@ Note that it is automatically referenced in the configuration now that certifica
 
 183
 00:34:06.930 --> 00:34:12.330
-Ken Bocchino: So now we're going through the process of actually placing that gateway on the engine X instance that I specified
+So now we're going through the process of actually placing that gateway on the NGINX instance that I specified
 
 # controller is applying the configuraiton to the instance that wa specified in the configuration
 the Gateway moves from a configuring to a configured state and now that Gateway is ready to use.
 
 184
 00:34:12.780 --> 00:34:19.680
-Ken Bocchino: Again, we'll go from a configuring state to a configured state and we now have that gateway stood up and David to slack Samantha saying, hey,
+Again, we'll go from a configuring state to a configured state and we now have that gateway stood up and David to slack Samantha saying, hey,
 
 185
 00:34:20.220 --> 00:34:29.550
-Ken Bocchino: I set up that new gateway for you and your plumbed all the way out to the internet. And you should be able to add additional components to your environment for that trading API.
+I set up that new gateway for you and your plumbed all the way out to the internet. And you should be able to add additional components to your environment for that trading API.
 
 # add addiitonal components to the gateway for the trading API
 
 186
 00:34:30.630 --> 00:34:38.220
-Ken Bocchino: So let's go back as Samantha and take a look at how she would go through the automation process of getting the new trading components available.
+So let's go back as Samantha and take a look at how she would go through the automation process of getting the new trading components available.
 
 # APIM import of open API spec
 
 187
 00:34:39.630 --> 00:34:46.680
-Ken Bocchino: So let's go through an API deployment using API am space of creating a new API definition.
+So let's go through an API deployment using API am space of creating a new API definition for the trading API.
+And then importing the OpenAPI specification of the trading API directly into controller. 
+Samantha's developers are able to specify all the details and endpoints and routes of the trading API in a swagger file. 
 
-188
-00:34:48.090 --> 00:34:49.200
-Ken Bocchino: For the trading API.
-
-
-189
-00:34:50.670 --> 00:34:52.710
-Ken Bocchino: And then importing the open
-
-190
-00:34:53.730 --> 00:35:08.430
-Ken Bocchino: Open API spec of the trading API directly into controller. So this is lighting up the API am use case by being able to specify all the details and endpoints and routes of the trading API. Here you can see buying and selling stocks.
+Here you can see buying and selling stocks.
 
 191
 00:35:10.800 --> 00:35:11.970
-Ken Bocchino: Oops, let me login first
+Oops, let me login first
 
 # Postman
 # login as admin
 
 192
 00:35:16.110 --> 00:35:16.470
-Ken Bocchino: Second,
+Second,
 
 193
 00:35:25.530 --> 00:35:30.810
-Ken Bocchino: Or, you know, now we've uploaded that and we'll publish that API to our trading application.
+Or, you know, now we've uploaded that and we'll publish that API to our trading application.
 
 Select 2) import OAS API-definition
 review the JSON and the endpoints
@@ -572,7 +429,7 @@ POST to upload the open api spec
 
 194
 00:35:32.340 --> 00:35:40.950
-Ken Bocchino: And specify the gateway. That's going to be used there and then we'll go and create two different things. We're going to create to the unsecured path for our trading API.
+And specify the gateway. That's going to be used there and then we'll go and create two different things. We're going to create to the unsecured path for our trading API.
 
 # create the unsecure path to the trading API
 14) Create Comp - trading - api
@@ -580,41 +437,41 @@ POST
 
 195
 00:35:41.370 --> 00:35:48.360
-Ken Bocchino: Again, just like any other component where that routes going to from a backend server perspective and what published API. It's a part of
+Again, just like any other component where that routes going to from a backend server perspective and what published API. It's a part of
 
 196
 00:35:50.610 --> 00:35:52.110
-Ken Bocchino: Whoops. Let me change it to what
+Whoops. Let me change it to what
 
 197
 00:35:54.840 --> 00:36:08.520
-Ken Bocchino: And will also create this secure part of the API going to different servers that are going to be authenticated with a che WT token. So we're going to make sure that we have a security in line policy that's using an identity provider.
+And will also create this secure part of the API going to different servers that are going to be authenticated with a che WT token. So we're going to make sure that we have a security in line policy that's using an identity provider.
 
 # create the secure path tot he trading API and authenticate with te JWT token
 
 
 198
 00:36:09.300 --> 00:36:20.220
-Ken Bocchino: I created that via the J WT endpoint or via the gooey and this is a barrier type token. So watch and authenticate. Make sure that no one can just randomly trade stocks.
+I created that via the J WT endpoint or via the gooey and this is a barrier type token. So watch and authenticate. Make sure that no one can just randomly trade stocks.
 
 # Postman16) Create comp - trading - api-secure
 PUT
 
 199
 00:36:20.940 --> 00:36:31.170
-Ken Bocchino: Just like everything else we can go and do a get and see if we're in a fully configured state. And we can see that state from a higher level order. So we can actually take a look at all of the configuration state.
+Just like everything else we can go and do a get and see if we're in a fully configured state. And we can see that state from a higher level order. So we can actually take a look at all of the configuration state.
 
 # change to GET and check for configured
 
 200
 00:36:31.650 --> 00:36:45.270
-Ken Bocchino: Within the retail dev environment. So we can take a look. I just seeing a list of all of our components and gateways and we can see what children we have within the space, like how many components. How many apps, etc. And we said, all of them are unhealthy configured state.
+Within the retail dev environment. So we can take a look. I just seeing a list of all of our components and gateways and we can see what children we have within the space, like how many components. How many apps, etc. And we said, all of them are unhealthy configured state.
 
 # review the entire retail-dev environment
 
 201
 00:36:46.290 --> 00:37:02.310
-Ken Bocchino: And now we should be able to go utilize our new trading endpoints and let's go and test that just simply via an API call. But we can integrate this now with our mobile client. So we'll start off by first of trying to authenticate without any authentication.
+And now we should be able to go utilize our new trading endpoints and let's go and test that just simply via an API call. But we can integrate this now with our mobile client. So we'll start off by first of trying to authenticate without any authentication.
 
 # Postman
 Temp
@@ -624,7 +481,7 @@ Temp
 
 202
 00:37:04.800 --> 00:37:15.120
-Ken Bocchino: And here we can see that engine X has brought back for one authorization error to our secure endpoint, we can change that to use our barrier token and Jake WT off.
+And here we can see that NGINX has brought back for one authorization error to our secure endpoint, we can change that to use our barrier token and Jake WT off.
 
 Temp
 - testing JWT
@@ -632,62 +489,50 @@ Temp
 
 203
 00:37:17.100 --> 00:37:26.310
-Ken Bocchino: There, we can see we just did a trade for quantity of 16 for some reason or API is allowing us to set our amount of of the cost of that stock.
+There, we can see we just did a trade for quantity of 16 for some reason or API is allowing us to set our amount of of the cost of that stock.
 
 # note the Reply
 # return to the trading application and note the trade.
 
 204
 00:37:26.970 --> 00:37:37.920
-Ken Bocchino: So probably talked to some folks about that. But we're able to make that transaction and because it's part of that trading application, we can go back to our trading application and see that we now have
+So probably talked to some folks about that. But we're able to make that transaction and because it's part of that trading application, we can go back to our trading application and see that we now have
 
 205
 00:37:40.050 --> 00:37:44.340
-Ken Bocchino: Another trade for 16 chairs of the Microsoft stock. So this showcases
+Another trade for 16 chairs of the Microsoft stock. So this showcases
 
 206
 00:37:45.480 --> 00:37:55.890
-Ken Bocchino: We pull up a slide again to showcases that partnership that can be established with the net ops team and the DevOps team in which self service as possible for Samantha.
+We pull up a slide again to showcases that partnership that can be established with the net ops team and the DevOps team in which self service as possible for Samantha.
 
 207
 00:37:56.340 --> 00:38:04.080
-Ken Bocchino: While still maintaining some level of necessity necessary control and plumbing that needs to be established by a platform owner
+While still maintaining some level of necessity necessary control and plumbing that needs to be established by a platform owner
 
 208
 00:38:07.470 --> 00:38:17.250
-Ken Bocchino: So now as we evolve Samantha's getting quite excited about all this new functionality we added to the trading application and she's looking to expand on
-
-209
-00:38:18.300 --> 00:38:19.830
-Ken Bocchino: Looks like she's looking to
-
-210
-00:38:22.020 --> 00:38:31.830
-Ken Bocchino: Expand on the marketing sites that are promoting the various technologies. That's the Acme financial organization has been able to produce especially looking to
-
-211
-00:38:32.280 --> 00:38:45.540
-Ken Bocchino: Build a brand new application component within the marketing page dub, dub, dub, dub acne financial.net and introduce the new blog capability so they can start blogging talking about the trading application.
-
-212
-00:38:46.860 --> 00:38:59.370
-Ken Bocchino: So let's plug back in as Samantha to the controller and let's take a look at some of the additional feature functionality that we brought with the HTC use cases, let's log off as David will come back in as Samantha.
+So now as we evolve Samantha's getting quite excited about all this new functionality we added to the trading application and she's looking to expand on
+Looks like she's looking to
+Expand on the marketing sites that are promoting the various technologies. That's the ACME financial organization has been able to produce especially looking to
+Build a brand new application component within the marketing page dub, dub, dub, dub acne financial.net and introduce the new blog capability so they can start blogging talking about the trading application.
+So let's plug back in as Samantha to the controller and let's take a look at some of the additional feature functionality that we brought with the HTC use cases, let's log off as David will come back in as Samantha.
 
 # logout of Contorller as DAvid / admin
 # login as Samantha
-retail-dev@acmefinancial.net
+retail-dev@ACMEfinancial.net
 
 213
 00:39:13.410 --> 00:39:21.750
-Ken Bocchino: And while we're here, we can take a look at that. That additional component tree that we added via the API. So we can see our full trading application.
+And while we're here, we can take a look at that. That additional component tree that we added via the API. So we can see our full trading application.
 
 # services -> apps
-trading.acmefinancial.net
+trading.ACMEfinancial.net
 review the components that were added.
 
 214
 00:39:22.470 --> 00:39:36.270
-Ken Bocchino: But we're here to actually enhance the dub, dub, dub site for Acme financial and here we can see we have a careers page a web page. Some of the image posting content. Let's go and add our blog content. So this is similar to what we did before.
+But we're here to actually enhance the dub, dub, dub site for ACME financial and here we can see we have a careers page a web page. Some of the image posting content. Let's go and add our blog content. So this is similar to what we did before.
 
 # return to All Apps
 Select www.ACMEFinancial.net
@@ -695,28 +540,28 @@ Select www.ACMEFinancial.net
 
 215
 00:39:37.650 --> 00:39:41.670
-Ken Bocchino: But we're going to take advantage of some additional capabilities within the ADC space.
+But we're going to take advantage of some additional capabilities within the ADC space.
 
 # create component
 Name: blog
 Next
-Gateway: www.acmefinancial.net
+Gateway: www.ACMEfinancial.net
 
 216
 00:39:43.470 --> 00:39:46.770
-Ken Bocchino: We don't need any certificates, but we will add slash blog.
+We don't need any certificates, but we will add slash blog.
 
 URI:  /blog/
 
 217
 00:39:48.030 --> 00:40:00.990
-Ken Bocchino: Now we've chosen to host our blog with WordPress and we've done some different things on the back end. So the path. You want to expose to the external internet isn't the WordPress internal server information. So we want to our need to rewrite
+Now we've chosen to host our blog with WordPress and we've done some different things on the back end. So the path. You want to expose to the external internet isn't the WordPress internal server information. So we want to our need to rewrite
 
 # next on through
 
 218
 00:40:02.160 --> 00:40:13.320
-Ken Bocchino: We need to rewrite the configuration of the the back end as traffic is coming through. We need to transform it and make sure that gets the right WordPress endpoints, so
+We need to rewrite the configuration of the the back end as traffic is coming through. We need to transform it and make sure that gets the right WordPress endpoints, so
 
 # Add workload group
 WordPress
@@ -724,7 +569,7 @@ WordPress
 
 219
 00:40:15.780 --> 00:40:22.590
-Ken Bocchino: let's configure our WordPress workload group and specify the rise of the back end service. So we have this server.
+let's configure our WordPress workload group and specify the rise of the back end service. So we have this server.
 
 # URIs of backend servers:
 http://10.1.20.21:8003
@@ -732,22 +577,22 @@ http://10.1.20.21:8003
 
 220
 00:40:24.060 --> 00:40:25.200
-Ken Bocchino: And we can add another one.
+And we can add another one.
 
 221
 00:40:27.210 --> 00:40:28.500
-Ken Bocchino: Which is going to be on 22
+Which is going to be on 22
 
 add second
 http://10.1.20.22:8003
 
 222
 00:40:31.080 --> 00:40:34.770
-Ken Bocchino: Right, so we now have our workload group, we can keep going.
+Right, so we now have our workload group, we can keep going.
 
 223
 00:40:36.390 --> 00:40:55.110
-Ken Bocchino: And we have some UI rewrite capabilities. So let's add a new rewrite capability to mask that slash blog incoming from the internet. And let's convert it into the actual back ends and points that are actually accessible on our WordPress server. So, we can write our rewrite pattern.
+And we have some UI rewrite capabilities. So let's add a new rewrite capability to mask that slash blog incoming from the internet. And let's convert it into the actual back ends and points that are actually accessible on our WordPress server. So, we can write our rewrite pattern.
 
 # URI rewrites:
 incoming pattern: ^/blog/(.*)$
@@ -755,153 +600,133 @@ convert it to (rewrite pattern): /blog/wordpress/wwwsite/$1?
 
 224
 00:40:56.760 --> 00:41:03.600
-Ken Bocchino: And we can see again, our configuration as well as that new program ability in line policy that's available in three
+And we can see again, our configuration as well as that new program ability in line policy that's available in three
 
 225
 00:41:05.130 --> 00:41:13.590
-Ken Bocchino: Let's go out and publish this and again we'll go from configuring to configured state. And let's go ahead and go to our of our website.
+Let's go out and publish this and again we'll go from configuring to configured state. And let's go ahead and go to our of our website.
 
 # publish
 
 226
 00:41:14.580 --> 00:41:25.050
-Ken Bocchino: you'll bear with us this demo is we're working to make that even better over time. But specifically, we can see the inbound requests is going to slash blog flash big announcement.
+you'll bear with us this demo is we're working to make that even better over time. But specifically, we can see the inbound requests is going to slash blog flash big announcement.
 
-# in broswer go to: dev.acmefinancial.net/blog/bigannouncement
+# in broswer go to: dev.ACMEfinancial.net/blog/bigannouncement
 Compare browser URL with path returned by target to notice the rewrite being applied
 
 227
 00:41:25.500 --> 00:41:32.820
-Ken Bocchino: But it's been transformed by the the backend server or sorry, by engine x to the specific place that we placed all that blog content.
+But it's been transformed by the the backend server or sorry, by NGINX to the specific place that we placed all that blog content.
 
 228
 00:41:37.410 --> 00:41:38.160
-Ken Bocchino: So moving on.
+So moving on.
 
-229
-00:41:39.180 --> 00:41:45.600
-Ken Bocchino: Let's talk a little bit about the the merchandise site that's acne financial retail has, you know, they've they've
+Let's talk a little bit about the the merchandise site that's acne financial retail has, you know, they've they've
+embraced this whole ACME corporate in and you know with the revolution of new hipsters that love you know these kind of Trotsky merge materials, we've decided to put up a merge site. But we have some complaints that
+In the end to end testing of the ACME store in the dev environment we're seeing that the shopping cart experience is not ideal. So we can actually take a look at what's happening there. So let's start off by going to our merchants are merged store.
 
-# insert hipster here
-
-230
-00:41:46.140 --> 00:41:58.350
-Ken Bocchino: embraced this whole Acme corporate in and you know with the revolution of new hipsters that love you know these kind of Trotsky merge materials, we've decided to put up a merge site. But we have some complaints that
-
-231
-00:41:58.860 --> 00:42:13.230
-Ken Bocchino: In the end to end testing of the Acme store in the dev environment we're seeing that the shopping cart experience is not ideal. So we can actually take a look at what's happening there. So let's start off by going to our merchants are merged store.
-
-# open web browser and go to:  merch.dev.acmefinancial.net
+# open web browser and go to:  merch.dev.ACMEfinancial.net
 notice a 404.
 try: https
 try: /asdf at the end
 
 232
 00:42:21.300 --> 00:42:23.190
-Ken Bocchino: merch store might just be down here. Let's see.
+merch store might just be down here. Let's see.
 
 # i believe this section was an error, and recovery.  Need to double check with environment.
 
 233
 00:42:29.400 --> 00:42:34.500
-Ken Bocchino: Let's take a look at what might be going on there so we can go to our merch store.
+Let's take a look at what might be going on there so we can go to our merch store.
 
 234
 00:42:37.560 --> 00:42:41.190
-Ken Bocchino: And it looks like we're missing component. So let me do deploy that component real quick.
+And it looks like we're missing component. So let me do deploy that component real quick.
 
 # postman
-applicaiton - merch.acmefinancial.com
+applicaiton - merch.ACMEfinancial.com
 6) create component - shop - no persist
 PUT
 
 235
 00:42:50.430 --> 00:42:54.090
-Ken Bocchino: Right. So let's see if our we just automate the deployment of that the missing component
+Right. So let's see if our we just automate the deployment of that the missing component
 
 236
 00:42:55.500 --> 00:42:57.000
-Ken Bocchino: Let's go to merch again.
+Let's go to merch again.
 
 237
 00:42:58.440 --> 00:43:06.600
-Ken Bocchino: Alright, so our stores here and what we've been noticing is like you add something to the cart and you keep browsing and maybe refresh. A couple times and our
+Alright, so our stores here and what we've been noticing is like you add something to the cart and you keep browsing and maybe refresh. A couple times and our
 
-# web browser: https://merch.dev.acmefinancial.net
+# web browser: https://merch.dev.ACMEfinancial.net
 Problem is above.  We are setting cookie persisitence.
 Put something in the cart, refresh a few times and note that cart goes empty as we move back and forth between backend servers.
 
 238
 00:43:08.670 --> 00:43:18.210
-Ken Bocchino: In our shopping cart was empty, without any any change to deleting it from the cart common issue probably miss configured and we can actually take a look at what might be going on there.
+In our shopping cart was empty, without any any change to deleting it from the cart common issue probably miss configured and we can actually take a look at what might be going on there.
 
 239
 00:43:18.690 --> 00:43:33.660
-Ken Bocchino: So we look at the the JSON configuration of that component. There's no persistence that's configured so let's go to reconfigure that component via Samantha's pipeline and add this new persistence configuration to the back end space.
+So we look at the the JSON configuration of that component. There's no persistence that's configured so let's go to reconfigure that component via Samantha's pipeline and add this new persistence configuration to the back end space.
 
 240
 00:43:36.510 --> 00:43:43.410
-Ken Bocchino: There we go. See, so here's our session persistence are configured within our workload group and we can configure that that cookie.
+There we go. See, so here's our session persistence are configured within our workload group and we can configure that that cookie.
 
 # postman
-application - Merch.acmefinancial.net
+application - Merch.ACMEfinancial.net
 7) create component - shop
 review the JSON.  Note sessionPersistence section
 
 241
 00:43:44.460 --> 00:43:48.630
-Ken Bocchino: What's going to place it on the back end. Again, going from a configuring to configured state.
+What's going to place it on the back end. Again, going from a configuring to configured state.
 
 # PUT
 wait for configured.
 
 242
 00:43:49.200 --> 00:43:54.000
-Ken Bocchino: And let's refresh our page a couple times and let's add something to our cart. So let's go back to our home store.
+And let's refresh our page a couple times and let's add something to our cart. So let's go back to our home store.
 
 243
 00:43:54.570 --> 00:44:00.540
-Ken Bocchino: That a really old iPhone to it correctly. We haven't updated this with the Acme materials. Now let's go to refresh. A couple times.
+That a really old iPhone to it correctly. We haven't updated this with the ACME materials. Now let's go to refresh. A couple times.
 
 244
 00:44:01.020 --> 00:44:16.140
-Ken Bocchino: There we can quickly see that configuration change and easy via the pipeline that Samantha has and it delegated to controller, who's done responsible to figure out how to get that to all the injections says that this application is running on
+There we can quickly see that configuration change and easy via the pipeline that Samantha has and it delegated to controller, who's done responsible to figure out how to get that to all the injections says that this application is running on
 
 245
 00:44:19.740 --> 00:44:28.530
-Ken Bocchino: So now let's leave Samantha enjoying Olivia, who is part of the longer standing lending business unit inside of the bank and
+So now let's leave Samantha enjoying Olivia, who is part of the longer standing lending business unit inside of the bank and
 
-246
-00:44:29.100 --> 00:44:39.600
-Ken Bocchino: Let's take a look at some of the problems with a pretty large call center application that Olivia is responsible for. It's a complicated application three tier app with internal services that are communicating
+Let's take a look at some of the problems with a pretty large call center application that Olivia is responsible for. It's a complicated application three tier app with internal services that are communicating
+And we're getting some reports from the call center agents at the service center application is having issues and let's go troubleshoot and understand what might be going on.
+It looks like some of the issues might be with our ticket processing internal service, but let's go and take a look at what the dashboards could show us inside a controller.
 
-247
-00:44:40.170 --> 00:44:48.840
-Ken Bocchino: And we're getting some reports from the call center agents at the service center application is having issues and let's go troubleshoot and understand what might be going on.
-
-248
-00:44:49.410 --> 00:44:57.360
-Ken Bocchino: It looks like some of the issues might be with our ticket processing internal service, but let's go and take a look at what the dashboards could show us inside a controller.
-
-249
-00:44:58.500 --> 00:45:02.940
-Ken Bocchino: So let's log off as our retail Samantha user and let's login as Olivia.
+So let's log off as our retail Samantha user and let's login as Olivia.
 
 # return to Contorller GUI
 Logoff as retail / Samantha user
-Login as Olivia: lending-admin@acmefinancial.net
+Login as Olivia: lending-admin@ACMEfinancial.net
 
 250
 00:45:14.280 --> 00:45:28.680
-Ken Bocchino: So let's take a look at what Olivia can see within the environments. And, first, let's go to an application inventory page. And we can see all the various lending admin are lending production applications that are here within the same platform that Samantha and David are both using
+So let's take a look at what Olivia can see within the environments. And, first, let's go to an application inventory page. And we can see all the various lending admin are lending production applications that are here within the same platform that Samantha and David are both using
 
 # application inventory
-# select servicecenter.acmefinaincial.net
+# select servicecenter.ACMEfinaincial.net
 
 251
 00:45:29.880 --> 00:45:43.890
-Ken Bocchino: It, we could see for the service center. What makes the service center tick has a bunch of different components that route traffic. But again, we've been hearing some reports of issues. So let's go to our analytics page and just quickly understand within the lending production space.
+It, we could see for the service center. What makes the service center tick has a bunch of different components that route traffic. But again, we've been hearing some reports of issues. So let's go to our analytics page and just quickly understand within the lending production space.
 
 # Select Analytics section
 # select Lending-Prod dashboard
@@ -909,52 +734,52 @@ note the 500 service errors  (should we be making some by using a browser before
 
 252
 00:45:45.030 --> 00:45:51.510
-Ken Bocchino: You know what might be going on. And here we can see a spike in 500 errors that's somewhat uncommon.
+You know what might be going on. And here we can see a spike in 500 errors that's somewhat uncommon.
 
 253
 00:45:52.530 --> 00:45:59.190
-Ken Bocchino: And so let's maybe look at some of those internal services. Let's do some calls to them and see if we are seeing some 500 messages.
+And so let's maybe look at some of those internal services. Let's do some calls to them and see if we are seeing some 500 messages.
 
 # postman:
 temp:  ticketprocessing
-get https://ticketprocessing.internal.acmefinancial.net/asdf
+get https://ticketprocessing.internal.ACMEfinancial.net/asdf
 
 254
 00:46:00.300 --> 00:46:03.900
-Ken Bocchino: So let's do a couple internal service calls to the ticket processing site.
+So let's do a couple internal service calls to the ticket processing site.
 
 # note the status code returned.
 
 255
 00:46:05.190 --> 00:46:12.870
-Ken Bocchino: And we can see that the status code on some of these is a 500 Internal Server Error. And so that's unusual. It's probably not good. So
+And we can see that the status code on some of these is a 500 Internal Server Error. And so that's unusual. It's probably not good. So
 
 256
 00:46:13.320 --> 00:46:21.720
-Ken Bocchino: Since retreat causing this problem we have customers that are complaining. Let's go ahead and make some modifications to the servers that are reporting error. So let's see if we can find another 500
+Since retreat causing this problem we have customers that are complaining. Let's go ahead and make some modifications to the servers that are reporting error. So let's see if we can find another 500
 
 257
 00:46:23.190 --> 00:46:37.020
-Ken Bocchino: So here's a 500 on server port six two or three. And it looks like the 4103 servers are perfectly fine. So a couple different ways we can do this. Let's go via the GUI and just go ahead and look at the configuration of our ticket.
+So here's a 500 on server port six two or three. And it looks like the 4103 servers are perfectly fine. So a couple different ways we can do this. Let's go via the GUI and just go ahead and look at the configuration of our ticket.
 
 # make a few more calls and note that the servers answering on port 4103 are fine, no server 500 errors.
 
 258
 00:46:38.430 --> 00:46:46.830
-Ken Bocchino: A ticket processing service for the service center, we can see again all the various components. Let's when edit just that one ticket processing component
+A ticket processing service for the service center, we can see again all the various components. Let's when edit just that one ticket processing component
 
-# contorller gui.  Apps -> servicecenter.acmefinaincial.net 
-Edit: ticketprocessing.internal.acmefinancial.net
+# contorller gui.  Apps -> servicecenter.ACMEfinaincial.net 
+Edit: ticketprocessing.internal.ACMEfinancial.net
 
 259
 00:46:47.190 --> 00:46:55.380
-Ken Bocchino: And because we know we're working with the back end. Let's go to the workload groups and take a look at the configuration of this workload group. It looks like we have 62 or 363 and
+And because we know we're working with the back end. Let's go to the workload groups and take a look at the configuration of this workload group. It looks like we have 62 or 363 and
 
 # go to workload groups and inspect the configuraiton
 
 260
 00:46:56.280 --> 00:47:09.390
-Ken Bocchino: 4103 is that we're having issues to an edit that and just down it which is down it real quick. We know we have some problems right now let's just change that from up to down and just go ahead and publish this configuration right now.
+4103 is that we're having issues to an edit that and just down it which is down it real quick. We know we have some problems right now let's just change that from up to down and just go ahead and publish this configuration right now.
 
 # edit the workload group and set the servers configured to answer on 6203 to down.
 # publish the configuration.
@@ -962,11 +787,11 @@ Ken Bocchino: 4103 is that we're having issues to an edit that and just down it 
 
 261
 00:47:10.560 --> 00:47:13.800
-Ken Bocchino: And so again that's going through is getting configured for to another couple calls
+And so again that's going through is getting configured for to another couple calls
 
 262
 00:47:15.090 --> 00:47:21.480
-Ken Bocchino: And see if we're healthy again. So we're no longer going to those bad servers, but I mean that's triage. We didn't necessarily want to really
+And see if we're healthy again. So we're no longer going to those bad servers, but I mean that's triage. We didn't necessarily want to really
 
 # postman
 temp - ticketprocessing
@@ -974,25 +799,25 @@ make a few more calls watching for 500 errors
 
 263
 00:47:21.810 --> 00:47:25.410
-Ken Bocchino: Leave that. That way, we do want to send traffic to the servers when when we want it.
+Leave that. That way, we do want to send traffic to the servers when when we want it.
 
 264
 00:47:26.160 --> 00:47:34.050
-Ken Bocchino: Let's think about how we configured the trading or shared the ticket processing side that's done via a pipeline. There's me animal behind that in
+Let's think about how we configured the trading or shared the ticket processing side that's done via a pipeline. There's me animal behind that in
 
 265
 00:47:34.710 --> 00:47:47.970
-Ken Bocchino: Libya is pipe pipeline tooling. So we don't want to. We know that if we were to just let the pipeline run we'd overlay override the configuration change. We just made by the way. So let's go back into the configuration of the ticket processing site.
+Libya is pipe pipeline tooling. So we don't want to. We know that if we were to just let the pipeline run we'd overlay override the configuration change. We just made by the way. So let's go back into the configuration of the ticket processing site.
 
 # now that we have been troubleshooting and proven the issue we need to return to the sourth of truth and change the configuration.
 # postman
-Application - servicecenter.acmefinancial.net
-4) Create Component - mon - ticketprocessing.internal.acmefinancial.net
+Application - servicecenter.ACMEfinancial.net
+4) Create Component - mon - ticketprocessing.internal.ACMEfinancial.net
 
 
 266
 00:47:49.110 --> 00:47:52.770
-Ken Bocchino: And let's do a couple things that to make this a little bit better. A better configuration.
+And let's do a couple things that to make this a little bit better. A better configuration.
 
 # we are going to enable monitoring
 servers are no longer tagged as down.
@@ -1000,133 +825,133 @@ Allow the system to tag servers as down.
 
 267
 00:47:54.090 --> 00:48:04.560
-Ken Bocchino: We can bring those server all the servers backup and then we can add monitoring to this configuration so that instead of just having to manually up down things we can let engine x be responsible for health checking
+We can bring those server all the servers backup and then we can add monitoring to this configuration so that instead of just having to manually up down things we can let NGINX be responsible for health checking
 
 268
 00:48:05.430 --> 00:48:12.240
-Ken Bocchino: actively or passively based on the configuration of monitoring here and ensuring that we are properly.
+actively or passively based on the configuration of monitoring here and ensuring that we are properly.
 
 269
 00:48:13.980 --> 00:48:20.940
-Ken Bocchino: Ensuring health and availability of the service. So now that this is back online. We can probably do a couple calls and see
+Ensuring health and availability of the service. So now that this is back online. We can probably do a couple calls and see
 
 # make a couple more test calls.
 Notice that health monitoring is automatically tagging the miss-configured servers as down and not routing traffic.
 
 270
 00:48:25.140 --> 00:48:32.280
-Ken Bocchino: That we're just now going to the 4103 even though we have all the servers online health monitoring is downing the unhealthy servers.
+That we're just now going to the 4103 even though we have all the servers online health monitoring is downing the unhealthy servers.
 
 271
 00:48:37.050 --> 00:48:45.690
-Ken Bocchino: Lastly, let's talk a little bit about expanding that same service center application on touches on the API management in depth portal capabilities in three
+Lastly, let's talk a little bit about expanding that same service center application on touches on the API management in depth portal capabilities in three
 
 272
 00:48:46.410 --> 00:48:52.350
-Ken Bocchino: These are preview and preview mode. But let's go love to show this to you this functionality to already now.
+These are preview and preview mode. But let's go love to show this to you this functionality to already now.
 
 273
 00:48:53.040 --> 00:48:59.760
-Ken Bocchino: So Tony, the green Tony is part of the service center application team. He works with other teams to develop customer call center applications.
+So Tony, the green Tony is part of the service center application team. He works with other teams to develop customer call center applications.
 
 274
 00:49:00.360 --> 00:49:11.640
-Ken Bocchino: They're working to consume the new account service and struggling to figure out how to integrate it into the various parts of the the service center app. So let's go with Tony kind of poke around the
+They're working to consume the new account service and struggling to figure out how to integrate it into the various parts of the the service center app. So let's go with Tony kind of poke around the
 
 275
 00:49:14.220 --> 00:49:15.270
-Ken Bocchino: The accounts page.
+The accounts page.
 
 276
 00:49:18.810 --> 00:49:27.210
-Ken Bocchino: And see that we have some authentication required so apparently we need to do something else to to get connected to the accounts endpoint.
+And see that we have some authentication required so apparently we need to do something else to to get connected to the accounts endpoint.
 
-# https://accounts.internal.acmefinancial.net/accounts/sadf
+# https://accounts.internal.ACMEfinancial.net/accounts/sadf
 
 277
 00:49:28.290 --> 00:49:31.500
-Ken Bocchino: But we have a way to do that within Acme financial we set up the dev portal.
+But we have a way to do that within ACME financial we set up the dev portal.
 
-http://devportal.acmefinaincial.net:8090/docs
+http://devportal.ACMEfinaincial.net:8090/docs
 
 278
 00:49:32.580 --> 00:49:40.260
-Ken Bocchino: And we can see what is the documentation around the various endpoints and services available through the internal services.
+And we can see what is the documentation around the various endpoints and services available through the internal services.
 
 279
 00:49:40.740 --> 00:49:48.660
-Ken Bocchino: And we see we have some documentation that the purple Tony establish as he published his API by the Open API spec important that we saw earlier.
+And we see we have some documentation that the purple Tony establish as he published his API by the Open API spec important that we saw earlier.
 
-# in API review: accounts.internal.acmefinancial.net
+# in API review: accounts.internal.ACMEfinancial.net
 notice that parameters of auth is required.
 
 280
 00:49:49.320 --> 00:50:05.490
-Ken Bocchino: And we can see that there's a couple different parameters that are required for this component to function properly specifically authentication and we know now know that the author parameter with a query is required for for this to work. So let's go and successfully authenticate.
+And we can see that there's a couple different parameters that are required for this component to function properly specifically authentication and we know now know that the author parameter with a query is required for for this to work. So let's go and successfully authenticate.
 
 281
 00:50:06.660 --> 00:50:15.960
-Ken Bocchino: Now that we know and have to read the documentation around the accounts page to hear providing the proper authentication, we're able to get
+Now that we know and have to read the documentation around the accounts page to hear providing the proper authentication, we're able to get
 
-# in browser, bookmark Controller demo -> acmefinancial.net -> Authed-https://accounts.internal.acmefinancial.net/account-types/coolaccounts?Auth=.....
+# in browser, bookmark Controller demo -> ACMEfinancial.net -> Authed-https://accounts.internal.ACMEfinancial.net/account-types/coolaccounts?Auth=.....
 
 282
 00:50:17.100 --> 00:50:18.300
-Ken Bocchino: To the actual endpoint.
+To the actual endpoint.
 
 283
 00:50:19.800 --> 00:50:23.820
-Ken Bocchino: And we can look at that configuration further within the API definition.
+And we can look at that configuration further within the API definition.
 
 # Controller GUI
 APIs -> API definitions
 
 284
 00:50:25.980 --> 00:50:36.840
-Ken Bocchino: Within our space. So the identity provider for lending product here and we can see the the accounts client server for the service center client I was what's
+Within our space. So the identity provider for lending product here and we can see the the accounts client server for the service center client I was what's
 
 # select the identity provider for lending-prod environment
 
 285
 00:50:37.410 --> 00:50:44.880
-Ken Bocchino: The green Tony was provided with one he talked to the purple Tony to say, hey, how do I authenticate this now that I have an off requirement.
+The green Tony was provided with one he talked to the purple Tony to say, hey, how do I authenticate this now that I have an off requirement.
 
 286
 00:50:49.530 --> 00:50:56.670
-Ken Bocchino: So lastly, let's talk a little about some security capabilities we're happy to preview in the three dot are happy to have in the three.oh release.
+So lastly, let's talk a little about some security capabilities we're happy to preview in the three dot are happy to have in the three.oh release.
 
 287
 00:50:57.810 --> 00:51:04.230
-Ken Bocchino: There's some reports to the mortgage team has had some inability to login as important part of the rate. Sorry, as a
+There's some reports to the mortgage team has had some inability to login as important part of the rate. Sorry, as a
 
 288
 00:51:04.740 --> 00:51:22.080
-Ken Bocchino: Blending organization and the login team is specifically said, hey, our services, seeing some massive spike and CPU load. So let's provide some relief to the mortgage team and take a look at the configuration of the mortgage application again we can see
+Blending organization and the login team is specifically said, hey, our services, seeing some massive spike and CPU load. So let's provide some relief to the mortgage team and take a look at the configuration of the mortgage application again we can see
 
 289
 00:51:23.250 --> 00:51:23.940
-Ken Bocchino: You up to it.
+You up to it.
 
 290
 00:51:26.760 --> 00:51:35.640
-Ken Bocchino: So our mortgage application in our pipeline has a couple different components, a web login and web API endpoints and we see the configuration right now via get
+So our mortgage application in our pipeline has a couple different components, a web login and web API endpoints and we see the configuration right now via get
 
 # postman
-Application - mortgage.acmefinancial.net
+Application - mortgage.ACMEfinancial.net
 Note component review: web, login, webapi
 Follow is a review of the Login component.
 
 291
 00:51:39.480 --> 00:51:46.650
-Ken Bocchino: is configured with to backend servers for the login process we're doing HTTP read encryption. So regressing
+is configured with to backend servers for the login process we're doing HTTP read encryption. So regressing
 
 292
 00:51:48.690 --> 00:51:56.250
-Ken Bocchino: We're increasing traffic to slash login by HTTPS and we're sending traffic to these back end servers on HTTPS, so we can support those various permutations of
+We're increasing traffic to slash login by HTTPS and we're sending traffic to these back end servers on HTTPS, so we can support those various permutations of
 
 293
 00:51:56.820 --> 00:52:07.890
-Ken Bocchino: traffic coming through for the component, but we don't have any rate limiting on here. So let's add some rate limiting to our configuration again within the inline security section. Let's send it really low, just to provide some relief.
+traffic coming through for the component, but we don't have any rate limiting on here. So let's add some rate limiting to our configuration again within the inline security section. Let's send it really low, just to provide some relief.
 
 # select 3) Create component - login - with rate
 Set low to provide some releif. (1 second)
@@ -1134,11 +959,11 @@ PUT
 
 294
 00:52:09.780 --> 00:52:15.720
-Ken Bocchino: And now we're updating that component. And let's go and test connecting to that mortgage login page.
+And now we're updating that component. And let's go and test connecting to that mortgage login page.
 
 295
 00:52:19.290 --> 00:52:32.940
-Ken Bocchino: And so we can see again not a sexy back end, but we can see the request that came through to the back end server. And if we really push hard. We can start seeing that we're getting off for 29 thing that we're rate limiting and the engine X solution is providing that limited capability.
+And so we can see again not a sexy back end, but we can see the request that came through to the back end server. And if we really push hard. We can start seeing that we're getting off for 29 thing that we're rate limiting and the NGINX solution is providing that limited capability.
 
 # browser test login
 https://mortgage.camefinancial.net/login
@@ -1147,27 +972,27 @@ refresh quickly to hit the rate limit 529
 
 296
 00:52:34.830 --> 00:52:39.060
-Ken Bocchino: Lastly, we'll end with David again. David has been able to provide
+Lastly, we'll end with David again. David has been able to provide
 
 297
 00:52:40.290 --> 00:52:55.950
-Ken Bocchino: A methodology for the various dev ops teams and other business units to be able to enable self service, while still having the management and control that he needs to provide that platform and standards and manage the infrastructure for those various organizations organizations.
+A methodology for the various dev ops teams and other business units to be able to enable self service, while still having the management and control that he needs to provide that platform and standards and manage the infrastructure for those various organizations organizations.
 
 298
 00:52:57.090 --> 00:53:14.580
-Ken Bocchino: He's been able to use that are back capability to empower that self service. So now if we take a look at what David can see. Let's go and spend some time exploring how he can configure and manage the infrastructure and the roles within his organization to log off as Olivia.
+He's been able to use that are back capability to empower that self service. So now if we take a look at what David can see. Let's go and spend some time exploring how he can configure and manage the infrastructure and the roles within his organization to log off as Olivia.
 
 299
 00:53:16.260 --> 00:53:17.370
-Ken Bocchino: And log back in as David
+And log back in as David
 
 # contoller GUI
 logout
-Login: admin@acmefinancial.net
+Login: admin@ACMEfinancial.net
 
 300
 00:53:27.540 --> 00:53:38.880
-Ken Bocchino: Let's join uh let's join David when he's looking at that infrastructure. We have a quick inventory of all the engine X instances deployed with the names and the information about how how they're doing.
+Let's join uh let's join David when he's looking at that infrastructure. We have a quick inventory of all the NGINX instances deployed with the names and the information about how how they're doing.
 
 # Contorller GUI
 infrastructure
@@ -1176,38 +1001,38 @@ review config
 
 301
 00:53:40.230 --> 00:53:49.320
-Ken Bocchino: We can take a look at the configuration or there's there's established settings and not the full config at this point.
+We can take a look at the configuration or there's there's established settings and not the full config at this point.
 
 302
 00:53:49.770 --> 00:53:56.640
-Ken Bocchino: As well as looking at the graphs and information about how the engine X instance itself is performing. So let's go to that dev environment.
+As well as looking at the graphs and information about how the NGINX instance itself is performing. So let's go to that dev environment.
 
 # select the Graphs and dev-nginx-1
 
 303
 00:53:57.090 --> 00:54:10.950
-Ken Bocchino: Where we've done a lot of our demo and our testing and we can see all the wonderful engine X instance statistics that are available and the GUI, as well as the same ones being accessible via the API demonstrated early earlier.
+Where we've done a lot of our demo and our testing and we can see all the wonderful NGINX instance statistics that are available and the GUI, as well as the same ones being accessible via the API demonstrated early earlier.
 
 304
 00:54:12.180 --> 00:54:27.330
-Ken Bocchino: Additionally, we have our analyzer for these various instances to inform them if engine X controller isn't using the HTC or API module to mark mark configuration, the standards that are employed by their organization.
+Additionally, we have our analyzer for these various instances to inform them if NGINX controller isn't using the HTC or API module to mark mark configuration, the standards that are employed by their organization.
 
 # select analyzer
 select instance
 
 305
 00:54:31.260 --> 00:54:36.810
-Ken Bocchino: Moving on. Let's take a look at some of the things that he can do from an alerts and events perspective.
+Moving on. Let's take a look at some of the things that he can do from an alerts and events perspective.
 
 # select Analytics - events
 
 306
 00:54:40.470 --> 00:54:52.020
-Ken Bocchino: So now, new within controller. We have an ability to view all the events that are happening within, within the environment, based on various categories and based on various event levels.
+So now, new within controller. We have an ability to view all the events that are happening within, within the environment, based on various categories and based on various event levels.
 
 307
 00:54:53.100 --> 00:55:01.050
-Ken Bocchino: So we can see if there's any critical events any failures to load engine X configuration, all that is now being exposed to David via both the GUI
+So we can see if there's any critical events any failures to load NGINX configuration, all that is now being exposed to David via both the GUI
 
 # postman
 Analytics
@@ -1215,47 +1040,47 @@ GET events
 
 308
 00:55:01.470 --> 00:55:18.720
-Ken Bocchino: RV so chooses via the API. So we can go with same filters that were showing earlier around looking at specific instances or specific time period and get a response by an API to inform them of what events has happened in a way that he can consume this now inside of
+RV so chooses via the API. So we can go with same filters that were showing earlier around looking at specific instances or specific time period and get a response by an API to inform them of what events has happened in a way that he can consume this now inside of
 
 309
 00:55:19.740 --> 00:55:21.330
-Ken Bocchino: Inside of his other tooling.
+Inside of his other tooling.
 
 310
 00:55:27.330 --> 00:55:38.400
-Ken Bocchino: So, with this we end our Acme financial customer case study, and we hope this has demonstrated some of the new and and Cape cool capabilities that we're now exposing with engine x three.
+So, with this we end our ACME financial customer case study, and we hope this has demonstrated some of the new and and Cape cool capabilities that we're now exposing with NGINX three.
 
 
 
 
 ## Hosts notes:
 
-10.1.20.9 devportal.dev.acmefinancial.net
-10.1.20.8 trading.dev.acmefinancial.net
-10.1.20.8 trading-api.dev.acmefinancial.net
-10.1.20.8 www.dev.acmefinancial.net
-10.1.20.8 merch.dev.acmefinancial.net
+10.1.20.9 devportal.dev.ACMEfinancial.net
+10.1.20.8 trading.dev.ACMEfinancial.net
+10.1.20.8 trading-api.dev.ACMEfinancial.net
+10.1.20.8 www.dev.ACMEfinancial.net
+10.1.20.8 merch.dev.ACMEfinancial.net
 
 
-10.1.10.5 trading.acmefinancial.net
-10.1.10.6 trading-api.acmefinancial.net
-10.1.10.5 www.acmefinancial.net
-10.1.10.6 merch.acmefinancial.net
+10.1.10.5 trading.ACMEfinancial.net
+10.1.10.6 trading-api.ACMEfinancial.net
+10.1.10.5 www.ACMEfinancial.net
+10.1.10.6 merch.ACMEfinancial.net
 
-10.1.10.5 mortgage.acmefinancial.net
-10.1.10.6 ratecalculator.acmefinancial.net
-10.1.10.5 servicecenter.acmefinancial.net
-10.1.10.16 accounts.internal.acmefinancial.net
-10.1.10.17 ticketprocessing.internal.acmefinancial.net
+10.1.10.5 mortgage.ACMEfinancial.net
+10.1.10.6 ratecalculator.ACMEfinancial.net
+10.1.10.5 servicecenter.ACMEfinancial.net
+10.1.10.16 accounts.internal.ACMEfinancial.net
+10.1.10.17 ticketprocessing.internal.ACMEfinancial.net
 
-10.1.10.7 devportal.acmefinancial.net
+10.1.10.7 devportal.ACMEfinancial.net
 
 
 #trading login 
 #user admin
 #pw iloveblue
 
-#trading-api.dev.acmefinancial.net
+#trading-api.dev.ACMEfinancial.net
 
 #"incomingPattern": "^/blog/(.*)$"
 
