@@ -53,7 +53,8 @@ Follow these steps to complete this task:
 
     1. From the Controller GUI web browser tab
     2. Select the trading.acmefinancial.net App
-    3. Select Edit ![edit](_static/edit.png)
+    3. Select Edit ![edit](_static/app_edit.png)
+
     4. at the bottom of the edit screen select VIEW API REQUEST to review the API used to create or modify this App object.  ![view_api_request](_static/view_api_request.png)
     5. Note the API call, the JSON body, and the copy to clipboard icon all added to enable quick and easy GUI discovery and translation to automation.
 
@@ -67,7 +68,7 @@ A referral program as well as some upload capabilities within the, within the co
 
 1. Explore the trading application
    1. Using Google Chrome, open a new tab
-   2. Enter 'https://trading.dev.acmefinancial.net` as the URL
+   2. Enter https://trading.dev.acmefinancial.net as the URL
    3. Select Login
    4. enter the username: admin with the password iloveblue
    5. Note the dashboard, as we enable new features the dashboard will change, displaying these new capabilities.
