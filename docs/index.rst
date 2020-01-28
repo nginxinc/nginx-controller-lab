@@ -14,4 +14,17 @@ Welcome to the NGINX Controller 3.0 Lab
    :glob:
 
    intro*
-   class*/class*
+   background*
+   module1*
+   module2*
+   module3*
+   module4*
+   module5*
+   module6*
+   module7*
+   module8*
+   module9*
+   module10*
+   module11*
+   module12*
+
