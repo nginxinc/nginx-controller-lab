@@ -8,8 +8,7 @@ Welcome to the NGINX Controller 3.0 Lab
 
 
 .. toctree::
-   :maxdepth: 3
-   :numbered:
+   :maxdepth: 2
    :caption: Contents:
    :glob:
 
@@ -17,3 +16,9 @@ Welcome to the NGINX Controller 3.0 Lab
    background*
    class*/module*/lab*
 
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
