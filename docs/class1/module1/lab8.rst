@@ -42,10 +42,10 @@ Add blog page to the main ACME Financial site with a URI rewrite
       1. http://10.1.20.21:8003
       2. http://10.1.20.22:8003
    
-   10. Add URI Rewrite:
+   10. Add URI Rewrite to match any URI starting with /blog/ and rewrite it to prepend /blog/wordpress/wwwsite/
 
-       1. incoming pattern: ^/blog/(.*)$
-       2. rewrite pattern: /blog/wordpress/wwwsite/$1?
+       1. incoming pattern: `^/blog/(.*)$`
+       2. rewrite pattern: `/blog/wordpress/wwwsite/$1?`
    
    11. Publish
 
