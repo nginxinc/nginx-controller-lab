@@ -1,3 +1,4 @@
+===================================================
 Adding a gateway for the mobile trading application
 ===================================================
 
@@ -7,15 +8,24 @@ Within ACME Financial the request workflow requires David to get involved when a
 Samantha will partner with David to ask for a new gateway with a new certificate to make sure that trading API interaction is secure.
 Let's work through the process of David establishing a new gateway for Samantha.
 
-### Reviewing Role Based Access Control
+Reviewing Role Based Access Control
+===================================
 
-1. Log out as Samantha
+Log out as Samantha
+^^^^^^^^^^^^^^^^^^^^^^
+
    1. In the Controller GUI tab of the web browser
    2. Select the retail dev user in the top right corner then
    3. Select logout
-2. Log in as David
+
+Log in as David
+^^^^^^^^^^^^^^^^^^
+
    1. Login as David using the username: admin@acmefinancial.net with the passord Admin123!@#
-3. Review Role Based Access Control
+
+Review Role Based Access Control
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
    1. Review what David can access across Apps, Components, Environments
    2. Note that he can view all Environments, including Samantha's retail-dev and Olivia's lending-prod
    3. Select Platform from the navigation bar

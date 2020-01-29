@@ -4,7 +4,9 @@ Analytics of your application
 
 In the previous scenario, we should we saw the expansion of the trading application. Now, let's take a look at what statistics are available within NGINX Controller for this application.
 
-1. Viewing analytics in the GUI
+Viewing analytics in the GUI
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
    1. Using the Controller GUI tab of the web browser
    2. Using the navigation bar select the Analytics menu
    3. Select the retail-dev Dashboard
@@ -13,7 +15,9 @@ In the previous scenario, we should we saw the expansion of the trading applicat
     In Controller 3.0 we have the ability to see all the statistics available to Samantha via a dashboard. You can edit and add additional statistics. You can see some of the traffic you have been generating while through the lab.
     This will be expanded into App centricity in future releases.
 
-2. Viewing metrics with the API
+Viewing metrics with the API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
    1. Using Postman
    2. Open the Analytics section
    3. Select `get metrics with filter`

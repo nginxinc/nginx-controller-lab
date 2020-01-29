@@ -15,7 +15,8 @@ Welcome to the NGINX Controller 3.0 Lab
 
    intro*
    background*
-   class*/module*/lab*
+   class1/module1/lab*
+   class1/module2/lab*
 
 Indices and tables
 ==================

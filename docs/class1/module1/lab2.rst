@@ -3,14 +3,14 @@ Extending the Trading application by exposing referral and upload capabilities
 ==============================================================================
 
 Using the GUI
--------------
+=============
 
 Samantha is responsible for the trading application has found that it's been extremely successful and adopted by the retail customers are looking to move fast.
 App teams are running a rolling out new parts of the application using modern application development processes. So what we're going to see is the deployment of new financial transfer functions.
 A referral program as well as some upload capabilities within the, within the controller space. So let's go ahead and begin these changes.
 
 
-1. Explore the trading application
+Explore the trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    1. Using Google Chrome, open a new tab
@@ -20,7 +20,7 @@ A referral program as well as some upload capabilities within the, within the co
    5. Note the dashboard, as we enable new features the dashboard will change, displaying these new capabilities.
 
 
-2. Define a new Transfers Component of the trading.acmefinancial.net application
+Define a new Transfers Component of the trading.acmefinancial.net application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    1. In the Controller GUI return to the Apps section
@@ -57,7 +57,7 @@ A referral program as well as some upload capabilities within the, within the co
     Controller is responsible for getting the desired configuration that we specified thorugh the GUI or the API and getting it to the actual NGINX instance to process traffic.
 
 
-3. review the new section of the Trading application
+Review the new section of the Trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    1. Return to the trading application browser tab and refresh the page
@@ -66,12 +66,12 @@ A referral program as well as some upload capabilities within the, within the co
 Very quickly, you were able to establish a new traffic path configuration and didn't have to directly configure an NGINX instance or understand nginx.conf syntax. Through monitoring and analytics you can see this new component capable of adding value to the business and business unit.
 
 Using the API
--------------
+=============
 
 Now, this is great. Samantha explored Contorller and discovered what she can do the GUI.  But most likely she is going to move forwarding to plumbing these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
 
 
-1. Login as Samantha using the API
+Login as Samantha using the API
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    1. From the desktop open Postman
@@ -82,7 +82,7 @@ Now, this is great. Samantha explored Contorller and discovered what she can do 
     You are now logged into the API as Samantha.  Controller returned a cookie that will be used for authenticating then executing the following commands.
 
 
-2. Enable the Referrals capability
+Enable the Referrals capability
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    1. In Postman open the section `Retail-Dev Environment`
@@ -100,12 +100,14 @@ Now, this is great. Samantha explored Contorller and discovered what she can do 
     Through the GET you can see the eventually consistent behavior of the system as the configuration is then built and applied to the referenced NGINX instances.
 
 
-3. review the new section of the Trading application
+Review the new section of the Trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    1. Return to the trading application browser tab and refresh the page
    2. Note the new |referrals| capability that has been added to the applicaton.  Previously there was a |coming_soon| placeholder.
    
    .. |coming_soon| image:: ../../_static/coming_soon.png
+      :scale: 50 %
    
    .. |referrals| image:: ../../_static/referrals.png
+      :scale: 50 %
