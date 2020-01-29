@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = CICDwithDevOpstools
+SPHINXPROJ    = NGINX-Controller-3-Demo
 SOURCEDIR     = .
 BUILDDIR      = _build
 

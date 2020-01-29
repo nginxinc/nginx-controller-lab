@@ -11,8 +11,8 @@ to the public Internet for Samantha's mobile application to receive API calls.
 Within ACME Financial the request workflow requires David to get involved when 
 any new endpoint is exposed to the public internet and to ensure security for API
 calls coming into the bank. Samantha will partner with David to ask for a new gateway 
- with a new certificate
- to make sure that trading API interaction is secure.
+with a new certificate
+to make sure that trading API interaction is secure.
 Let's work through the process of David establishing a new gateway for Samantha.
 
 Reviewing Role Based Access Control

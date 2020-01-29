@@ -24,4 +24,4 @@ Viewing metrics with the API
    4. Review the query settings of resolution of 30 minutes for the aggregation of SUM of 500 errors with a filter to NGINX instance 4 or 6
    5. Select Send
 
-    The return is time series data that are a summary of status 500 messages counted every 30 minutes.  The API offers flexibility to craft a number of different queries using filters, resolution over time periods, and aggreagations.
+     The return is time series data that are a summary of status 500 messages counted every 30 minutes.  The API offers flexibility to craft a number of different queries using filters, resolution over time periods, and aggreagations.

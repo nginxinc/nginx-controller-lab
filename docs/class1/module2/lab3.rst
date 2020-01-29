@@ -22,9 +22,8 @@ GET the configuration
 Review rate limiting
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Select `Create Component -login - with rate `
-   2. Note the Security section and the rateLimit. The rate limit is set low ( 1 second ) to 
-   provide some relief.
+   1. Select `Create Component -login - with rate`
+   2. Note the Security section and the rateLimit. The rate limit is set low ( 1 second ) to provide some relief.
    3. Click Send to push the configuration change (PUT method)
 
 Test the Rate Limit configuration

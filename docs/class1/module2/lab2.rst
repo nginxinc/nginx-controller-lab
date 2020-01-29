@@ -10,7 +10,7 @@ communicating between each other. Olivia is getting some reports from the call
 center agents that the application is having issues.  We are going to 
 troubleshoot and understand what might be going on. It looks like some of the issues 
 might be with the ticket processing service, but let's take a look at what the Controller
- dashboards could show us about the application and components.
+dashboards could show us about the application and components.
 
 Log out as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -46,8 +46,7 @@ Identify where the 500 error is coming from
 
    1. Returning to Postman
    2. Click Send until you receive a 500 error
-   3. Note the serverPort in the response
-      the 500 error only happens when the request is routed to a specific workload serverPort
+   3. Note the serverPort in the response the 500 error only happens when the request is routed to a specific workload serverPort
 
 Triage a workaround
 ^^^^^^^^^^^^^^^^^^^
@@ -55,13 +54,13 @@ Triage a workaround
    1. Return to the Controller GUI
    2. Select Service from the Navigation bar
    3. Select the App `servicecenter.acmefinancial.net`
-   4. Select the Component `ticketprocessing.internal.acmefinancial.net`and edit it
+   4. Select the Component `ticketprocessing.internal.acmefinancial.net` and edit it
    5. Select Workload Groups
    6. Edit the `servers` workload group
    7. Edit the two backend workload URIs using port 6203
 
-      1. Set "Is Down" to `True`
-      2. Click Done
+     1. Set "Is Down" to `True`
+     2. Click Done
 
    8. Publish the changes
 
