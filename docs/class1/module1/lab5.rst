@@ -5,7 +5,8 @@ Adding a new Gateway
 Add a Gateway using the GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. In the Controller GUI tab of the web browser
+   1. In the Controller GUI tab of the web browser (you **MUST** do this 
+   from the Jumphost / Chrome)
    2. Select the Services menu from the navigation bar
    3. Select Gateways
    4. Select Overview
@@ -19,8 +20,10 @@ Add a Gateway using the GUI
    12. Select Done
    13. For the Certificate Reference select |createNew|
    14. Name the new certificate: trading-api.acmefinancial.net
-   15. Browse to the trading-api.dev.acmefinancial.net.crt certificate
-   16. Browse to the trading-api.dev.acmefinancial.net.key key
+   15. Browse to the trading-api.dev.acmefinancial.net.crt certificate (it's 
+   in your jumphost,  in Documents > Certs)
+   16. Browse to the trading-api.dev.acmefinancial.net.key key (it's 
+   in your jumphost,  in Documents > Certs)
    17. Select Submit to create the new certificate
    18. Select Next
    19. Select Next

@@ -21,7 +21,7 @@ Credentials
 - Windows Jumphost:
     - administrator / BZ8D8MCVR
 
-- NGINX Controller:
+- NGINX Controller (From Jumphost: https://10.1.1.5 - use CHROME):
     - admin@acmefinancial.net / Admin123!@#  ( aka David )
     - retail-dev@acmefinancial.net / Admin123!@#   ( aka Samantha )
     - lending-admin@acmefinancial.net / Admin123!@#  ( aka Olivia )
