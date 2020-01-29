@@ -2,7 +2,7 @@
 Analytics of your application
 =============================
 
-In the previous scenario, we should we saw the expansion of the trading application. Now, let's take a look at what statistics are available within NGINX Controller for this application.
+In the previous scenario, we saw the expansion of the trading application. Now, let's take a look at what statistics are available within NGINX Controller for this application.
 
 Viewing analytics in the GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
