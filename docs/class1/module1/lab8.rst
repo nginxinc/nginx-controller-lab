@@ -9,45 +9,45 @@ So let's return to Controller as Samantha and take a look at some of the additio
 Log out as David
 ^^^^^^^^^^^^^^^^^^^
 
-   1. Returning to the Controller GUI
-   2. Select |admin| in the top right
-   3. Select |logout|
+    1. Returning to the Controller GUI
+    2. Select |admin| in the top right
+    3. Select |logout|
 
 Log in as Samantha
 ^^^^^^^^^^^^^^^^^^^^^
 
-   1. Login as Samantha using the username: `retail-dev@acmefinancial.net` with the passord `Admin123!@#`
+    1. Login as Samantha using the username: `retail-dev@acmefinancial.net` with the passord `Admin123!@#`
 
 Review the Components added via the API
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Select Services from the navigation menu
-   2. Select Apps
-   3. Select `trading.acmefinancial.net`
-   4. Review the components added through the API, note the commonality between the API and GUI
+    1. Select Services from the navigation menu
+    2. Select Apps
+    3. Select `trading.acmefinancial.net`
+    4. Review the components added through the API, note the commonality between the API and GUI
 
 Add blog page to the main ACME Financial site with a URI rewrite
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Return to the list of all Apps
-   2. Select `www.acmefinancial.net`
-   3. Select View
-   4. Select Create Component
-   5. Name: blog
-   6. Gateway: www.acmefinancial.net
-   7. URI: /blog
-   8. Add Workload Group: wordpress
-   9. Add Backend Workload URIs:
+    1. Return to the list of all Apps
+    2. Select `www.acmefinancial.net`
+    3. Select View
+    4. Select Create Component
+    5. Name: blog
+    6. Gateway: www.acmefinancial.net
+    7. URI: /blog
+    8. Add Workload Group: wordpress
+    9. Add Backend Workload URIs:
 
       1. http://10.1.20.21:8003
       2. http://10.1.20.22:8003
-   
-   10. Add URI Rewrite to match any URI starting with /blog/ and rewrite it to prepend /blog/wordpress/wwwsite/
+    
+    10. Add URI Rewrite to match any URI starting with /blog/ and rewrite it to prepend /blog/wordpress/wwwsite/
 
-       1. incoming pattern: `^/blog/(.*)$`
-       2. rewrite pattern: `/blog/wordpress/wwwsite/$1?`
-   
-   11. Publish
+        1. incoming pattern: `^/blog/(.*)$`
+        2. rewrite pattern: `/blog/wordpress/wwwsite/$1?`
+    
+    11. Publish
 
 Test the URI rewrite
 ^^^^^^^^^^^^^^^^^^^^^^^

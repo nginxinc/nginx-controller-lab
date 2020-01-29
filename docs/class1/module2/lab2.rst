@@ -15,84 +15,84 @@ dashboards could show us about the application and components.
 Log out as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Go back to the Controller GUI
-   2. Select retail dev in the top right
-   3. Select |logout|
+    1. Go back to the Controller GUI
+    2. Select retail dev in the top right
+    3. Select |logout|
 
 Log in as Olivia
 ^^^^^^^^^^^^^^^^^^^
 
-   1. Login as Olivia using the username: lending-admin@acmefinancial.net with the passord Admin123!@#
+    1. Login as Olivia using the username: lending-admin@acmefinancial.net with the passord Admin123!@#
 
 Test the web site
 ^^^^^^^^^^^^^^^^^^^^
 
-   1. Using Postman (in the JumpHost)
-   2. Expand the `Traffic Tests` section
-   3. Select the ticketprocessing.internal.acmefinancial.net request
-   4. Select Send a few times
-   5. Note that you will randomly receive a 500 response
+    1. Using Postman (in the JumpHost)
+    2. Expand the `Traffic Tests` section
+    3. Select the ticketprocessing.internal.acmefinancial.net request
+    4. Select Send a few times
+    5. Note that you will randomly receive a 500 response
 
 Review statsus codes
 ^^^^^^^^^^^^^^^^^^^^
 
-   1. Open Analytics from the Navigation bar
-   2. Select the Lending-Prod dashboard
-   3. Scroll to the bottom and you will find the internal system - 500 service errors graph
-   4. Note the spikes of 500 errors
+    1. Open Analytics from the Navigation bar
+    2. Select the Lending-Prod dashboard
+    3. Scroll to the bottom and you will find the internal system - 500 service errors graph
+    4. Note the spikes of 500 errors
 
 Identify where the 500 error is coming from
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Returning to Postman
-   2. Click Send until you receive a 500 error
-   3. Note the serverPort in the response the 500 error only happens when the request is routed to a specific workload serverPort
+    1. Returning to Postman
+    2. Click Send until you receive a 500 error
+    3. Note the serverPort in the response the 500 error only happens when the request is routed to a specific workload serverPort
 
 Triage a workaround
 ^^^^^^^^^^^^^^^^^^^
 
-   1. Return to the Controller GUI
-   2. Select Service from the Navigation bar
-   3. Select the App `servicecenter.acmefinancial.net`
-   4. Select the Component `ticketprocessing.internal.acmefinancial.net` and edit it
-   5. Select Workload Groups
-   6. Edit the `servers` workload group
-   7. Edit the two backend workload URIs using port 6203
+    1. Return to the Controller GUI
+    2. Select Service from the Navigation bar
+    3. Select the App `servicecenter.acmefinancial.net`
+    4. Select the Component `ticketprocessing.internal.acmefinancial.net` and edit it
+    5. Select Workload Groups
+    6. Edit the `servers` workload group
+    7. Edit the two backend workload URIs using port 6203
 
-     1. Set "Is Down" to `True`
-     2. Click Done
+      1. Set "Is Down" to `True`
+      2. Click Done
 
-   8. Publish the changes
+    8. Publish the changes
 
 Test the web site again
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Using Postman
-   2. Expand the `Traffic Tests` section
-   3. Select the ticketprocessing.internal.acmefinancial.net call
-   4. Click Send a few times
-   5. Note that you no longer receive a 500 response
+    1. Using Postman
+    2. Expand the `Traffic Tests` section
+    3. Select the ticketprocessing.internal.acmefinancial.net call
+    4. Click Send a few times
+    5. Note that you no longer receive a 500 response
 
 Setting a Health monitor from the pipeline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Using Postman
-   2. Expand the `Landing-Prod Environment` section
-   3. Expand `Application - servicecenter.acmefinancial.net`
-   4. Expand `Establish APIM Defs and Components - ticketprocessing.internal.acmefinancial.net`
-   5. Select `Create Component - mon - ticketprocessing.internal.acmefinancial.net`
-   6. Note the monitoring section
-   7. Note that isDown is back to false for each workload URI
-   8. Click on Send to push this configuration (PUT method)
+    1. Using Postman
+    2. Expand the `Landing-Prod Environment` section
+    3. Expand `Application - servicecenter.acmefinancial.net`
+    4. Expand `Establish APIM Defs and Components - ticketprocessing.internal.acmefinancial.net`
+    5. Select `Create Component - mon - ticketprocessing.internal.acmefinancial.net`
+    6. Note the monitoring section
+    7. Note that isDown is back to false for each workload URI
+    8. Click on Send to push this configuration (PUT method)
 
 Test the web site again
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Using Postman
-   2. Expand the Traffic Tests section
-   3. Select the ticketprocessing.internal.acmefinancial.net call
-   4. Select Send a few times
-   5. Note that you no longer reseive a 500 response
+    1. Using Postman
+    2. Expand the Traffic Tests section
+    3. Select the ticketprocessing.internal.acmefinancial.net call
+    4. Select Send a few times
+    5. Note that you no longer reseive a 500 response
 
 This is a better configuration. Servers are no longer tagged as down permanently in the 
 configuration. TAdding monitoring to this configuration so that instead of just having to 
