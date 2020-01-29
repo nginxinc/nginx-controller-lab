@@ -3,7 +3,7 @@ Extending www.acmefinancial.net with a blog Component
 =====================================================
 
 Samantha is looking to expand on the marketing sites that are promoting the various technologies that the ACME Financial organization has been able to produce.
-She wants to build a brand new application component within the marketing page www.acnefinancial.net and introduce the new blog capability so they can start blogging about the trading application.
+She wants to build a new application component within the marketing site www.acmefinancial.net and introduce a new blog capability so they can start blogging about the trading application.
 So let's return to Controller as Samantha and take a look at some of the additional feature functionality with the ADC use cases of URI rewrite.
 
 Log out as David
@@ -16,7 +16,7 @@ Log out as David
 Log in as Samantha
 ^^^^^^^^^^^^^^^^^^^^^
 
-   1. Login as Samantha using the username: retail-dev@acmefinancial.net with the passord Admin123!@#
+   1. Login as Samantha using the username: `retail-dev@acmefinancial.net` with the passord `Admin123!@#`
 
 Review the Components added via the API
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
