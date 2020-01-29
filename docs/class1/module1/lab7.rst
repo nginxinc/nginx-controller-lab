@@ -1,4 +1,5 @@
-### Reviewing configuration state through the API at a higher level
+Reviewing configuration state through the API at a higher level
+===============================================================
 
 Just like everything else we can go and do a get and see if we're in a fully configured state. And we can see that state from a higher level order. So we can actually take a look at the configuration state across an Application or Environment.
 Within the retail-dev environment. So we want to see a list of all of our components and gateways and what children we have within the space, how many components, How many apps, etc.

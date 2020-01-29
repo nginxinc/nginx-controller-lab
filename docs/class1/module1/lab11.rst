@@ -1,4 +1,5 @@
-## Protecting your application with rate limiting
+Protecting your application with rate limiting
+==============================================
 
 There are reports to the mortgage team that some folks have had the inability to login.
 The mortgage team has reported: "hey, our service is seeing some massive spike and CPU load."

@@ -1,4 +1,5 @@
-## The www.acmefinancial.net is having issues
+The www.acmefinancial.net is having issues
+==========================================
 
 Let's at the merchandise site that's ACME Financial retail has. They have embraced this whole ACME corporate branding and new hipsters that love these kinds of chochky branded materials.  ACME Financial decided to put up a merchandise site.
 But support has been receiving some complaints. In end to end testing of the ACME store in the development environment it was identified that the shopping cart experience is not ideal.

@@ -1,4 +1,5 @@
-## Triaging and handling 500 errors with a large call center application
+Triaging and handling 500 errors with a large call center application
+=====================================================================
 
 Let's take a look at some of the problems with a large call center application that Olivia is responsible for. 
 It's a complicated three tier application with internal services that are communicating between each other.
@@ -8,7 +9,7 @@ It looks like some of the issues might be with the ticket processing service, bu
 1. Log out as Samantha
    1. Returing to the Controller GUI
    2. Select retail dev in the top right
-   3. Select ![Log Out](_static/log_out.png)
+   3. Select ![Log Out](../../_static/log_out.png)
 2. Log in as Olivia
    1. Login as Olivia using the username: lending-admin@acmefinancial.net with the passord Admin123!@#
 3. Test the web site
@@ -32,7 +33,7 @@ It looks like some of the issues might be with the ticket processing service, bu
    2. Select Service from the Navigation bar
    3. Select the App servicecenter.acmefinancial.net
    4. Select the Component ticketprocessing.internal.acmefinancial.net
-   5. Select ![Edit Component](_static/edit_component.png)
+   5. Select ![Edit Component](../../_static/edit_component.png)
    6. Select Workload Groups
    7. Edit the servers workload group
    8. Edit the two backend workload URIs using port 6203

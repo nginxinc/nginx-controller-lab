@@ -1,11 +1,12 @@
-### Adding a new Gateway
+Adding a new Gateway
+====================
 
 1. Add a Gateway using the GUI
    1. In the Controller GUI tab of the web browser
    2. Select the Services menu from the navigation bar
    3. Select Gateways
    4. Select Overview
-   5. Select ![create](_static/create.png)
+   5. Select ![create](../../_static/create.png)
    6. Enter the Name: trading-api.acmefinancial.net
    7. Select the environment:  Retail Dev
    8. Select Next
@@ -13,7 +14,7 @@
    10. Select Next
    11. Add the URI: https://trading-api.acmefinancial.net
    12. Select Done
-   13. For the Certificate Reference select ![Create New](_static/create_new.png)
+   13. For the Certificate Reference select ![Create New](../../_static/create_new.png)
    14. Name the new certificate: trading-api.acmefinancial.net
    15. Browse to the trading-api.dev.acmefinancial.net.crt certificate
    16. Browse to the trading-api.dev.acmefinancial.net.key key

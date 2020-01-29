@@ -1,4 +1,5 @@
-# The ACME Financial story
+The ACME Financial story
+========================
 
 ACME Financial was founded in 1965.
 During the 1980 recession in America, ACME financial spun off to provide lending assistance for its customers. This created a lending business unit and in 2001 asked me financial increased to start focusing on the retail personal finance space.
