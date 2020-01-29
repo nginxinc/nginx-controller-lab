@@ -2,10 +2,17 @@
 Adding a gateway for the mobile trading application
 ===================================================
 
-The trading application has been a great product with a web broswer GUI. The business unit wants to expand this to a new mobile application so that ACME Financial retail customers can do trades on the go.
-To enable this noe mobile API for customers ACME Financial needs to expose a brand new gateway to the public Internet for Samantha's mobile application to receive API calls.
-Within ACME Financial the request workflow requires David to get involved when any new endpoint is exposed to the public internet and to ensure security for API calls coming into the bank.
-Samantha will partner with David to ask for a new gateway with a new certificate to make sure that trading API interaction is secure.
+The trading application has been a great product with a web broswer GUI. 
+The business unit wants to expand this to a new mobile application so that ACME 
+Financial retail customers can do trades on the go.
+To enable this one mobile API for customers ACME Financial needs to expose a 
+brand new gateway 
+to the public Internet for Samantha's mobile application to receive API calls.
+Within ACME Financial the request workflow requires David to get involved when 
+any new endpoint is exposed to the public internet and to ensure security for API
+calls coming into the bank. Samantha will partner with David to ask for a new gateway 
+ with a new certificate
+ to make sure that trading API interaction is secure.
 Let's work through the process of David establishing a new gateway for Samantha.
 
 Reviewing Role Based Access Control
@@ -26,7 +33,7 @@ Log in as David
 Review Role Based Access Control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Review what David can access across Apps, Components, Environments
+   1. Review what David can access across Apps, Components, Environments (in the `Services` Menu)
    2. Note that he can view all Environments, including Samantha's retail-dev and Olivia's lending-prod
    3. Select Platform from the navigation bar
    4. Select Roles
