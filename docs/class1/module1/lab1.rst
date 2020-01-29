@@ -66,7 +66,7 @@ Explore API actions in the GUI while editing
   2. Select the trading.acmefinancial.net App
   3. Select Edit 
     
-    .. image:: ../../_static/edit.png
+    .. image:: ../../_static/app_edit.png
        :scale: 60 %
 
   4. at the bottom of the edit screen select VIEW API REQUEST to review the API used to create or modify this App object.  

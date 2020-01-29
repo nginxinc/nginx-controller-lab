@@ -19,7 +19,7 @@ Credentials
 ===========
 
 - Windows Jumphost:
-    - .\administrator / BZ8D8MCVR
+    - administrator / BZ8D8MCVR
 
 - NGINX Controller:
     - admin@acmefinancial.net / Admin123!@#  ( aka David )
