@@ -9,7 +9,7 @@ So let's return to Controller as Samantha and take a look at some of the additio
 Log out as David
 ^^^^^^^^^^^^^^^^^^^
 
-   1. Returing to the Controller GUI
+   1. Returning to the Controller GUI
    2. Select |admin| in the top right
    3. Select |logout|
 
