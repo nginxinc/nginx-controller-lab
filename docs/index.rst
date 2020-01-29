@@ -1,8 +1,9 @@
+========================
 NGINX Controller 3.0 Lab
 ========================
 
 Welcome
--------
+=======
 
 Welcome to the NGINX Controller 3.0 Lab
 
