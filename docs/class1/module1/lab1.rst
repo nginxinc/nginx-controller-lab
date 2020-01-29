@@ -7,7 +7,7 @@ Follow these steps to complete this task:
 Login to Controller as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  1. Open the Controller web interface and logon using the username: retail-dev@ACMEfinancial.net with the password:  Admin123!@#
+  1. Open the Controller web interface and logon using the username: `retail-dev@ACMEfinancial.net` with the password:  `Admin123!@#`
 
 Review Samantha's view within Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -35,7 +35,7 @@ Review Samantha's view within Controller
 Explore the documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Samantha is also becoming accustomed to the new API for controller. She is going to be able to use this new UX experience to both work visually with the product as well as seeing how to automate and use the new API that's available with Controller.
+Samantha is also becoming accustomed to the new API for controller. She is going to be able to use this new UX experience to  work both visually with the product as well as seeing how to automate and use the new API that's available with Controller.
 
   1. From the Controller UI, select the help icon in the Navigation bar.  
     
