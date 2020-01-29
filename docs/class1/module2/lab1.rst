@@ -1,48 +1,45 @@
-Lab – Install a |f5| |bip| Appliance
-------------------------------------
+==========================================
+The www.acmefinancial.net is having issues
+==========================================
 
-.. TODO:: Needs lab description
+Let's at the merchandise site that's ACME Financial retail has. They have embraced this whole ACME corporate branding and new hipsters that love these kinds of chochky branded materials.  ACME Financial decided to put up a merchandise site.
+But support has been receiving some complaints. In end to end testing of the ACME store in the development environment it was identified that the shopping cart experience is not ideal.
+Let's take a look at what's happening there. Starting off with a little debugging session.
 
-In this lab we will unpack and install the |bip| Appliance into a rack in your
-datacenter.
+View the symptom
+^^^^^^^^^^^^^^^^^^^
 
-Task – Unpack the |bip| Appliance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   1. Open a tab in the web browser
+   2. Go to the site: https://merch.dev.acmefinancial.net
+   3. Browse the site and add something to your shopping cart
+   4. Open the Shopping Cart
+   5. Refresh the shopping cart a few times and notice that the cart empties
+      1. The cart state is tracked in a cookie and the cookie is not shared across the backend servers
 
-.. TODO:: Needs task description
+View the JSON of the Component
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In this task you will remove the |bip| Appliance from it's packaging.
+   1. Using Postman
+   2. Expand `Retail-Dev Environment`
+   3. Expand `Application - merch.acmefinancial.net`
+   4. Select `Create Component - shop - no persist`
+   5. Review the JSON body
+      1. this is the existing configuration from Samantha's pipeline
+      2. Note that no persistence is defined to aide in loadbalancing across workloads
 
-Follow these steps to complete this task:
+Verify new developer cookie persistence settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Open the box with an extremely sharp knife or cutter
+   1. Select `Create Component - shop`
+   2. Review the JSON body
+   3. Note the `sessionPersistence` section
+   4. Select Send to PUT the new configuration
+   5. Change the method to GET to check for the configuration to be applied
 
-   .. DANGER:: Knives are sharp and can cut you.  Please be careful.
+View the solution
+^^^^^^^^^^^^^^^^^^^^
 
-      |knivessharp|
-
-#. Carefully remove the |bip| from it's packaging
-#. Set it down on a stable surface
-
-Task – Install the |bip| Appliance in a Datacenter Rack
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. TODO:: Needs task description
-
-In this task you will install the |bip| Appliance into a Rack.  You will need
-the following tools:
-
-- Phillips Screwdriver
-- Hammer
-- Crowbar
-
-.. CAUTION:: Appliances can be heavy.  Please follow all applicable safety
-   guidelines.
-
-Follow these steps to complete this task:
-
-#. Install the rackmount rails onto the appliance using the included hardware
-#. Lift the appliance into place
-#. Complete installation by using your tools to secure the appliance.
-
-.. |knivessharp| image:: http://theinkkitchen.com/wp-content/uploads/2014/08/Screenshot-2014-07-30-12.22.44.png
+   1. Return to the browser tab with https://merch.dev.acmefinancial.net
+   2. Browse the site and add something to your shopping cart
+   3. Open the Shopping Cart
+   4. Refresh the shopping cart a few times and notice that the cart does not empty any longer
