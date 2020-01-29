@@ -14,7 +14,7 @@ Explore the trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    1. Using Google Chrome, open a new tab
-   2. Enter `https://trading.dev.acmefinancial.net` as the URL
+   2. Enter `https://trading.dev.acmefinancial.net` as the URL (do it from the Jumpbox)
    3. Select Login
    4. enter the username: `admin` with the password `iloveblue`
    5. Note the dashboard, as we enable new features the dashboard will change, displaying these new capabilities.
@@ -90,20 +90,20 @@ Enable the Referrals capability
    3. Select `Create Comp - trading - referrals`
    4. In the right hand frame of Postman, select the Body tab
    5. Review the JSON
-   6. PUT the configuration by selecting Send
-   7. Change the command to GET and Send
+   6. Change the method from GET to PUT and then click Send
+   7. Change the method back to GET and Send
    8. View the status of the configuration being applied in the currentStatus section and that the selfConfigState is in configuring
    9. Repeat the GET until configured equals 1
 
     Controller follows an API first methodology which means that the GUI is using the same APIs as you are.
-    In this configuration PUT body you can see the desiredState of ingress (the incomming URI) and backend (the workloadGroups and servers).
+    In our previous Postman PUT request's body you can see the desiredState of ingress (the incoming URI) and backend (the workloadGroups and servers).
     Through the GET you can see the eventually consistent behavior of the system as the configuration is then built and applied to the referenced NGINX instances.
 
 
 Review the new section of the Trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   1. Return to the trading application browser tab and refresh the page
+   1. Return to the trading application browser tab and refresh the page (from the Jumphost)
    2. Note the new |referrals| capability that has been added to the applicaton.  Previously there was a |coming_soon| placeholder.
    
    .. |coming_soon| image:: ../../_static/coming_soon.png
