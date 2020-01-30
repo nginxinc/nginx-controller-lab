@@ -1,6 +1,6 @@
-====================================
-Importing an OpenAPI 3 specification
-====================================
+===================================================
+Importing an OpenAPI 3 specification ( in PREVIEW )
+===================================================
 
 Next is working through an API deployment using an API specification to create a 
 new API definition for the trading API. Then importing the OpenAPI specification directly 

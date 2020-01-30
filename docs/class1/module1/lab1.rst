@@ -7,7 +7,10 @@ Follow these steps to complete this task:
 Login to Controller as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  1. Open the Controller web interface and logon using the username: `retail-dev@ACMEfinancial.net` with the password:  `Admin123!@#`
+  1. From the Jumphost (all activities should be performed from the Jumphost)
+  2. Using CHROME
+  3. Enter the URL: https://10.1.1.5
+  4. Logon as Samantha using the username: `retail-dev@ACMEfinancial.net` with the password:  `Admin123!@#`
 
 Review Samantha's view within Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
