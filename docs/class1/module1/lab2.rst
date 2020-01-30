@@ -48,9 +48,9 @@ Define a new Transfers Component of the trading.acmefinancial.net application (W
     .. image:: ../../_static/publish.png
     
     16. Observe the Status of the Component change from Configuring to Configured to indicate it is live.     
-
-    .. |configuring| image:: ../../_static/configuring.png
-
+    
+    .. image:: ../../_static/configuring.png
+    
     ..
 
       A dev ops team or in the ACME financial organization David's responsible for the network and certificate management within the financial organization. David's team established the trading gateway for Samantha to support this new component.     
