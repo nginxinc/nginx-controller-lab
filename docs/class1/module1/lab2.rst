@@ -5,9 +5,9 @@ Extending the Trading application by exposing referral and upload capabilities
 Using the GUI
 =============
 
-Samantha is responsible for the trading application has found that it's been extremely successful and adopted by the retail customers are looking to move fast.
-App teams are running a rolling out new parts of the application using modern application development processes. So what we're going to see is the deployment of new financial transfer functions.
-A referral program as well as some upload capabilities within the, within the controller space. So let's go ahead and begin these changes.
+Samantha is responsible for the trading application, she has found that it's been extremely successful and adopted quickly by the retail customers.
+App teams are rolling out new parts of the application using modern application development processes. We are going to deploy some new capabilities for this application. We will add 
+the ability to transfer funds, a referral program and the ability to upload documents. So let's go ahead and begin these changes.
 
 
 Explore the trading application
@@ -20,8 +20,8 @@ Explore the trading application
     5. Note the dashboard, as we enable new features the dashboard will change, displaying these new capabilities.
 
 
-Define a new Transfers Component of the trading.acmefinancial.net application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Define a new Transfers Component of the trading.acmefinancial.net application (Withing the retail-dev environment)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. In the Controller GUI return to the Apps section
     2. Select the App `trading.acmefinancial.net`
@@ -48,8 +48,8 @@ Define a new Transfers Component of the trading.acmefinancial.net application
     .. image:: ../../_static/publish.png
 
     16. Observe the Status of the Component change from Configuring to Configured to indicate it is live.
-
-      A dev ops team or in this ACME financial organization David's responsible for the network and certificate management within the financial organization. David's team established the trading gateway for Samantha to support this new component.
+    .. image:: ../../_static/configuring.png
+      A dev ops team or in the ACME financial organization David's responsible for the network and certificate management within the financial organization. David's team established the trading gateway for Samantha to support this new component.
 
       As you can see the UI space is really flexible and powerful for various scenarios or use cases within Controller, whether it's basic URI routing,  SNI routing, or a combination. This example was very basic URI routing.
       The objective of this component is to route to the servers on which the particular component code runs, this is the workload group.  A workload group is the collection of servers or upstreams.
