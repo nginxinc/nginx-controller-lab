@@ -45,6 +45,7 @@ Define a new Transfers Component of the trading.acmefinancial.net application (W
     14. Add Backend Workload URI: `http://10.1.20.21:9804`
     15. Select Publish to create the transfers capability.     
     .. image:: ../../_static/publish.png
+    
     16. Observe the Status of the Component change from Configuring to Configured to indicate it is live.
     .. image:: ../../_static/configuring.png
       A dev ops team or in the ACME financial organization David's responsible for the network and certificate management within the financial organization. David's team established the trading gateway for Samantha to support this new component.
