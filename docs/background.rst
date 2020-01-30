@@ -10,18 +10,22 @@ The ACME Financial story
 In this exercise we will be working with the lending business unit and the retail space. We will engage with David, Olvia, Tony and Samatha.
 
 David is a network engineer within the lending business unit. He is responsible for
+
 - NGINX Controller platform
 - networking and core routing
 - security
 
 Olivia is a DevOps engineer within the lending business unit. She is responsible for
+
 - NGINX configurations
 - curiation of CI/CD pipelines
 
 Tony is a app developer within the retail business unit. He is responsible for
+
 - the core service center applications
 
 Samantha is a DevOps engineer within the retail business unit. She is responsible 
+
 - curiation of CI/CD pipelines
 - the new trading application
 - other applications in the marketing space
