@@ -58,7 +58,7 @@ Define a new Transfers Component of the trading.acmefinancial.net application (W
       As you can see the UI space is really flexible and powerful for various scenarios or use cases within Controller, whether it's basic URI routing,  SNI routing, or a combination. This example was very basic URI routing.
       The objective of this component is to route to the servers on which the particular component code runs, this is the workload group.  A workload group is the collection of servers or upstreams.
 
-      Controller is responsible for getting the desired configuration that we specified thorugh the GUI or the API and getting it to the actual NGINX instance to process traffic.
+      Controller is responsible for getting the desired configuration that we specified thorugh the GUI (or the API) and getting it to the actual NGINX instance to process traffic.
 
 
 Review the new section of the Trading application

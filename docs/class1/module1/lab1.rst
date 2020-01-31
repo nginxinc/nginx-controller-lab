@@ -38,7 +38,7 @@ Review Samantha's view within Controller
 Explore the documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Samantha is also becoming accustomed to the new API for controller. She is going to be able to use this new UX experience to  work both visually with the product as well as seeing how to automate and use the new API that's available with Controller.
+Samantha is also becoming accustomed to the new API for controller. She finds the new UX experience straightforward to work both visually with the product as well as understanding the object structure and how to automate with Controler's API as she viws each configuration and examins the JSON bodies and API calls at the end.
 
   1. From the Controller UI, select the help icon in the Navigation bar.  
     
@@ -56,8 +56,8 @@ Samantha is also becoming accustomed to the new API for controller. She is going
 Samantha now has a full API reference of how to use the various endpoints that are available and can walk through the various endpoints to be able to automate from login to creating and deploying new services.
 The two main endpoints that we will be working with are gateway and component
 
-  4. In the left side of the API Reference select the gateways section and review the options.
-  5. In the left side of the API Reference select the components section and review the options.
+  4. In the left side of the API Reference select the gateways section and explore the object.
+  5. In the left side of the API Reference select the components section and explore the object.
 
 In both cases note the object based path to interact with these objects.  For example: a Component is an object that is a child to an App which is a child to an environment.
 `https://10.1.1.5/api/v1/services/environments/{environmentName}/apps/{appName}/components`

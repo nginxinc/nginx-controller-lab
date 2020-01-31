@@ -1,6 +1,19 @@
-====================
-Adding a new Gateway
-====================
+===================================================
+Adding a gateway for the mobile trading application
+===================================================
+
+The trading application has been a great product with a web broswer GUI. 
+The business unit wants to expand this to a new mobile application so that ACME 
+Financial retail customers can do trades on the go.
+To enable this one mobile API for customers ACME Financial needs to expose a 
+brand new gateway 
+to the public Internet for Samantha's mobile application to receive API calls.
+Within ACME Financial the request workflow requires David to get involved when 
+any new endpoint is exposed to the public internet and to ensure security for API
+calls coming into the bank. Samantha will partner with David to ask for a new gateway 
+with a new certificate
+to make sure that trading API interaction is secure.
+Let's work through the process of David establishing a new gateway for Samantha.
 
 Add a Gateway using the GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

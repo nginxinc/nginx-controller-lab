@@ -3,14 +3,11 @@ The www.acmefinancial.net is having issues
 ==========================================
 
 Let's check the merchandise site that's ACME Financial retail has. 
-They have embraced this whole ACME corporate branding and new hipsters 
-that love these kinds of chochky branded materials.  ACME Financial decided 
-to put up a merchandise site.But support has been receiving some complaints. 
+Customers have embraced this whole ACME corporate branding and hipsters especially love these kinds of chochky branded materials.  
+In support and to expand revenue, ACME Financial decided to put up a merchandise site. But support has been receiving some complaints about the store experience. 
 
-In the end to end testing of the ACME store in the development environment, it was 
-identified that the shopping cart experience is not ideal.
-Let's take a look at what's happening there. Starting off with a little debugging 
-session.
+In the end to end testing of the ACME store in the development environment, it was identified that the shopping cart experience is not ideal.
+Let's take a look at what's happening there. Starting off with a little debugging session.
 
 View the symptom
 ^^^^^^^^^^^^^^^^

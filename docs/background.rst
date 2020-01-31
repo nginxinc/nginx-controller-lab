@@ -8,25 +8,12 @@ ACME Financial's lending business unit was successful in the recovery following 
 In 2001 the Lending business unit branched into the retail personal finance space.
 In 2020 that retail (personal finance) space embarked on a new trading platform for customers.
 
-In this exercise we will be working with the lending business unit and the retail space. We will engage with David, Olvia, Tony and Samatha.
+In this exercise we will be working with the lending business unit and various folks supporting the retail efforts. Specifically, we will engage with David, Olvia, Tony, and Samatha.
 
-David is a network engineer within the lending business unit. He is responsible for
+David a network engineer is responsible for the overall NGINX Controller platform. Responsible for some of the security and network routing core routing and corresponding security requirements in the lending business unit.
 
-- NGINX Controller platform
-- networking and core routing
-- security
+Olivia, a DevOps engineer, is responsible for curating the pipelines and the NGINX configurations.
 
-Olivia is a DevOps engineer within the lending business unit. She is responsible for
+Tony, an applicaton developer is responsible for portions of the core service center applications.
 
-- NGINX configurations
-- curiation of CI/CD pipelines
-
-Tony is a app developer within the retail business unit. He is responsible for
-
-- the core service center applications
-
-Samantha is a DevOps engineer within the retail business unit. She is responsible for
-
-- curiation of CI/CD pipelines
-- the new trading application
-- other applications in the marketing space
+In the Retail Business Unit we have Samantha who is responsible for DevOps pipelines and getting the new trading and other apps to market.
