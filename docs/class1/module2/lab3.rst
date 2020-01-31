@@ -10,24 +10,24 @@ mortgage application again we can see
 The mortgage application in our pipeline has a couple of different components, a web login and 
 web API endpoints
 
-GET the configuration
-^^^^^^^^^^^^^^^^^^^^^
+Create the configuration
+^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Using Postman (in the JumpHost)
     2. Expand the `Lending-Prod Environment` section
     3. Expand `Application - mortgage.acmefinancial.net`
     4. Select `Create Component - login` and click Send
-    5. Note the URI and that the service is fully encrypted to the workloads
+    5. Note that both the INGRESS URIs and WORKLOAD URIs are configured to use encryption
 
-Review rate limiting
-^^^^^^^^^^^^^^^^^^^^^^^
+Upsert rate limiting
+^^^^^^^^^^^^^^^^^^^^
 
     1. Select `Create Component -login - with rate`
     2. Note the Security section and the rateLimit. The rate limit is set low ( 1 second ) to provide some relief.
     3. Click Send to push the configuration change (PUT method)
 
 Test the Rate Limit configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Open a tab in the web browser (in the JumpHost)
     2. enter the URL: https://mortgage.acmefinancial.net/login

@@ -21,7 +21,7 @@ View the symptom
     4. Open the Shopping Cart
     5. Refresh the shopping cart a few times and notice that the cart empties
 
-      - The cart state is tracked in a cookie and the cookie is not shared across the backend servers
+      - The shopping cart items are mapped to the users session state, the session state is not shared between the backend servers
 
 View the JSON of the Component
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -30,10 +30,12 @@ View the JSON of the Component
     2. Expand `Retail-Dev Environment`
     3. Expand `Application - merch.acmefinancial.net`
     4. Select `Create Component - shop - no persist`
-    5. Review the JSON body
+    5. Review the JSON body in this request
 
       - this is the existing configuration from Samantha's pipeline
       - Note that no persistence is defined to help in loadbalancing across workloads
+
+    6. Change the method to GET and click send to verify the configure state doesn't currently have persistence enabled
 
 Verify new developer cookie persistence settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -41,7 +43,7 @@ Verify new developer cookie persistence settings
     1. Select `Create Component - shop`
     2. Review the JSON body
     3. Note the `sessionPersistence` section
-    4. Click onSend to create this new configuration (PUT method)
+    4. Click on Send to upsert the configuration (PUT method)
     5. Change the method to GET to check for the configuration to be applied
 
 View the solution
