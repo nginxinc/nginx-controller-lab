@@ -6,8 +6,8 @@ Using the GUI
 =============
 
 Samantha is responsible for the trading application, she has found that it's been extremely successful and adopted quickly by the retail customers.
-Application teams are rolling out new parts of the application using modern application development processes. We are going to deploy some new capabilities for this application. 
-We will add the ability to transfer funds, a referral program, and the ability to upload documents. So let's go ahead and begin these changes.
+App teams are rolling out new parts of the application using modern application development processes. We are going to deploy some new capabilities for this application. We will add 
+the ability to transfer funds, a referral program and the ability to upload documents. So let's go ahead and begin these changes.
 
 
 Explore the trading application
@@ -53,10 +53,13 @@ Define a new Transfers Component of the trading.acmefinancial.net application (W
     
     17. Observe
     
-David is responsible for the network and certificate management within the financial organization. David’s team established the trading gateway for Samantha to support this new component.
-As you can see the UI space is really flexible and powerful for various scenarios or use cases within Controller, whether it’s basic URI routing, SNI routing, or a combination. This example was very basic URI routing. 
-The objective of this component is to route to the servers on which the code runs: the workload group. A workload group is a collection of servers or upstreams.
-Controller is responsible for retrieving the specified configuration entered via the GUI or the API, and getting it to the actual NGINX instance to process traffic.
+      A dev ops team or in the ACME financial organization David's responsible for the network and certificate management within the financial organization. David's team established the trading gateway for Samantha to support this new component.
+
+      As you can see the UI space is really flexible and powerful for various scenarios or use cases within Controller, whether it's basic URI routing,  SNI routing, or a combination. This example was very basic URI routing.
+      The objective of this component is to route to the servers on which the particular component code runs, this is the workload group.  A workload group is the collection of servers or upstreams.
+
+      Controller is responsible for getting the desired configuration that we specified thorugh the GUI or the API and getting it to the actual NGINX instance to process traffic.
+
 
 Review the new section of the Trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,7 +72,7 @@ Very quickly, you were able to establish a new traffic path configuration and di
 Using the API
 =============
 
-Now, this is great. Samantha explored Contorller and discovered what she can do the GUI.  But most likely she is going to move forward to plumbing these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
+Now, this is great. Samantha explored Contorller and discovered what she can do the GUI.  But most likely she is going to move forwarding to plumbing these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
 
 
 Login as Samantha using the API
