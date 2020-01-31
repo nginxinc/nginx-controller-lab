@@ -53,13 +53,11 @@ Define a new Transfers Component of the trading.acmefinancial.net application (W
     
     ..
 
-      A dev ops team or in the ACME financial organization David's responsible for the network and certificate management within the financial organization. David's team established the trading gateway for Samantha to support this new component.     
+David is responsible for the network and certificate management across business units within the organization. David’s team established the trading gateway for Samantha to support this new component.
+The Controller UI is both flexible and powerful for various scenarios or use cases, whether it’s basic URI routing, SNI routing, or a combination. This example happened to be a very basic URI routing use case. 
 
-      As you can see the UI space is really flexible and powerful for various scenarios or use cases within Controller, whether it's basic URI routing,  SNI routing, or a combination. This example was very basic URI routing.
-      The objective of this component is to route to the servers on which the particular component code runs, this is the workload group.  A workload group is the collection of servers or upstreams.
-
-      Controller is responsible for getting the desired configuration that we specified thorugh the GUI (or the API) and getting it to the actual NGINX instance to process traffic.
-
+The objective of this component is to route to the servers on which the code runs: the workload group. A workload group is a collection of servers or upstreams.
+Controller is responsible for applying the configuration specified via the GUI or the API, and realizing it at the actual NGINX instance to process traffic.
 
 Review the new section of the Trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -72,7 +70,7 @@ Very quickly, you were able to establish a new traffic path configuration and di
 Using the API
 =============
 
-Now, this is great. Samantha explored Contorller and discovered what she can do the GUI.  But most likely she is going to move forwarding to plumbing these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
+Now, this is great. Samantha explored Contorller and discovered what she can do the GUI.  But most likely she is going to move forward to enabling her pipeline(s) with these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
 
 
 Login as Samantha using the API
