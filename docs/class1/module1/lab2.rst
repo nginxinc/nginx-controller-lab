@@ -19,6 +19,8 @@ Explore the trading application
     4. enter the username: `admin` with the password `iloveblue`
     5. Note the dashboard, as we enable new features the dashboard will change, displaying these new capabilities.
 
+|trading_transfer_before|
+
 
 Define a new Transfers Component of the trading.acmefinancial.net application (Withing the retail-dev environment)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -51,7 +53,8 @@ Define a new Transfers Component of the trading.acmefinancial.net application (W
     
     .. image:: ../../_static/configuring.png
     
-    ..
+|trading_transfer_after|
+
 
 David is responsible for the network and certificate management across business units within the organization. David’s team established the trading gateway for Samantha to support this new component.
 The Controller UI is both flexible and powerful for various scenarios or use cases, whether it’s basic URI routing, SNI routing, or a combination. This example happened to be a very basic URI routing use case. 
@@ -70,7 +73,7 @@ Very quickly, you were able to establish a new traffic path configuration and di
 Using the API
 =============
 
-Now, this is great. Samantha explored Contorller and discovered what she can do the GUI.  But most likely she is going to move forward to enabling her pipeline(s) with these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
+Now, this is great. Samantha explored Controller and discovered what she can do the GUI.  But most likely she is going to move forward to enabling her pipeline(s) with these steps and configurations into her pipeline.  We are now going to open a pipeline tool that Olivia might use and extend the trading application using the API.
 
 
 Login as Samantha using the API
@@ -78,7 +81,7 @@ Login as Samantha using the API
 
     1. From the desktop open Postman
     2. the Collection `NGINX Controller 3.0 UDF Demo & Lab` should already be loaded
-    3. Open the Common Tasks section and select `Login to Controller - retail dev`
+    3. Open the `Common Tasks` section and select `Login to Controller - retail dev`
     4. Select Send
 
       You are now logged into the API as Samantha.  Controller returned a cookie that will be used for authenticating then executing the following commands.
@@ -92,8 +95,8 @@ Enable the Referrals capability
     3. Select `Create Comp - trading - referrals`
     4. In the right hand frame of Postman, select the Body tab
     5. Review the JSON
-    6. Change the method from GET to PUT and then click Send
-    7. Change the method back to GET and Send
+    6. Click Send
+    7. Change the method to GET and click Send again
     8. View the status of the configuration being applied in the currentStatus section and that the selfConfigState is in configuring
     9. Repeat the GET until configured equals 1
 
@@ -107,7 +110,11 @@ Review the new section of the Trading application
 
     1. Return to the trading application browser tab and refresh the page (from the Jumphost)
     2. Note the new |referrals| capability that has been added to the applicaton.  Previously there was a |coming_soon| placeholder.
-    
+
+.. |trading_transfer_before| image:: ../../_static/trading_transfer_before.png
+
+.. |trading_transfer_after| image:: ../../_static/trading_transfer_after.png
+
 .. |coming_soon| image:: ../../_static/coming_soon.png
     :scale: 50 %
 
