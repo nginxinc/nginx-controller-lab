@@ -2,7 +2,7 @@
 Adding a gateway for the mobile trading application
 ===================================================
 
-The trading application has been a great product with a web broswer GUI. 
+The trading application has been a great product with a web browser GUI. 
 The business unit wants to expand this to a new mobile application so that ACME 
 Financial retail customers can do trades on the go.
 To enable a new mobile API for customers ACME Financial needs to expose a 
