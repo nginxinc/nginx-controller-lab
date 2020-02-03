@@ -42,16 +42,15 @@ Define a new Transfers Component of the trading.acmefinancial.net application (W
     7. Select Next
     8. Select the Gateway: `trading.acmefinancial.net`
     9. Select Next
-    10. Enter the URI: `/api`
+    10. Click the `Add URI` link on the upper right. Enter the URI: `/api`
     11. Select Next (skipping `Methods`, and `Advanced sections`)
-    12. Add a workload group
-    13. Workload Group Name: `app2-servers`
-    14. Add Backend Workload URI: `http://10.1.20.21:9804`
-    15. Select `Publish` to create the transfers capability.     
+    12. Click the `Add Workload Group` link in the upper right and enter a new group name: `app2-servers`
+    13. Add Backend Workload URI: `http://10.1.20.21:9804`. Click `Done`.
+    14. Select `Publish` to create the transfers capability.     
     
     .. image:: ../../_static/publish.png
     
-    16. Observe the Status of the Component change from `Configuring` to `Configured` to indicate it is live.     
+    15. Observe the Status of the Component change from `Configuring` to `Configured` to indicate it is live.     
     
     .. image:: ../../_static/configuring.png
     

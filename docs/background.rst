@@ -10,10 +10,10 @@ In 2020 that retail (personal finance) space embarked on a new trading platform 
 
 In this exercise we will be working with the lending business unit and various folks supporting the retail efforts. Specifically, we will engage with David, Olivia, Tony, and Samantha.
 
-David is a network engineer is responsible for the overall NGINX Controller platform. He is responsible for core network routing and corresponding security requirements in the lending business unit.
+- David is a network engineer is responsible for the overall NGINX Controller platform. He is responsible for core network routing and corresponding security requirements in the lending business unit.
 
-Olivia, a DevOps engineer, is responsible for curating the pipelines and the NGINX configurations.
+- Olivia, a DevOps engineer, is responsible for curating the pipelines and the NGINX configurations.
 
-Tony, an application developer is responsible for portions of the core service center applications.
+- Tony, an application developer is responsible for portions of the core service center applications.
 
-In the Retail Business Unit we have Samantha who is responsible for DevOps pipelines and getting the new trading and other apps to market.
+- Samantha works in the Retail Business Unit. She is responsible for DevOps pipelines and getting the new trading and other apps to market.
