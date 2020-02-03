@@ -13,8 +13,9 @@ Log in as David
 ^^^^^^^^^^^^^^^^^^
 
     1. Login as David using the credentials: 
-        - username: `admin@acmefinancial.net`
-        - password: `Admin123!@#`
+    
+      - username: `admin@acmefinancial.net`
+      - password: `Admin123!@#`
 
 Review Role Based Access Control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

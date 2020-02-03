@@ -13,16 +13,18 @@ Login to Controller as Samantha
         :scale: 60 %
 
   2. Log in to the Jumphost. Enter the Jumphost credentials:
-      - username: `administrator`
-      - password: `BZ8D8MCVR`
+
+    - username: `administrator`
+    - password: `BZ8D8MCVR`
 
   3. Open the Chrome browser
 
   4. Enter the URL: https://10.1.1.5
 
   5. Log in as Samantha using the credentials:
-      - username: `retail-dev@ACMEfinancial.net`
-      - password:  `Admin123!@#`
+  
+    - username: `retail-dev@ACMEfinancial.net`
+    - password:  `Admin123!@#`
 
 Review Samantha's view within Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

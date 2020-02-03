@@ -23,8 +23,9 @@ Log in as Olivia
 ^^^^^^^^^^^^^^^^^^^
 
     1. Login as Olivia using the credentials:
-        - username: `lending-admin@acmefinancial.net`
-        - password: `Admin123!@#`
+    
+      - username: `lending-admin@acmefinancial.net`
+      - password: `Admin123!@#`
 
 Test the web site
 ^^^^^^^^^^^^^^^^^^^^

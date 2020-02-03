@@ -19,8 +19,10 @@ Add a Gateway using the GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Select the Controller GUI tab in Chrome on the Jumphost. Verify you are logged in as `admin` using the credentials:
-        - username: `admin@acmefinancial.net`
-        - password:  `Admin123!@#`
+
+      - username: `admin@acmefinancial.net`
+      - password:  `Admin123!@#`
+      
     2. Select the `Services` menu from the navigation bar
     3. Select `Gateways`
     4. Select |create|

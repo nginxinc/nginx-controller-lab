@@ -17,8 +17,9 @@ Log in as Samantha
 ^^^^^^^^^^^^^^^^^^^^^
 
     1. Login as Samantha using the credentials:
-        - username: `retail-dev@acmefinancial.net`
-        - password: `Admin123!@#`
+    
+      - username: `retail-dev@acmefinancial.net`
+      - password: `Admin123!@#`
 
 Review the Components added via the API
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
