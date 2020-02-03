@@ -5,8 +5,8 @@ Reviewing Role Based Access Control
 Log out as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^
 
-    1. In the Controller GUI tab of the web browser
-    2. Select the retail dev user in the top right corner then
+    1. Select the Controller GUI tab in Chrome
+    2. Select the `retail dev` user in the top right corner
     3. Select logout
 
 Log in as David

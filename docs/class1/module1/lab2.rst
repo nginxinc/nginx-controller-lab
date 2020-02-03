@@ -13,8 +13,8 @@ the ability to transfer funds, a referral program and the ability to upload docu
 Explore the trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    1. Using Google Chrome, open a new tab
-    2. Enter `https://trading.dev.acmefinancial.net` as the URL (do it from the Jumpbox)
+    1. Using Google Chrome on the Jumpbox, open a new tab
+    2. Enter `https://trading.dev.acmefinancial.net` as the URL
     3. Select `Login`
     4. enter the credentials:
       - username: `admin`

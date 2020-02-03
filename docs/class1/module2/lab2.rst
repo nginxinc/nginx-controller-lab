@@ -15,7 +15,7 @@ dashboards could show us about the application and components.
 Log out as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^
 
-    1. Go back to the Controller GUI
+    1. Select the Controller GUI tab in Chrome
     2. Select `retail dev` in the top right
     3. Select |logout|
 

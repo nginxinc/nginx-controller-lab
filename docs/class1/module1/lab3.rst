@@ -7,8 +7,8 @@ In the previous scenario, we saw the expansion of the trading application. Now, 
 Viewing analytics in the GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    1. Using the Controller GUI tab of the web browser
-    2. Using the navigation bar select the `Analytics` menu
+    1. Select the Controller GUI tab in Chrome
+    2. Using the navigation bar, select the `Analytics` menu
     3. Select the `retail-dev` Dashboard
     4. Note the traffic that you created during the previous steps
 
