@@ -11,8 +11,8 @@ Login to Controller as Samantha
   2. Open the Chrome browser
   3. Enter the URL: https://10.1.1.5
   4. Log in as Samantha using the credentials:
-    - username: `retail-dev@ACMEfinancial.net`
-    - password:  `Admin123!@#`
+      - username: `retail-dev@ACMEfinancial.net`
+      - password:  `Admin123!@#`
 
 Review Samantha's view within Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
