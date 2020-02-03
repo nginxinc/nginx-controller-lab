@@ -18,7 +18,7 @@ Explore the trading application
     3. Select `Login`
     4. enter the credentials:
       - username: `admin`
-      - password `iloveblue`
+      - password: `iloveblue`
     5. Note the dashboard. As we enable new features the dashboard will change, displaying these new capabilities.
 
 |trading_transfer_before|
