@@ -19,10 +19,10 @@ Create the configuration
     4. Select `Create Component - login` and click Send
     5. Note that both the INGRESS URIs and WORKLOAD URIs are configured to use encryption
 
-Upsert rate limiting
+Insert rate limiting
 ^^^^^^^^^^^^^^^^^^^^
 
-    1. Select `Create Component -login - with rate`
+    1. Select `Create Component - login - with rate`
     2. Note the Security section and the rateLimit. The rate limit is set low ( 1 second ) to provide some relief.
     3. Click Send to push the configuration change (PUT method)
 
