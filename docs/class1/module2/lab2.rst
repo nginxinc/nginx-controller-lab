@@ -37,7 +37,7 @@ Test the web site
 
 |traffic_test_500_error_msg|
 
-Review statsus codes
+Review status codes
 ^^^^^^^^^^^^^^^^^^^^
 
     1. Open `Analytics` from the Navigation bar
