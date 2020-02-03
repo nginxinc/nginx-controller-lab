@@ -33,6 +33,8 @@ Test the web site
     4. Select Send a few times
     5. Note that you will randomly receive a 500 response
 
+|traffic_test_500_error_msg|
+
 Review statsus codes
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -41,6 +43,8 @@ Review statsus codes
     3. Scroll to the bottom and you will find the internal system - 500 service errors graph
     4. Note the spikes of 500 errors
 
+|traffic_test_500_error_msg_gui|
+
 Identify where the 500 error is coming from
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -48,11 +52,13 @@ Identify where the 500 error is coming from
     2. Click Send until you receive a 500 error
     3. Note the serverPort in the response the 500 error only happens when the request is routed to a specific workload serverPort
 
+|traffic_test_500_error_msg_serverport|
+
 Triage a workaround
 ^^^^^^^^^^^^^^^^^^^
 
     1. Return to the Controller GUI
-    2. Select Service from the Navigation bar
+    2. Select `Services` from the Navigation bar
     3. Select the App `servicecenter.acmefinancial.net`
     4. Select the Component `ticketprocessing.internal.acmefinancial.net` and edit it
     5. Select Workload Groups
@@ -69,7 +75,7 @@ Test the web site again
 
     1. Using Postman
     2. Expand the `Traffic Tests` section
-    3. Select the ticketprocessing.internal.acmefinancial.net call
+    3. Select the `ticketprocessing.internal.acmefinancial.net` call
     4. Click Send a few times
     5. Note that you no longer receive a 500 response
 
@@ -77,7 +83,7 @@ Setting a Health monitor from the pipeline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Using Postman
-    2. Expand the `Landing-Prod Environment` section
+    2. Expand the `Lending-Prod Environment` section
     3. Expand `Application - servicecenter.acmefinancial.net`
     4. Expand `Establish APIM Defs and Components - ticketprocessing.internal.acmefinancial.net`
     5. Select `Create Component - mon - ticketprocessing.internal.acmefinancial.net`
@@ -89,8 +95,8 @@ Test the web site again
 ^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Using Postman
-    2. Expand the Traffic Tests section
-    3. Select the ticketprocessing.internal.acmefinancial.net call
+    2. Expand the `Traffic Tests` section
+    3. Select the `ticketprocessing.internal.acmefinancial.net` call
     4. Select Send a few times
     5. Note that you no longer reseive a 500 response
 
@@ -102,3 +108,12 @@ of the service.
 
 .. |logout| image:: ../../_static/log_out.png
    :scale: 50 %
+
+.. |traffic_test_500_error_msg| image:: ../../_static/traffic_test_500_error_msg.png
+   :scale: 50%
+
+.. |traffic_test_500_error_msg_gui| image:: ../../_static/traffic_test_500_error_msg_gui.png
+   :scale: 50%
+
+.. |traffic_test_500_error_msg_serverport| image:: ../../_static/traffic_test_500_error_msg_serverport.png
+   :scale: 50%
