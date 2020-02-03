@@ -25,6 +25,6 @@ Return the objects within an Environment
     5. Change the PUT method to a GET method
     6. Note the URL, it refers to the retail-dev Environment object
     7. Click Send to GET the object
-    8. Note the applications, certificates, and gateways in their resprctive reference sections
-    9. In the state section note the `childrenConfigState` that refers to any of the child objects and their status
+    8. Note the applications, certificates, and gateways in their respective reference sections
+    9. In the `state` section note the `childrenConfigState` that refers to any of the child objects and their status
     10. Note the `selfConfigState` which refers to the Environment itself
