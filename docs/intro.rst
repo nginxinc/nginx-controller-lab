@@ -5,9 +5,9 @@ Getting Started
 Please use the "**NGINX Controller 3.x Demo / Lab**" Blueprint for this lab exercise
 
 The infrastructure is all ready for you.
-Controller, nginx plus, and agents are all installed.  Controller is pre-configured.
+Controller, nginx plus, and agents are all installed. Controller is pre-configured.
 
-The JumpHost contains the Postman collection for the demo, which also outlines steps through a workflow and the settings in the JSON body that you can use through either the GUI or API.
+The JumpHost contains the Postman collection for the demo. The collection steps through the demo workflow and show the settings, in the JSON bodies, that you can use through either the GUI or API.
 
 .. note::
     
@@ -56,29 +56,29 @@ Infrastructure Machines:
 - Application hosts:
     - appcontainer-1:
         - 'reflector'
-            HTTP 8000 - 8999
-            HTTPS 4000 - 4999
-            HTTP always unhealthy 5800 - 5899
-            HTTPS always unhealthy 5400 - 5499
-            HTTP random health 6100 - 6299
-            HTTPS random health 6200 - 6299
+            - HTTP 8000 - 8999
+            - HTTPS 4000 - 4999
+            - HTTP always unhealthy 5800 - 5899
+            - HTTPS always unhealthy 5400 - 5499
+            - HTTP random health 6100 - 6299
+            - HTTPS random health 6200 - 6299
         - 'Arcadia Financial'
-            mainapp 9801
-            backend 9803
-            app2 9804
-            app3 9805
+            - mainapp 9801
+            - backend 9803
+            - app2 9804
+            - app3 9805
         - 'recruiting'
-            careers west 3004
+            - careers west 3004
     - appcontainer-2:
         - 'reflector'
-            HTTP 8000 - 8999
-            HTTPS 4000 - 4999
-            HTTP always unhealthy 5800 - 5899
-            HTTPS always unhealthy 5400 - 5499
-            HTTP random health 6100 - 6299
-            HTTPS random health 6200 - 6299
+            - HTTP 8000 - 8999
+            - HTTPS 4000 - 4999
+            - HTTP always unhealthy 5800 - 5899
+            - HTTPS always unhealthy 5400 - 5499
+            - HTTP random health 6100 - 6299
+            - HTTPS random health 6200 - 6299
         - 'recruiting'
-            careers east 3004
+            - careers east 3004
     - opencart-1 / opencart-2
         - HTTP 80
         - HTTPS 443

@@ -2,7 +2,7 @@
 The www.acmefinancial.net is having issues
 ==========================================
 
-Let's check the merchandise site that's ACME Financial retail has. 
+Let's check the merchandise site that ACME Financial retail uses. 
 Customers have embraced this whole ACME corporate branding and hipsters especially love these kinds of chochky branded materials.  
 In support and to expand revenue, ACME Financial decided to put up a merchandise site. But support has been receiving some complaints about the store experience. 
 
@@ -13,7 +13,7 @@ View the symptom
 ^^^^^^^^^^^^^^^^
 
     1. Open a tab in the web browser (in the Jumphost)
-    2. Go to the site: https://merch.dev.acmefinancial.net
+    2. Go to the site: `https://merch.dev.acmefinancial.net`
     3. Browse the site and add something to your shopping cart
     4. Open the Shopping Cart
     5. Refresh the shopping cart a few times and notice that the cart empties
@@ -40,13 +40,13 @@ Verify new developer cookie persistence settings
     1. Select `Create Component - shop`
     2. Review the JSON body
     3. Note the `sessionPersistence` section
-    4. Click on Send to upsert the configuration (PUT method)
+    4. Click on `Send` to update the configuration (PUT method)
     5. Change the method to GET to check for the configuration to be applied
 
 View the solution
 ^^^^^^^^^^^^^^^^^
 
-    1. Return to the browser tab with https://merch.dev.acmefinancial.net
+    1. Return to the browser tab with `https://merch.dev.acmefinancial.net`
     2. Browse the site and add something to your shopping cart
     3. Open the Shopping Cart
     4. Refresh the shopping cart a few times and notice that the cart does not empty any longer

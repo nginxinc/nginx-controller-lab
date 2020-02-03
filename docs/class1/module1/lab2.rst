@@ -5,7 +5,7 @@ Extending the Trading application by exposing referral and upload capabilities
 Using the GUI
 =============
 
-Samantha is responsible for the trading application, she has found that it's been extremely successful and adopted quickly by the retail customers.
+Samantha is responsible for the trading application. She has found that it's been extremely successful and adopted quickly by the retail customers.
 App teams are rolling out new parts of the application using modern application development processes. We are going to deploy some new capabilities for this application. We will add 
 the ability to transfer funds, a referral program and the ability to upload documents. So let's go ahead and begin these changes.
 
@@ -13,11 +13,13 @@ the ability to transfer funds, a referral program and the ability to upload docu
 Explore the trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    1. Using Google Chrome, open a new tab
-    2. Enter `https://trading.dev.acmefinancial.net` as the URL (do it from the Jumpbox)
-    3. Select Login
-    4. enter the username: `admin` with the password `iloveblue`
-    5. Note the dashboard, as we enable new features the dashboard will change, displaying these new capabilities.
+    1. Using Google Chrome on the Jumpbox, open a new tab
+    2. Enter `https://trading.dev.acmefinancial.net` as the URL
+    3. Select `Login`
+    4. enter the credentials:
+      - username: `admin`
+      - password: `iloveblue`
+    5. Note the dashboard. As we enable new features the dashboard will change, displaying these new capabilities.
 
 |trading_transfer_before|
 
@@ -25,31 +27,31 @@ Explore the trading application
 Define a new Transfers Component of the trading.acmefinancial.net application (Withing the retail-dev environment)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    1. In the Controller GUI return to the Apps section
+    1. In the Controller GUI return to the `Apps` section
     2. Select the App `trading.acmefinancial.net`
-    3. Select the View icon |icon| to see the full list of Components for the App
+    3. Select the `View` icon |icon| to see the full list of Components for the App
     
     .. |icon| image:: ../../_static/view.png
 
-    4. Select Create Component 
+    4. Select `Create Component` 
     
     .. image:: ../../_static/create_component.png
 
     5. enter the name: `trading-transfers`
-    6. enter the display name: Trading Transfers Component
+    6. enter the display name: `Trading Transfers Component`
     7. Select Next
     8. Select the Gateway: `trading.acmefinancial.net`
     9. Select Next
     10. Enter the URI: `/api`
-    11. Select Next (skipping Methods, and Advanced sections)
+    11. Select Next (skipping `Methods`, and `Advanced sections`)
     12. Add a workload group
     13. Workload Group Name: `app2-servers`
     14. Add Backend Workload URI: `http://10.1.20.21:9804`
-    15. Select Publish to create the transfers capability.     
+    15. Select `Publish` to create the transfers capability.     
     
     .. image:: ../../_static/publish.png
     
-    16. Observe the Status of the Component change from Configuring to Configured to indicate it is live.     
+    16. Observe the Status of the Component change from `Configuring` to `Configured` to indicate it is live.     
     
     .. image:: ../../_static/configuring.png
     
@@ -66,7 +68,7 @@ Review the new section of the Trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Return to the trading application browser tab and refresh the page
-    2. Note the new capability that has been added to the right hand side of the applicaton.
+    2. Note the new capability that has been added to the right hand side of the application.
 
 Very quickly, you were able to establish a new traffic path configuration and didn't have to directly configure an NGINX instance or understand nginx.conf syntax. Through monitoring and analytics you can see this new component capable of adding value to the business and business unit.
 
@@ -82,7 +84,7 @@ Login as Samantha using the API
     1. From the desktop open Postman
     2. the Collection `NGINX Controller 3.0 UDF Demo & Lab` should already be loaded
     3. Open the `Common Tasks` section and select `Login to Controller - retail dev`
-    4. Select Send
+    4. Select `Send`
 
       You are now logged into the API as Samantha.  Controller returned a cookie that will be used for authenticating then executing the following commands.
 
@@ -93,12 +95,12 @@ Enable the Referrals capability
     1. In Postman open the section `Retail-Dev Environment`
     2. open the `Application - trading.acmefinancial.com` section
     3. Select `Create Comp - trading - referrals`
-    4. In the right hand frame of Postman, select the Body tab
+    4. In the right hand frame of Postman, select the `Body` tab
     5. Review the JSON
-    6. Click Send
-    7. Change the method to GET and click Send again
-    8. View the status of the configuration being applied in the currentStatus section and that the selfConfigState is in configuring
-    9. Repeat the GET until configured equals 1
+    6. Click `Send`
+    7. Change the method to "GET" and click `Send` again
+    8. View the status of the configuration being applied in the `currentStatus` section and that the `selfConfigState` is in "configuring"
+    9. Repeat the GET until "configured" equals "1"
 
       Controller follows an API first methodology which means that the GUI is using the same APIs as you are.
       In our previous Postman PUT request's body you can see the desiredState of ingress (the incoming URI) and backend (the workloadGroups and servers).
@@ -109,7 +111,7 @@ Review the new section of the Trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Return to the trading application browser tab and refresh the page (from the Jumphost)
-    2. Note the new |referrals| capability that has been added to the applicaton.  Previously there was a |coming_soon| placeholder.
+    2. Note the new |referrals| capability that has been added to the application.  Previously there was a |coming_soon| placeholder.
 
 .. |trading_transfer_before| image:: ../../_static/trading_transfer_before.png
 

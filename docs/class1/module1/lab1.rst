@@ -7,10 +7,12 @@ Follow these steps to complete this task:
 Login to Controller as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  1. From the Jumphost (all activities should be performed from the Jumphost)
-  2. Using CHROME
+  1. Log in to the Jumphost (all activities should be performed from the Jumphost)
+  2. Open the Chrome browser
   3. Enter the URL: https://10.1.1.5
-  4. Logon as Samantha using the username: `retail-dev@ACMEfinancial.net` with the password:  `Admin123!@#`
+  4. Log in as Samantha using the credentials:
+    - username: `retail-dev@ACMEfinancial.net`
+    - password:  `Admin123!@#`
 
 Review Samantha's view within Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -20,14 +22,14 @@ Review Samantha's view within Controller
         .. image:: ../../_static/navigation_root.png
            :scale: 60 %
 
-  2. Select the Services menu. 
+  2. Select the `Services` menu. 
    
         .. image:: ../../_static/navigation_services.png
            :scale: 60 %
 
-        1. Under Services Samantha is restricted to three Apps supporting ACME Financial.
+        1. Under `Services` Samantha is restricted to three Apps supporting ACME Financial.
     
-  3. Select the App named trading.acmefinancial.net
+  3. Select the App named `trading.acmefinancial.net`
         
         1. Note the tray that opens on the right, showing the Components that have been configured for the application.
    
@@ -38,7 +40,7 @@ Review Samantha's view within Controller
 Explore the documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Samantha is also becoming accustomed to the new API for controller. She finds the new UX experience straightforward to work both visually with the product as well as understanding the object structure and how to automate with Controler's API as she viws each configuration and examins the JSON bodies and API calls at the end.
+Samantha is also becoming accustomed to the new API for Controller. She finds the new UX experience straightforward to work both visually with the product as well as understanding the object structure and how to automate with Controler's API as she viws each configuration and examins the JSON bodies and API calls at the end.
 
   1. From the Controller UI, select the help icon in the Navigation bar.  
     
@@ -47,17 +49,17 @@ Samantha is also becoming accustomed to the new API for controller. She finds th
 
         A new tab opens presenting the in-box documentation
 
-  2. Select API Reference drop down
+  2. Select `API Reference` drop down
   3. Select the current version of the API Reference 
     
         .. image:: ../../_static/documentation_api.png
            :scale: 60 %
 
 Samantha now has a full API reference of how to use the various endpoints that are available and can walk through the various endpoints to be able to automate from login to creating and deploying new services.
-The two main endpoints that we will be working with are gateway and component
+The two main endpoints that we will be working with are `gateway` and `component`.
 
-  4. In the left side of the API Reference select the gateways section and explore the object.
-  5. In the left side of the API Reference select the components section and explore the object.
+  4. In the left side of the API Reference select the `gateways` section and explore the object.
+  5. In the left side of the API Reference select the `components` section and explore the object.
 
 In both cases note the object based path to interact with these objects.  For example: a Component is an object that is a child to an App which is a child to an environment.
 `https://10.1.1.5/api/v1/services/environments/{environmentName}/apps/{appName}/components`
@@ -66,13 +68,13 @@ Explore API actions in the GUI while editing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   1. From the Controller GUI web browser tab
-  2. Select the trading.acmefinancial.net App
+  2. Select the `trading.acmefinancial.net` App
   3. Select Edit 
     
     .. image:: ../../_static/app_edit.png
        :scale: 60 %
 
-  4. at the bottom of the edit screen select VIEW API REQUEST to review the API used to create or modify this App object.  
+  4. at the bottom of the edit screen select `VIEW API REQUEST` to review the API used to create or modify this App object.  
     
     .. image:: ../../_static/view_api_request.png
        :scale: 60 %

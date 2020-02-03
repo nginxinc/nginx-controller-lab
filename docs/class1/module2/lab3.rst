@@ -2,13 +2,13 @@
 Protecting your application with rate limiting
 ==============================================
 
-There are reports to the mortgage team that some folks have had the inability to login.
+There are reports to the mortgage team that some folks are not able to log in.
 The mortgage team has reported: "hey, our service is seeing some massive spike and CPU load."
-So let's provide some relief to the mortgage team and take a look at the configuration of the 
-mortgage application again we can see
+Let's attempt to provide some relief to the mortgage team by changing the configuration of the 
+mortgage application.
 
 The mortgage application in our pipeline has a couple of different components, a web login and 
-web API endpoints
+web API endpoints.
 
 Create the configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -24,7 +24,7 @@ Insert rate limiting
 
     1. Select `Create Component - login - with rate`
     2. Note the Security section and the rateLimit. The rate limit is set low ( 1 second ) to provide some relief.
-    3. Click Send to push the configuration change (PUT method)
+    3. Click `Send` to push the configuration change (PUT method)
 
 Test the Rate Limit configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
