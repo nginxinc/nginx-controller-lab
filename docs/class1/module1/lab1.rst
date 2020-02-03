@@ -7,10 +7,12 @@ Follow these steps to complete this task:
 Login to Controller as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  1. From the Jumphost (all activities should be performed from the Jumphost)
-  2. Using CHROME
+  1. Log in to the Jumphost (all activities should be performed from the Jumphost)
+  2. Open the Chrome browser
   3. Enter the URL: https://10.1.1.5
-  4. Logon as Samantha using the username: `retail-dev@ACMEfinancial.net` with the password:  `Admin123!@#`
+  4. Log in as Samantha using the credentials:
+    - username: `retail-dev@ACMEfinancial.net`
+    - password:  `Admin123!@#`
 
 Review Samantha's view within Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -38,7 +40,7 @@ Review Samantha's view within Controller
 Explore the documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Samantha is also becoming accustomed to the new API for controller. She finds the new UX experience straightforward to work both visually with the product as well as understanding the object structure and how to automate with Controler's API as she viws each configuration and examins the JSON bodies and API calls at the end.
+Samantha is also becoming accustomed to the new API for Controller. She finds the new UX experience straightforward to work both visually with the product as well as understanding the object structure and how to automate with Controler's API as she viws each configuration and examins the JSON bodies and API calls at the end.
 
   1. From the Controller UI, select the help icon in the Navigation bar.  
     
