@@ -16,21 +16,23 @@ Log out as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^
 
     1. Go back to the Controller GUI
-    2. Select retail dev in the top right
+    2. Select `retail dev` in the top right
     3. Select |logout|
 
 Log in as Olivia
 ^^^^^^^^^^^^^^^^^^^
 
-    1. Login as Olivia using the username: lending-admin@acmefinancial.net with the passord Admin123!@#
+    1. Login as Olivia using the credentials:
+      - username: `lending-admin@acmefinancial.net`
+      - password: `Admin123!@#`
 
 Test the web site
 ^^^^^^^^^^^^^^^^^^^^
 
     1. Using Postman (in the JumpHost)
     2. Expand the `Traffic Tests` section
-    3. Select the ticketprocessing.internal.acmefinancial.net request
-    4. Select Send a few times
+    3. Select the `ticketprocessing.internal.acmefinancial.net` request
+    4. Select `Send` a few times
     5. Note that you will randomly receive a 500 response
 
 |traffic_test_500_error_msg|
@@ -38,8 +40,8 @@ Test the web site
 Review statsus codes
 ^^^^^^^^^^^^^^^^^^^^
 
-    1. Open Analytics from the Navigation bar
-    2. Select the Lending-Prod dashboard
+    1. Open `Analytics` from the Navigation bar
+    2. Select the `Lending-Prod` dashboard
     3. Scroll to the bottom and you will find the internal system - 500 service errors graph
     4. Note the spikes of 500 errors
 
@@ -49,7 +51,7 @@ Identify where the 500 error is coming from
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Returning to Postman
-    2. Click Send until you receive a 500 error
+    2. Click `Send` until you receive a 500 error
     3. Note the serverPort in the response the 500 error only happens when the request is routed to a specific workload serverPort
 
 |traffic_test_500_error_msg_serverport|
@@ -61,7 +63,7 @@ Triage a workaround
     2. Select `Services` from the Navigation bar
     3. Select the App `servicecenter.acmefinancial.net`
     4. Select the Component `ticketprocessing.internal.acmefinancial.net` and edit it
-    5. Select Workload Groups
+    5. Select `Workload Groups`
     6. Edit the `servers` workload group
     7. Edit the two backend workload URIs using port 6203
 
@@ -76,7 +78,7 @@ Test the web site again
     1. Using Postman
     2. Expand the `Traffic Tests` section
     3. Select the `ticketprocessing.internal.acmefinancial.net` call
-    4. Click Send a few times
+    4. Click `Send` a few times
     5. Note that you no longer receive a 500 response
 
 Setting a Health monitor from the pipeline
@@ -97,8 +99,8 @@ Test the web site again
     1. Using Postman
     2. Expand the `Traffic Tests` section
     3. Select the `ticketprocessing.internal.acmefinancial.net` call
-    4. Select Send a few times
-    5. Note that you no longer reseive a 500 response
+    4. Select `Send` a few times
+    5. Note that you no longer receive a 500 response
 
 This is a better configuration. Servers are no longer tagged as down permanently in the 
 configuration. TAdding monitoring to this configuration so that instead of just having to 
