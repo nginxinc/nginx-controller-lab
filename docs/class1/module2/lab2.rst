@@ -103,10 +103,8 @@ Test the web site again
     5. Note that you no longer receive a 500 response
 
 This is a better configuration. Servers are no longer tagged as down permanently in the 
-configuration. TAdding monitoring to this configuration so that instead of just having to 
-manually up down things we can let NGINX  be responsible for health checking actively or 
-passively based on the configuration of monitoring ensuring health and availability 
-of the service.
+configuration. By adding monitoring to this configuration, we can let NGINX be responsible for health checking (actively or 
+passively) ensuring health and availability of the service.
 
 .. |logout| image:: ../../_static/log_out.png
    :scale: 50 %
