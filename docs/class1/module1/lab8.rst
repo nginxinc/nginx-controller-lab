@@ -21,7 +21,7 @@ Log in as Samantha
 Review the Components added via the API
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    1. Select Services from the navigation menu
+    1. Select `Services` from the navigation menu
     2. Select Apps
     3. Select `trading.acmefinancial.net`
     4. Review the components added through the API, note the commonality between the API and GUI
@@ -54,6 +54,7 @@ Test the URI rewrite
 
     1. In a new tab in the web browser (in the Jumphost) enter: 
     http://www.dev.acmefinancial.net/blog/biganouncement
+    
     2. In the returned web page note that the path is being rewritten to: 
     /blog/wordpress/wwwsite/biganouncement
 
