@@ -7,7 +7,7 @@ Please use the "**NGINX Controller 3.x Demo / Lab**" Blueprint for this lab exer
 The infrastructure is all ready for you.
 Controller, NGINX Plus, and agents are all installed. Controller is pre-configured.
 
-The JumpHost contains the Postman collection for the demo. The collection steps through the demo workflow and show the settings, in the JSON bodies, that you can use through either the GUI or API.
+The JumpHost contains a Postman collection that will be used for the demo. The Postman collection is organized as a number of steps within a workflow and the settings in the JSON body can be used through either the GUI or the API.
 
 .. note::
     
