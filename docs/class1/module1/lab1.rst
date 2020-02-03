@@ -22,14 +22,14 @@ Review Samantha's view within Controller
         .. image:: ../../_static/navigation_root.png
            :scale: 60 %
 
-  2. Select the Services menu. 
+  2. Select the `Services` menu. 
    
         .. image:: ../../_static/navigation_services.png
            :scale: 60 %
 
-        1. Under Services Samantha is restricted to three Apps supporting ACME Financial.
+        1. Under `Services` Samantha is restricted to three Apps supporting ACME Financial.
     
-  3. Select the App named trading.acmefinancial.net
+  3. Select the App named `trading.acmefinancial.net`
         
         1. Note the tray that opens on the right, showing the Components that have been configured for the application.
    
@@ -49,17 +49,17 @@ Samantha is also becoming accustomed to the new API for Controller. She finds th
 
         A new tab opens presenting the in-box documentation
 
-  2. Select API Reference drop down
+  2. Select `API Reference` drop down
   3. Select the current version of the API Reference 
     
         .. image:: ../../_static/documentation_api.png
            :scale: 60 %
 
 Samantha now has a full API reference of how to use the various endpoints that are available and can walk through the various endpoints to be able to automate from login to creating and deploying new services.
-The two main endpoints that we will be working with are gateway and component
+The two main endpoints that we will be working with are `gateway` and `component`.
 
-  4. In the left side of the API Reference select the gateways section and explore the object.
-  5. In the left side of the API Reference select the components section and explore the object.
+  4. In the left side of the API Reference select the `gateways` section and explore the object.
+  5. In the left side of the API Reference select the `components` section and explore the object.
 
 In both cases note the object based path to interact with these objects.  For example: a Component is an object that is a child to an App which is a child to an environment.
 `https://10.1.1.5/api/v1/services/environments/{environmentName}/apps/{appName}/components`
@@ -68,13 +68,13 @@ Explore API actions in the GUI while editing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   1. From the Controller GUI web browser tab
-  2. Select the trading.acmefinancial.net App
+  2. Select the `trading.acmefinancial.net` App
   3. Select Edit 
     
     .. image:: ../../_static/app_edit.png
        :scale: 60 %
 
-  4. at the bottom of the edit screen select VIEW API REQUEST to review the API used to create or modify this App object.  
+  4. at the bottom of the edit screen select `VIEW API REQUEST` to review the API used to create or modify this App object.  
     
     .. image:: ../../_static/view_api_request.png
        :scale: 60 %
