@@ -37,6 +37,5 @@ Define the path for the API and reference the API definition
     1. Within the `Application - trading.acmefinancial.net` section of Postman
     2. Select `Create Comp - trading - api`
     3. Note the additional publishedApiRef section
-    4. Change the GET method to a PUT method (we need to create the object first)
-    5. Click on Send to create this Component (via PUT method)
-    6. Change the PUT method back to a GET method to check the state of the change
+    4. Click on Send to create this Component (via PUT method)
+    5. Change the PUT method back to a GET method to check the state of the change
