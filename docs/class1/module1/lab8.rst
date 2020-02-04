@@ -1,10 +1,18 @@
-=====================================================
-Extending www.acmefinancial.net with a blog Component
-=====================================================
+==============================================
+Add a blog Component to www.acmefinancial.net
+==============================================
 
-Samantha is looking to expand on the marketing sites that are promoting the various technologies that the ACME Financial organization has been able to produce.
-She wants to build a new application component within the marketing site www.acmefinancial.net and introduce a new blog capability so they can start blogging about the trading application.
-Let's return to Controller as Samantha and take a look at some of the additional feature functionality with the ADC use cases of URI rewrite.
+
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| Samantha wants to expand on the marketing sites promoting ACME Financial technology. She    |
+| wants to build a new app component for the acme financial app - a blog.                     |
+| This will allow her team to start blogging about the trading app, to spark interest and     |
+| connection with their customers.                                                            |
+| Let's take a look at additional feature functionality in the URI rewrite use case.          |
++---------------------------------------------------------------------------------------------+
+
 
 Log out as David
 ^^^^^^^^^^^^^^^^^^^
@@ -21,7 +29,7 @@ Log in as Samantha
       - username: `retail-dev@acmefinancial.net`
       - password: `Admin123!@#`
 
-Review the Components added via the API
+Review the Components added through the API
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Select `Services` from the navigation menu
@@ -29,7 +37,7 @@ Review the Components added via the API
     3. Select `trading.acmefinancial.net`
     4. Review the components added through the API, note the commonality between the API and GUI
 
-Add blog page to the main ACME Financial site with a URI rewrite
+Add the blog page to the main ACME Financial site with a URI rewrite
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Return to the list of all Apps
