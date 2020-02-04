@@ -1,27 +1,34 @@
 ==========================================
-The www.acmefinancial.net is having issues
+ www.acmefinancial.net is having issues
 ==========================================
 
-Let's check the merchandise site that ACME Financial retail uses. 
-Customers have embraced this whole ACME corporate branding and hipsters especially love these kinds of chochky branded materials.  
-In support and to expand revenue, ACME Financial decided to put up a merchandise site. But support has been receiving some complaints about the store experience. 
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| Let's check out the merchandise site for ACME Financial retail.                             |
+| Customers have embraced the ACME corporate branding, with hipsters especially loving these  |
+| kinds of ACME-branded materials. In support of this - and seeing an opportunity to expand   |
+| revenue, ACME Financial has decided to put up a merchandise site.                           |
+| However, ACME customer support has been receving complaints about the store experience.     |
+| In their dev pipeline they discovered during the end-to-end testing phase of the workflow   |
+| that the shopping cart experience isn't ideal.                                              |
+| Let's take a look at what's happening there and see if we can figure out what's going on.   |
++---------------------------------------------------------------------------------------------+
 
-In the end to end testing of the ACME store in the development environment, it was identified that the shopping cart experience is not ideal.
-Let's take a look at what's happening there. Starting off with a little debugging session.
 
-View the symptom
-^^^^^^^^^^^^^^^^
+View the symptoms
+^^^^^^^^^^^^^^^^^
 
-    1. Open a tab in the web browser (in the Jumphost)
+    1. Open a tab in Chrome (in the Jumphost)
     2. Go to the site: `https://merch.dev.acmefinancial.net`
     3. Browse the site and add something to your shopping cart
     4. Open the Shopping Cart
     5. Refresh the shopping cart a few times and notice that the cart empties
 
-      - The shopping cart items are mapped to the users session state, the session state is not shared between the backend servers
+      - The shopping cart items are mapped to the users' session state, however the session state is not shared between the backend servers.
 
-View the JSON of the Component
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+View the JSON of the create component request
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Using Postman (in the Jumphost)
     2. Expand `Retail-Dev Environment`
@@ -34,8 +41,11 @@ View the JSON of the Component
 
     6. Change the method to GET and click send to verify the configure state doesn't currently have persistence enabled
 
+
+
 Verify new developer cookie persistence settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Change the config to enable session persistence, and sharing of the session state between the workloads
 
     1. Select `Create Component - shop`
     2. Review the JSON body
