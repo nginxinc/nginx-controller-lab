@@ -1,12 +1,15 @@
 ===================================================
-Importing an OpenAPI 3 specification ( in PREVIEW )
+Import an OpenAPI 3 specification (in PREVIEW)
 ===================================================
 
-In this lab we will work through an API deployment using an API specification to create a 
-new API definition for the trading API. Then importing the OpenAPI specification directly 
-into Controller. Samantha's developers are able to specify all the details, endpoints,  
-and routes of the trading API in a swagger file, which they are maintaining anyway as 
-modern application developers.
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| Samantha's org wants to add a new API to the trading app. Samantha's developers are able to |
+| specify all the details, endpoints and routes of the API in a swagger file (they maintan    |                                                  | this swagger file as part of being a modern app dev). We'll go through deploying this API   |
+| and creating a new definition, and then we'll import the OpenAPI specification directly     |
+| Controller.                                                                                 |
++---------------------------------------------------------------------------------------------+
 
 Login
 ^^^^^
