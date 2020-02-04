@@ -111,7 +111,7 @@ Enable the Referrals capability
 Review the new section of the Trading application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    1. Return to the trading application browser tab and refresh the page (from the Jumphost)
+    1. Return to the trading application browser tab and *refresh the page* (from the Jumphost)
     2. Note the new |referrals| capability that has been added to the application.  Previously there was a |coming_soon| placeholder.
 
 .. |trading_transfer_before| image:: ../../_static/trading_transfer_before.png
