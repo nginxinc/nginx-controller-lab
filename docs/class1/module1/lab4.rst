@@ -1,5 +1,5 @@
 ===================================
-Reviewing Role Based Access Control
+Reviewing Role Based Access Control (RBAC)
 ===================================
 
 Log out as Samantha
@@ -17,7 +17,7 @@ Log in as David
       - username: `admin@acmefinancial.net`
       - password: `Admin123!@#`
 
-Review Role Based Access Control
+Review Role Based Access Control (RBAC)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Review what David can access across `Apps`, `Components`, `Environments` (in the `Services` Menu)
@@ -28,5 +28,15 @@ Review Role Based Access Control
     6. Select `Users`
     7. Explore what users are associated with what Roles
 
-      As you saw, Controller can limit access to various users. For example, Samantha is able to self-service within her environments and configure specific data path instances.
-      This keeps peace of mind for David that no business units collide within configuration of shared or dedicated NGINX instances.
+
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| As you saw, Controller can limit users' access to various objects. For example, Samantha is |
+| able to manage and make changes within her environments and configure specific data path    |
+| instances, enabling self-service for the areas she owns.                                    |
+| This ensures David's peace of mind that no business units configuration changes collide on  |
+| shared or dedicated NGINX instances.                                                        |
++---------------------------------------------------------------------------------------------+
+    
+    
