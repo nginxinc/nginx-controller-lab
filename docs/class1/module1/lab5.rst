@@ -1,19 +1,22 @@
 ===================================================
-Adding a gateway for the mobile trading application
+Add a Gateway for the mobile trading app
 ===================================================
 
-The trading application has been a great product with a web browser GUI. 
-The business unit wants to expand this to a new mobile application so that ACME 
-Financial retail customers can do trades on the go.
-To enable a new mobile API for customers ACME Financial needs to expose a 
-brand new gateway 
-to the public Internet for Samantha's mobile application to receive API calls.
-Within ACME Financial the request workflow requires David to get involved when 
-any new endpoint is exposed to the public Internet and to ensure security for API
-calls coming into the bank. Samantha will partner with David to ask for a new gateway 
-with a new certificate
-to make sure that trading API interactions are secure.
-Let's work through the process of David establishing a new gateway for Samantha.
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| The trading app has been a great product for ACME Financial. It's currently available as a  |
+| browser GUI. The business unit wants to expand this to a new mobile application so that     |
+| retail customers can do trades on the go.                                                   |
+| To enable a new mobile API for customers ACME Financial needs to expose a brand new gateway |
+| to the public Internet, in order for Samantha's mobile app to receive API calls.            |
+| When any new endpoint is exposed to the public Interney, ACME's standards require David get |
+| involved to ensure security for API calls coming into the bank. Samantha will partner with  |
+| David to ask for a new gateway, with a new certificate, to make sure that trading API       |
+| interactions are secure.                                                                    |
+| Let's work through the process of David establishing a new gateway for Samantha.            |
++---------------------------------------------------------------------------------------------+
+
 
 Add a Gateway using the GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -43,7 +46,17 @@ Add a Gateway using the GUI
     19. Select `Publish`
     20. Note that the Gateway progresses from a state of "configuring" to "configured".
 
-Certificates (PEM or PKCS12) can be imported into Controller at the time they are added to a Gateway or Component, they can be defined and managed separately (such as by a unique certificate team) and only referenced, or a file path local to the NGINX instance can be defined.  These options give unique flexibility to David and Samantha in best meeting how they want to manage their certificates.
+
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| Certificates (PEM or PKCS12) can be imported into Controller at the time they're added to   |
+| a Gateway or Component. They can be defined and managed separately (such as by a specific   |
+| certificate/security team) with Controller only referenced them, or a file path local to    |
+| NGINX instancecan be defined.                                                               |
+| These options give David and Samantha unique flexibility to enable how they want to manage  |
+| their certificates.                                                                         |
++---------------------------------------------------------------------------------------------+
 
 .. |create| image:: ../../_static/create.png
 
