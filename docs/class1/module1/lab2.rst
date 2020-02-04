@@ -84,8 +84,15 @@ Login as Samantha using the API
 
     1. From the desktop open Postman
     2. the Collection `NGINX Controller 3.0 UDF Demo & Lab` should already be loaded
-    3. Open the `Common Tasks` section and select `Login to Controller - retail dev`
-    4. Select `Send`
+    3. Open the `Common Tasks` section 
+    
+ |open|
+ 
+    4. Select `Login to Controller - retail dev`
+ 
+ |login|
+    
+    5. Select `Send`
 
       You are now logged into the API as Samantha.  Controller returned a cookie that will be used for authenticating then executing the following commands.
 
@@ -119,7 +126,12 @@ Review the new section of the Trading application
 .. |trading_transfer_after| image:: ../../_static/trading_transfer_after.png
 
 .. |coming_soon| image:: ../../_static/coming_soon.png
-    :scale: 50 %
+    :scale: 40 %
 
 .. |referrals| image:: ../../_static/referrals.png
-    :scale: 50 %
+    :scale: 40 %
+    
+.. |open| image:: ../../_static/postman_commontasks.png
+
+ .. |login| image:: ../../_static/postman_login.png
+
