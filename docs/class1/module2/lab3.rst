@@ -1,14 +1,19 @@
 ==============================================
-Protecting your application with rate limiting
+Protecting your app with rate limiting
 ==============================================
 
-There are reports to the mortgage team that some folks are not able to log in.
-The mortgage team has reported: "hey, our service is seeing some massive spike and CPU load."
-Let's attempt to provide some relief to the mortgage team by changing the configuration of the 
-mortgage application.
 
-The mortgage application in our pipeline has a couple of different components, a web login and 
-web API endpoints.
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| The mortgage team has been hearing reports that some users aren't able to log in. They tell |
+| Olivia that "our service is seeing massive network spikes and CPU load.                     |
+| Olivia attempts to relieve this by changing the mortgate app config so that these issues    |
+| go away.                                                                                    |
+| The mortgate app is made up of a couple of different components, a web login and web API    |
+| endpoints.                                                                                  |
++---------------------------------------------------------------------------------------------+
+
 
 Create the configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^
