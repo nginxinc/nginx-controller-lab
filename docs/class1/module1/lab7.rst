@@ -1,12 +1,10 @@
 ===============================================================
-Reviewing configuration state through the API at a higher level
+Understand configuration state via the API
 ===============================================================
 
-Just like everything else, we can go and do a GET request to see if we're in a fully 
-configured state. 
+Just like with everything else in Controller, we can do a GET request to see if we're in a fully 
+configured state. We're able to look at config state from a high-level, such as across an App or an Environment.
 
-We can see that state from a higher level order. We can actually take a look at the 
-configuration state across an Application or Environment.
 
 For example: Within the `retail-dev` environment, we want to see:
 
