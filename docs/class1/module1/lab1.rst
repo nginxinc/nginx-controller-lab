@@ -2,7 +2,10 @@
 Familiarize yourself with Controller as Samantha
 ================================================
 
+
+   
 Follow these steps to complete this task:
+
 
 Login to Controller as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -11,6 +14,7 @@ Login to Controller as Samantha
 
     .. image:: ../../_static/jumphost.png
         :scale: 60 %
+        :align: center
 
   2. Log in to the Jumphost. Enter the Jumphost credentials:
 
@@ -26,6 +30,8 @@ Login to Controller as Samantha
     - username: `retail-dev@ACMEfinancial.net`
     - password:  `Admin123!@#`
 
+ 
+ 
 Review Samantha's view within Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -39,20 +45,37 @@ Review Samantha's view within Controller
         .. image:: ../../_static/navigation_services.png
            :scale: 60 %
 
-        1. Under `Services` Samantha is restricted to three Apps supporting ACME Financial.
+        - Under `Services` Samantha is restricted to three Apps supporting ACME Financial.
     
   3. Select the App named `trading.acmefinancial.net`
         
-        1. Note the tray that opens on the right, showing the Components that have been configured for the application.
+        - Note the tray that opens on the right, showing the Components that have been configured for the application.
    
   4. Explore each Component to familiarize yourself with the full application.
 
-    We can see at a glance the configuration state of the trading application and then go in and see what makes this application tick. What are the various components and pieces.
+ 
+ 
+  +-------------------------------------------------------------------------------------+
+  | Talk Track                                                                          |
+  +=====================================================================================+
+  | We can see at a glance the configuration state of the trading app and then go and   |
+  | see the various components and pieces of the app.                                   |
+  +-------------------------------------------------------------------------------------+
+  
+
 
 Explore the documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Samantha is also becoming accustomed to the new API for Controller. She finds the new UX experience straightforward to work both visually with the product as well as understanding the object structure and how to automate with Controller's API as she views each configuration and examines the JSON bodies and API calls at the end.
+  +-------------------------------------------------------------------------------------+
+  | Talk Track                                                                          |
+  +=====================================================================================+
+  | Samantha is also becoming accustomed to the new Controller API. She finds the new   |
+  | UX straightforward visually, and she likes that it helps her understand the object  |
+  | structure. Not to mention how it helps her learn how to use the APIs: she can see   |
+  | the API call being built, the endpoint and how the JSON is structured.              |
+  +-------------------------------------------------------------------------------------+
+
 
   1. From the Controller UI, select the help icon in the Navigation bar.  
     
@@ -67,15 +90,30 @@ Samantha is also becoming accustomed to the new API for Controller. She finds th
         .. image:: ../../_static/documentation_api.png
            :scale: 60 %
 
-Samantha now has a full API reference of how to use the various endpoints that are available. She can use this reference to automate creating and deploying new services.
-The two main endpoints that we will be working with are `gateway` and `component`.
+
+  +-------------------------------------------------------------------------------------+
+  | Talk Track                                                                          |
+  +=====================================================================================+
+  | Samantha now has a full API reference of the Controller endpoints. She can use this |
+  | to automate creating and deploying new servies.                                     |
+  | The two main endpoints we'll be working with a `gateway` and `component`.           |
+  +-------------------------------------------------------------------------------------+
+
 
   4. In the left side of the API Reference select the `gateways` section and explore the object.
   5. In the left side of the API Reference select the `components` section and explore the object.
 
-In both cases note the object based path to interact with these objects.  For example: a Component is an object that is a child to an App which is a child to an environment.
+In both cases note the object-based path to interact with these objects.  For example: a *Component* is an object that is a child to an *App* which is a child to an *Environment*.
 `https://10.1.1.5/api/v1/services/environments/{environmentName}/apps/{appName}/components`
+|br|
+Take a moment to review the Information Architecture controller employs to make sure this makes sense to you:
+      .. image:: ../../_static/ia.png
 
+
+
+ 
+ 
+ 
 Explore API actions in the GUI while editing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -93,3 +131,4 @@ Explore API actions in the GUI while editing
 
   5. Note the API call, the JSON body, and the copy to clipboard icon all added to enable quick and easy GUI discovery and translation to automation.
 
+   .. image:: ../../_static/view_api_req.png
