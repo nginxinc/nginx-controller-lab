@@ -11,6 +11,7 @@ A: Using the GUI
 | Samantha owns the trading app: it's been extremely successful and rapidly adopted by retail |
 | customers. Dev teams are rolling out new parts of the app using modern app processes like   |
 | automated testing and CI/CD. We're going to deploy some new features for the app:           |
+|                                                                                             |
 |  - the ability to transfer funds,                                                           |
 |  - a referrals program, and                                                                 |
 |  - file uploads                                                                             |
@@ -80,6 +81,7 @@ Review the new section of the Trading application
 
     1. Return to the trading application browser tab and refresh the page
     2. Note the new capability that has been added to the right hand side of the application.
+
 |trading_transfer_after|
 
 
@@ -128,11 +130,16 @@ Enable the Referrals capability
     1. In Postman open the section `Retail-Dev Environment` 
     2. open the `Application - trading.acmefinancial.com` section
     3. Select `Create Comp - trading - referrals`
+
      |trading|
+
     4. In the right hand frame of Postman, select the `Body` tab
+
      |body|
+
     5. Review the JSON
     6. Make sure that the method is set to "PUT"
+
      |method|
       
     7. Click `Send`
@@ -141,6 +148,7 @@ Enable the Referrals capability
     
     9. View the status of the configuration being applied in the `currentStatus` section and that the `selfConfigState` is in "configuring"
     10. Repeat the GET until "configured" equals "1"
+    
       |configured|
       
 +---------------------------------------------------------------------------------------------+
@@ -178,8 +186,8 @@ Review the new section of the Trading application
  
 .. |trading| image:: ../../_static/postman_showtree.png
  
-.. |body|  image:: ../../_static/postman_body.png
+.. |body| image:: ../../_static/postman_body.png
  
-.. |configured|  image:: ../../_static/postman_configuredjson.png
+.. |configured| image:: ../../_static/postman_configuredjson.png
 
-.. |put|  image:: ../../_static/postman_changemethod.png
+.. |method| image:: ../../_static/postman_changemethod.png

@@ -1,6 +1,6 @@
-===================================
+==========================================
 Reviewing Role Based Access Control (RBAC)
-===================================
+==========================================
 
 Log out as Samantha
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -18,7 +18,7 @@ Log in as David
       - password: `Admin123!@#`
 
 Review Role Based Access Control (RBAC)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Review what David can access across `Apps`, `Components`, `Environments` (in the `Services` Menu)
     2. Note that he can view all `Environments`, including Samantha's `retail-dev` and Olivia's `lending-prod`

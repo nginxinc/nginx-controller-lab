@@ -26,6 +26,7 @@ Create the configuration
     2. Expand the `Lending-Prod Environment` section
     3. Expand `Application - mortgage.acmefinancial.net`
     4. Select `Create Component - login` and click Send
+    
     |login|
     
     5. Note that both the INGRESS URIs and WORKLOAD URIs are configured to use encryption
@@ -33,9 +34,9 @@ Create the configuration
 Insert rate limiting
 ^^^^^^^^^^^^^^^^^^^^
 
-.. note:: 
-   
-   Ratelimiting is only available in the **API** in Controller 3.0; it will be available in the GUI later.
+    .. note:: 
+        Ratelimiting is only available in the **API** in Controller 3.0; it will be available in the GUI later.
+
 
     1. Select `Create Component - login - with rate`
     2. Note the Security section and the rateLimit. The rate limit is set low ( 1 second ) to provide some relief.
