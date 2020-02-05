@@ -105,8 +105,8 @@ Explore the documentation
 
 In both cases note the object-based path to interact with these objects.  For example: a *Component* is an object that is a child to an *App* which is a child to an *Environment*.
 `https://10.1.1.5/api/v1/services/environments/{environmentName}/apps/{appName}/components`
-|br|
-Take a moment to review the Information Architecture controller employs to make sure this makes sense to you:
+| Take a moment to review the Information Architecture controller employs to make sure this makes sense to you:
+
       .. image:: ../../_static/ia.png
 
 

@@ -26,6 +26,7 @@ Create the configuration
     2. Expand the `Lending-Prod Environment` section
     3. Expand `Application - mortgage.acmefinancial.net`
     4. Select `Create Component - login` and click Send
+    
     |login|
     
     5. Note that both the INGRESS URIs and WORKLOAD URIs are configured to use encryption

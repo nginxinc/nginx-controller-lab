@@ -30,7 +30,7 @@ Log in as Samantha
       - password: `Admin123!@#`
 
 Review the Components added through the API
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Select `Services` from the navigation menu in the Controller GUI
     2. Select `Apps`
@@ -38,7 +38,7 @@ Review the Components added through the API
     4. Review the components added through the API, note the commonality between the API and GUI
 
 Add the blog page to the main ACME Financial site with a URI rewrite
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     1. Return to the list of all Apps
     2. Select `www.acmefinancial.net`

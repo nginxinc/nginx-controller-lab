@@ -27,6 +27,7 @@ Add the OpenAPI3 API definition
     1. Expand the `Retail-Dev Environment`
     2. Expand the `Application - trading.acmefinancial.net`
     3. Select `Import OAS API Definition - trading-api`
+    
      |treeref|
     
     4. Click on `Send` to push the API specification (via PUT method)
