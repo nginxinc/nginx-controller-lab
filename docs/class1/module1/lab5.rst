@@ -37,7 +37,7 @@ Add a Gateway using the GUI
     10. Add the URI: `https://trading-api.acmefinancial.net`
     11. Select `Done`
     12. For the Certificate Reference, select |createNew|
-    13. Name the new certificate: `trading-api.acmefinancial.net`
+    13. Name the new certificate: `trading-api.dev.acmefinancial.net`
     14. Browse to the trading-api.dev.acmefinancial.net.crt certificate (it's in your jumphost,  in Documents > Certs)
     15. Browse to the trading-api.dev.acmefinancial.net.key key (it's in your jumphost,  in Documents > Certs)
     16. Select `Submit` to create the new certificate
@@ -53,7 +53,7 @@ Add a Gateway using the GUI
 | Certificates (PEM or PKCS12) can be imported into Controller at the time they're added to   |
 | a Gateway or Component. They can be defined and managed separately (such as by a specific   |
 | certificate/security team) with Controller only referenced them, or a file path local to    |
-| NGINX instancecan be defined.                                                               |
+| NGINX instance can be defined.                                                              |
 | These options give David and Samantha unique flexibility to enable how they want to manage  |
 | their certificates.                                                                         |
 +---------------------------------------------------------------------------------------------+
