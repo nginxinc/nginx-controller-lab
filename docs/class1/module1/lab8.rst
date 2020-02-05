@@ -55,8 +55,8 @@ Add the blog page to the main ACME Financial site with a URI rewrite
     
     10. Add URI Rewrite to match any URI starting with /blog/ and rewrite it to prepend /blog/wordpress/wwwsite/. Use the regex pattern specified below: the incoming pattern catches what's been specified in the URL after */blog/*, and then puts that into the `$1` variable to rewrite the URI as /blog/wordpress/wwwsite/$1.
 
-        1. incoming pattern: **`^/blog/(.*)$`**
-        2. rewrite pattern: **`/blog/wordpress/wwwsite/$1?`**
+        1. incoming pattern: **^/blog/(.*)$**
+        2. rewrite pattern: **/blog/wordpress/wwwsite/$1?**
     
     11. Press *Publish*
 
