@@ -105,6 +105,7 @@ Explore the documentation
 
 In both cases note the object-based path to interact with these objects.  For example: a *Component* is an object that is a child to an *App* which is a child to an *Environment*.
 `https://10.1.1.5/api/v1/services/environments/{environmentName}/apps/{appName}/components`
+
 | Take a moment to review the Information Architecture controller employs to make sure this makes sense to you:
 
       .. image:: ../../_static/ia.png
@@ -132,3 +133,4 @@ Explore API actions in the GUI while editing
   5. Note the API call, the JSON body, and the copy to clipboard icon all added to enable quick and easy GUI discovery and translation to automation.
 
    .. image:: ../../_static/view_api_req.png
+
