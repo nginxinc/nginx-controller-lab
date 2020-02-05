@@ -32,10 +32,10 @@ Create the configuration
 
 Insert rate limiting
 ^^^^^^^^^^^^^^^^^^^^
+
 .. note:: 
    
    Ratelimiting is only available in the **API** in Controller 3.0; it will be available in the GUI later.
- 
 
     1. Select `Create Component - login - with rate`
     2. Note the Security section and the rateLimit. The rate limit is set low ( 1 second ) to provide some relief.
