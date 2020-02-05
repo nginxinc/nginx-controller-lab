@@ -93,6 +93,9 @@ Setting a Health monitor from the pipeline
     3. Expand `Application - servicecenter.acmefinancial.net`
     4. Expand `Establish APIM Defs and Components - ticketprocessing.internal.acmefinancial.net`
     5. Select `Create Component - mon - ticketprocessing.internal.acmefinancial.net`
+    
+    |monitor|
+    
     6. Note the monitoring section
     7. Note that isDown is back to false for each workload URI
     8. Click on Send to push this configuration (PUT method)
@@ -128,3 +131,5 @@ Test the web site again
 
 .. |traffic_test_500_error_msg_serverport| image:: ../../_static/traffic_test_500_error_msg_serverport.png
    :scale: 50%
+   
+.. |monitor|  image:: ../../_static/postman_monitor.png
