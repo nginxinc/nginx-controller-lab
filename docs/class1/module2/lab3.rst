@@ -1,3 +1,7 @@
+
+
+
+
 ==============================================
 Protecting your app with rate limiting
 ==============================================
@@ -22,13 +26,20 @@ Create the configuration
     2. Expand the `Lending-Prod Environment` section
     3. Expand `Application - mortgage.acmefinancial.net`
     4. Select `Create Component - login` and click Send
+    |login|
+    
     5. Note that both the INGRESS URIs and WORKLOAD URIs are configured to use encryption
 
 Insert rate limiting
 ^^^^^^^^^^^^^^^^^^^^
+.. warning:: Ratelimiting is only available in the **API** in Controller 3.0; it will be available in the GUI later.
+ 
 
     1. Select `Create Component - login - with rate`
     2. Note the Security section and the rateLimit. The rate limit is set low ( 1 second ) to provide some relief.
+    
+    |ratelimitspec|
+    
     3. Click `Send` to push the configuration change (PUT method)
 
 Test the Rate Limit configuration
@@ -47,3 +58,6 @@ Test the Rate Limit configuration
 ==========
 END OF LAB
 ==========
+
+ .. |login| image:: ../../_static/postman_loginforratelimit.png
+ .. |ratelimitspec| image:: ../../_static/postman_ratelimitspec.png
