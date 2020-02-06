@@ -52,7 +52,7 @@ Add a Gateway using the GUI
 +=============================================================================================+
 | Certificates (PEM or PKCS12) can be imported into Controller at the time they're added to   |
 | a Gateway or Component. They can be defined and managed separately (such as by a specific   |
-| certificate/security team) with Controller only referenced them, or a file path local to    |
+| certificate/security team) with Controller only referencing them, or a file path local to    |
 | NGINX instance can be defined.                                                              |
 | These options give David and Samantha unique flexibility to enable how they want to manage  |
 | their certificates.                                                                         |
