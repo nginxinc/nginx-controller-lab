@@ -11,7 +11,7 @@ Protecting your app with rate limiting
 | Talk Track                                                                                  |
 +=============================================================================================+
 | The mortgage team has been hearing reports that some users aren't able to log in. They tell |
-| Olivia that "our service is seeing massive network spikes and CPU load.                     |
+| Olivia: "our service is seeing massive network spikes and CPU load!"                        |
 | Olivia attempts to relieve this by changing the mortgate app config so that these issues    |
 | go away.                                                                                    |
 | The mortgate app is made up of a couple of different components, a web login and web API    |
