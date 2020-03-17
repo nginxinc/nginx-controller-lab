@@ -27,7 +27,7 @@ Login to Controller as Samantha
 
   5. Log in as Samantha using the credentials:
   
-    - username: `retail-dev@ACMEfinancial.net`
+    - username: `retail-dev@acmefinancial.net`
     - password:  `Admin123!@#`
 
  
