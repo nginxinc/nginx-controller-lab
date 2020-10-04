@@ -11,8 +11,8 @@ jobs:
         - bash ./containthedocs-cleanbuild.sh
       before_deploy:
         - cd docs/_build/html
-        - tar -zcf ${TRAVIS_BUILD_DIR}${REPO}-${BUILD_ENV}-${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER}.tar.gz ${REPO}
         - ls
+        - tar -zcf ${TRAVIS_BUILD_DIR}${REPO}-${BUILD_ENV}-${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER}.tar.gz ${REPO}
       deploy:
         provider: releases
         api_key:
