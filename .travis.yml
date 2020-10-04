@@ -12,7 +12,7 @@ jobs:
       before_deploy:
         - cd docs/_build/html
         - ls
-        - tar -zcf ${TRAVIS_BUILD_DIR}${REPO}-${BUILD_ENV}-${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER}.tar.gz ${REPO}
+        - tar -zcf ${TRAVIS_BUILD_DIR}${REPO}-${BUILD_ENV}-${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER}.tar.gz ./
       deploy:
         provider: releases
         api_key:
