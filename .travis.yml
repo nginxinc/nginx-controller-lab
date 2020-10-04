@@ -12,6 +12,7 @@ jobs:
       name: Create build zip
       if: (NOT type IN (pull_request)) AND (branch = master) # only deploy if merging on master
       script:
+        - ls
         - cd ./docs/_build/html
         - zip docs.zip
       deploy:
