@@ -9,7 +9,6 @@ jobs:
       name: Build
       script:
         - bash ./containthedocs-cleanbuild.sh
-        - zip docs.zip
       before_deploy:
         - cd docs/_build/html
         - tar -zcf ${TRAVIS_BUILD_DIR}${REPO}-${BUILD_ENV}-${TRAVIS_TAG}-${TRAVIS_BUILD_NUMBER}.tar.gz ${REPO}
