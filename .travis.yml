@@ -7,12 +7,8 @@ jobs:
   include:
     - stage: build
       name: Build
-      script: bash ./containthedocs-cleanbuild.sh
-    - stage: deploy
-      name: Create build zip
-      if: (NOT type IN (pull_request)) AND (branch = master) # only deploy if merging on master
       script:
-        - ls
+        - bash ./containthedocs-cleanbuild.sh
         - cd ./docs/_build/html
         - zip docs.zip
       deploy:
