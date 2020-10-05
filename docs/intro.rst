@@ -2,7 +2,7 @@
 Getting Started
 ===============
 
-Please use the "**NGINX Controller 3.x Demo / Lab**" Blueprint for this lab exercise
+Please use the "**NGINX Controller Product Team Demo / Lab**" Blueprint for this lab exercise
 
 The infrastructure is all ready for you.
 Controller, NGINX Plus, and agents are all installed. Controller is pre-configured.
