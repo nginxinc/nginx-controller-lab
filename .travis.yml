@@ -20,5 +20,5 @@ jobs:
           secure: SlfuH7JVBtxqK8XaZrD+O+u8tefvyc5DCN+suttf715RagwVQuKaXEIKgIUpuJ2I/oq6xXajeGgM/skkiXLPm35WN8VOU7wxI88KwICGSyXhEyg8DZ5BJpNsDpIgUtq3Pfus/Y2Hj4MgLX32KwZ/YZCu+lNSDgS5fga2bJQlXGLwhENIE6XVtoCfKyv83cGWX7k9FmdCgluVxxKzccjFezvgwN5Bs47UgrcubH+xIxKbexBhLN+PsM2/UaHu78StZyWigTN4aIMycX8rV5ynZloV3uOg2wkOMR9Y8TlDMAmOCVSNcZ3iGxgY3VlLhMA0PsYCfQrOVsN243V4uJAL6heLikPl0U0NTg2VStARMPW6RTmQNThRiXlFtnwNkZ3G/wuCHgBANfFV0UUDSA8nBHNGqxjUcqTyO6TUvX/ig7oWigpvhbfq+WLdbWjmnQP+m6jvxmmjONMvx6HIk9xr8uNqhaR2gJksVlPMuOgCSqG1EzWQKJLf/PApBEUf+7c0Ul6ri/wZAeinw3/v3aZz5+B5wIiJhn7lgZ/N3Y2ueC172PyOwNg7foskxitwcqodW/CtN0hYi+O5PfZntKAGaNY11aNIxws35/45azEn3krKufIbagFE7YHEgCjE6UtXPBazw/J7FqM/Q86q7Rn+fvKTNJxwwrQdRgZmOsPe8wE=
         file: ${TRAVIS_BUILD_DIR}${REPO}-${TRAVIS_BUILD_NUMBER}.tar.gz
         on:
-          repo: aknot242/nginx-controller-lab
+          repo: f5networks/nginx-controller-lab
         cleanup: 'false'
