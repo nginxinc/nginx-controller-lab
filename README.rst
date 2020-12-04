@@ -1,56 +1,22 @@
-F5 Agility Lab Template
-=======================
+NGINX Controller Lab Guide
+==========================
 
 [![Build Status](https://travis-ci.org/nginxinc/nginx-controller-lab.svg?branch=master)](https://travis-ci.org/nginxinc/nginx-controller-lab)
 
 Introduction
 ------------
 
-This repo contains a template that should be used when creating lab
-documentation for F5's Agility Labs.
+This repo contains the documentation sources for the NGINX Controller 3.x UDF lab.
 
 Setup
 -----
 
-#. Download or ``git clone`` the f5-agility-lab-template
+#. Download or ``git clone`` the nginx-controller-lab
 #. Download and install Docker CE (https://docs.docker.com/engine/installation/)
 #. Build the sample docs ``./containthedocs-build.sh``. The first time you build
    a container (~1G in size) will be downloaded from Docker Hub.
 #. Open the ``docs/_build/html/index.html`` file on you system in a web browser
 
-Configuration & Use
--------------------
-
-To use this template:
-
-#. Copy contents of this repo to a new directory ``cp -Rf . /path/to/your/docs``
-#. ``cd /path/to/your/docs``
-#. Edit ``docs/conf.py``
-#. Modify the following lines:
-
-   - ``classname = "Your Class Name"``
-   - ``github_repo = "https://github.com/f5devcentral/your-class-repo"``
-
-#. Build docs ``./containthedocs-build.sh`` (*see Build Scripts below*)
-#. Open the ``docs/_build/html/index.html`` file on you system in a web browser
-#. Edit the ``*.rst`` files as needed for your class
-#. Rebuild docs as needed using ``./containthedocs-build.sh``
-
-Converting from Microsoft Word
-------------------------------
-
-To convert a ``.docx`` file from Microsoft Work to reStructuredText:
-
-#. Copy your ``.docx`` file into the f5-agility-lab-template directory
-#. Run ``./containthedocs-convert.sh <filename.docx>``
-#. Your converted file will be named ``filename.rst``
-#. Images in your document will be extracted and placed in the ``media``
-   directory
-
-.. WARNING:: While the document has been converted to rST format you will still
-   need to refactor the rST to use the structure implemented in this template.
-
-.. _scripts:
 
 Build Scripts
 -------------
