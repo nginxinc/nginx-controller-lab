@@ -25,8 +25,8 @@ Explore the trading application
     3. Select `Login`
     4. enter the credentials:
 
-      - username: `admin`
-      - password: `iloveblue`
+      - username: `matt`
+      - password: `ilovef5`
       
     5. Note the dashboard. As we enable new features the dashboard will change, displaying these new capabilities.
 

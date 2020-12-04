@@ -27,7 +27,7 @@ Credentials
     - lending-admin@acmefinancial.net / Admin123!@#  ( aka Olivia )
 
 - Trading Application:
-    - admin / iloveblue
+    - matt / ilovef5
 
 Lab Topology
 ============
