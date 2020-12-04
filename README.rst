@@ -1,8 +1,7 @@
 F5 Agility Lab Template
 =======================
 
-.. image:: https://travis-ci.com/f5devcentral/2020-NGINX-Controller-Lab-Guide.svg?token=7SDHmaEMbVMyBQWy9Hfr&branch=main
-    :target: https://travis-ci.com/f5devcentral/2020-NGINX-Controller-Lab-Guide
+[![Build Status](https://travis-ci.org/nginxinc/nginx-controller-lab.svg?branch=master)](https://travis-ci.org/nginxinc/nginx-controller-lab)
 
 Introduction
 ------------
