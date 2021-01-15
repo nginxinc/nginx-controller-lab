@@ -1,135 +1,130 @@
-=====================================================================
-Troubleshoot 500 errors in a large call center app
-=====================================================================
+Lab 2 - Programmatic ADC App Creation
+################################################
 
-+---------------------------------------------------------------------------------------------+
-| Talk Track                                                                                  |
-+=============================================================================================+
-| Let's take a look at some of the problems with a large call center app Olivia is            |
-| responsible for. The app is a complicated 3-tier application with internal services         |
-| talking to each other. Olivia is getting reports from the call center agents that the app   |
-| is having issues.                                                                           |
-| We're going to troubleshoot to figure out what's going on. It looks like some of the issues |
-| could be with the ticket processing service, but let's start by looking at the Controller   |
-| dashboards to understand what's happening with the application and it's components.         |
-+---------------------------------------------------------------------------------------------+
+The goal of this lab is for the student to deploy an app component using the NGINX Controller API.
+This lab uses Postman as a proxy for programmatic deployments customers might perform through automation tools or a CI/CD pipeline.
 
-Log out as Samantha
-^^^^^^^^^^^^^^^^^^^^^^
+.. IMPORTANT::
+    Estimated completion time: 5 minutes
 
-    1. Select the Controller GUI tab in Chrome
-    2. Select `retail dev` in the top right
-    3. Select |logout|
-
-Log in as Olivia
-^^^^^^^^^^^^^^^^^^^
-
-    1. Login as Olivia using the credentials:
-    
-      - username: `lending-admin@acmefinancial.net`
-      - password: `Admin123!@#`
-
-Test the web site
-^^^^^^^^^^^^^^^^^^^^
-
-    1. Using Postman (in the JumpHost)
-    2. Expand the `Traffic Tests` section
-    3. Select the `ticketprocessing.internal.acmefinancial.net` request
-    4. Select `Send` a few times
-    5. Note that you will randomly receive a 500 response
-
-|traffic_test_500_error_msg|
-
-Review status codes
-^^^^^^^^^^^^^^^^^^^^
-
-    1. Go to the Controller GUI (using Chrome on the JumpHost)
-    2. Open `Analytics` from the Navigation bar
-    3. Select the `Lending-Prod` dashboard
-    4. Scroll to the bottom and you to see the internal system - 500 service errors graph
-    5. Note the 500 errors spikes
-
-|traffic_test_500_error_msg_gui|
-
-Identify where the 500 error is coming from
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-    1. Return to Postman (on the JumpHost)
-    2. Click `Send` until you receive a 500 error
-    3. Note the serverPort in the response: the 500 error only happens when the request is routed to a specific workload serverPort
-
-|traffic_test_500_error_msg_serverport|
-
-Triage a workaround
-^^^^^^^^^^^^^^^^^^^
-
-    1. Return to the Controller GUI
-    2. Select `Services` from the Navigation bar
-    3. Select the App `servicecenter.acmefinancial.net`
-    4. Select the Component `ticketprocessing.internal.acmefinancial.net` and edit it
-    5. Select `Workload Groups`
-    6. Edit the `servers` workload group
-    7. Edit the two backend workload URIs using port 6203
-
-      1. Set "Is Down" to `True`
-      2. Click Done
-
-    8. Publish the changes
-
-Test the web site again
-^^^^^^^^^^^^^^^^^^^^^^^
-
-    1. Using Postman (in the JumpHost)
-    2. Expand the `Traffic Tests` section
-    3. Select the `ticketprocessing.internal.acmefinancial.net` call
-    4. Click `Send` a few times
-    5. Note that you no longer receive a 500 response
-
-Setting a Health monitor from the pipeline
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-    1. Using Postman (in the JumpHost)
-    2. Expand the `Lending-Prod Environment` section
-    3. Expand `Application - servicecenter.acmefinancial.net`
-    4. Expand `Establish APIM Defs and Components - ticketprocessing.internal.acmefinancial.net`
-    5. Select `Create Component - mon - ticketprocessing.internal.acmefinancial.net`
-    
-    |monitor|
-    
-    6. Note the monitoring section
-    7. Note that isDown is back to false for each workload URI
-    8. Click on Send to push this configuration (PUT method)
-
-Test the web site again
-^^^^^^^^^^^^^^^^^^^^^^^
-
-    1. Using Postman (in the JumpHost)
-    2. Expand the `Traffic Tests` section
-    3. Select the `ticketprocessing.internal.acmefinancial.net` call
-    4. Select `Send` a few times
-    5. Note that you no longer receive a 500 response
+.. NOTE::
+    Lab instructions are written as if the student is executing the steps
+    from the Windows jumphost -- ``jumphost-1``. See the :ref:`overview` for connection details.
 
 
-+---------------------------------------------------------------------------------------------+
-| Talk Track                                                                                  |
-+=============================================================================================+
-| Olivia sees that the configuration changes have fixed the issues: servers are no longer     |
-| tagged as down permanently.                                                                 |
-| By adding monitoring to the configuration, NGINX can be responsible for health checking     |
-| (actively or passively) ensuring the health and availability of the service.                |
-+---------------------------------------------------------------------------------------------+
+View Trading App Current State
+---------------------------------
+
+#. In Chrome, open a tab and go ``http://trading.acmefinancial.net``. Click the **Login** button. 
+   This is an example "trading" application.
+
+   .. image:: ./media/M2L2tradingGen.png
+      :width: 800
+
+#. Login to the application with the specified credentials. 
+
+   +-------------------------+----------------------+
+   |        Username         |      Passwor         |
+   +=========================+======================+
+   |  matt                   |  ``ilovef5``         |
+   +-------------------------+----------------------+
+  
+   .. image:: ./media/M2L2tradingLogin.png
+      :width: 200
+
+   .. NOTE::
+      Notice the "Coming Soon" for the "Quick Money Transfer" frame on the right.
+
+   .. image:: ./media/M2L2trading1.png
+      :width: 200
+
+Deploy a Component using Postman
+---------------------------------
+
+#. On the jumphost, open **Postman**. Expand the **_NGINX Controller 3.x
+   UDF ISC (master)” Collection**.
+
+   .. image:: ./media/M2L2PMcoll.png
+      :width: 400
+
+#. Expand **Common Tasks**, **Admin Logon**, and select the "Login to Controller
+   – admin – local" request.
+
+   .. image:: ./media/M2L2PMcoll2.png
+      :width: 400
+
+#. In Postman select **Send**.
+
+   .. image:: ./media/M2L2PMsend1.png
+      :width: 600
+
+   .. NOTE::
+      Controller responds with a "204" response and an authentication cookie. 
+      Postman uses this cookie for auth in subsequent requests.
+
+   .. image:: ./media/M2L2PMcookie.png
+      :width: 400
+
+#. Expand the **Retail-Development Environment**, **Application trading** folder. 
+   Open the **Application trading** subfolder and select the request name "4) Create Component
+   – transfers".
+
+   .. image:: ./media/M2L2PMtransfer.png
+      :width: 400
+
+#. Click the **Body** view in the Postman request area. Look over the PUT request payload. 
+   The JSON properties under ``desiredState``, ``logging``, ``security``, and ``backend`` 
+   should look familiar based on the Component you deployed in the previous lab.
+
+   .. image:: ./media/M2L2PMbody.png
+      :width: 400
+
+#. In Postman select **Send**.
+
+   .. image:: ./media/M2L2PMsend2.png
+      :width: 800
+
+   .. NOTE::
+      Controller follows an "eventual consistency model". The API responded to the Postman request with a "202 Accepted".
+      Controller is now working to bring about the desired state. 
+
+   .. image:: ./media/M2L2PMconfig.png
+      :width: 600
+
+Verify Trading App Changes
+---------------------------
+
+#. In Chrome, reload the ``http://trading.acmefinancial.net/trading/index.php`` site.
+   Verify the “Quick MoneyTransfer” is active and “Coming Soon” has been replace.
+
+   .. image:: ./media/M2L2result.png
+      :width: 400
 
 
-.. |logout| image:: ../../_static/log_out.png
-   :scale: 50 %
+.. _loadgen:
 
-.. |traffic_test_500_error_msg| image:: ../../_static/traffic_test_500_error_msg.png
-   :scale: 50%
+Start WAF Traffic Generation for Analytics
+-------------------------------------------
 
-.. |traffic_test_500_error_msg_gui| image:: ../../_static/traffic_test_500_error_msg_gui.png
-   :scale: 50%
+.. IMPORTANT::
+   This step **MUST** be completed for statistics to be available in Module 3. 
 
-.. |traffic_test_500_error_msg_serverport| image:: ../../_static/traffic_test_500_error_msg_serverport.png
-   :scale: 50%
-   
-.. |monitor|  image:: ../../_static/postman_monitor.png
+#. Login to the "loadgen-1" instance. Using "PuTTY" select the **loadgen-1** saved session and click **Open**.
+
+   .. image:: ./media/M2L2loadgenssh.png
+      :width: 400
+
+   .. IMPORTANT::
+      If you receive a PuTTY warning regarding the server's host key click **Yes** to connect.
+      This is caused by a unique host key being generated for each UDF deployment.
+
+#. Execute the following "docker" command to generate traffic against the demo application deployed in this lab.
+
+   .. code-block:: bash
+
+      $ sudo docker start 89
+
+#. The result of the command should echo the container name ("89").
+
+   .. image:: ./media/M2L2loadgenresult.png
+      :width: 600

@@ -1,136 +1,145 @@
-================================================
-Familiarize yourself with Controller as Samantha
-================================================
+Lab 1 - Active Directory Authentication
+#################################################
+
+The goal of this lab is to explore the pre-configured Active Directory authentication
+and role based access control configuration. Students will view the existing configuration without making changes.
+
+.. IMPORTANT::
+    Estimated completion time: 5 minutes
+
+.. NOTE::
+    Lab instructions are written as if the student is executing the steps
+    from the Windows jumphost -- ``jumphost-1``. See the :ref:`overview` for connection details.
+
+Access the Authentication Providers Configuration
+--------------------------------------------------
+
+#. Open Chrome Browser.
+#. Access the NGINX Controller UI through the provided bookmark.
+
+   .. image:: ./media/M1L1ControllerBookmark.png
+      :width: 400
+
+#. Login with the ``Peter Parker`` account who is an NGINX Controller admin.
+
+   +-------------------------+-----------------+
+   |      Username           |    Password     |
+   +=========================+=================+
+   | peter@acmefinancial.net | ``Peter123!@#`` |
+   +-------------------------+-----------------+
+
+   .. image:: ./media/M1L1ControllerLogin.png
+      :width: 400
+
+#. Select the navigation bar in the upper left of the screen then select **Platform** from the drop-down list.
+
+   .. image:: ./media/M1L1Platform.png
+      :width: 200
+
+#. Navigate to the **Auth Providers** tile.
+
+   .. image:: ./media/M1L1AuthProviders.png
+      :width: 800
+
+#. View the configuration of the ``ad-acmefinancial-net`` provider by clicking **Edit**.
+
+   .. image:: ./media/M1L1ProviderEdit.png
+      :width: 800
+
+Inspect the Authentication Provider Configuration
+--------------------------------------------------
+
+In this section, students will walk through the "Authentication Provider Configuration" tabs.
+Click the tab for the relevant area.
+
+.. image:: ./media/M1L1ADwalkthrough.png
+   :width: 200
+
+#. **Configuration** tab
+
+   This section defines the basic settings for the authentication provider.  The required parameters are:
+
+   +--------------------+---------------------------------------------------------------------------------------+
+   | Attribute          | Description                                                                           |
+   +====================+=======================================================================================+
+   | Auth Provider Type | Define the  authentication provider being used                                        |
+   +--------------------+---------------------------------------------------------------------------------------+
+   | User Format        | Define if the user will login with username@domain (UPN) or domain/user (User Domain) |
+   +--------------------+---------------------------------------------------------------------------------------+
+
+   .. NOTE::
+      As of release 3.10, Active Directory is currently the only supported Auth Provider Type.
 
 
-   
-Follow these steps to complete this task:
+   .. image:: ./media/M1L1ProviderConfig.png
+      :width: 800
+
+#. **Connection** tab
+
+   This section is used to specify the Domain, URL, and SSL settings.  
+
+   .. NOTE::
+        There is no option under **SSL Parameters** to allow for an unencrypted connection. 
+
+   In this example, the AD certificate has been provided for verification purposes. 
 
 
-Login to Controller as Samantha
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   .. image:: ./media/M1L1Connection.png
+      :width: 800
 
-  1. Connect to the Jumphost from the UDF interface (all activities should be performed from the Jumphost). In UDF from the `jumphost-1` host, select `Access` and then `RDP`. 
+#. **User Binding** tab
 
-    .. image:: ../../_static/jumphost.png
-        :scale: 60 %
-        :align: center
+   This section specifies the "Bind" account credentials for NGINX Controller to authenticate to Active Directory.
 
-  2. Log in to the Jumphost. Enter the Jumphost credentials:
 
-    - username: `administrator`
-    - password: `BZ8D8MCVR`
+   .. image:: ./media/M1L1UserBinding.png
+      :width: 800
 
-  3. Open the Chrome browser
+#. **Group Setup** tab
 
-  4. Enter the URL: https://10.1.1.5
+   This section determines the caching and query parameters for Active Directory groups which can be used for Role Based Access Control.
 
-  5. Log in as Samantha using the credentials:
-  
-    - username: `retail-dev@acmefinancial.net`
-    - password:  `Admin123!@#`
 
+   .. image:: ./media/M1L1GroupSetup.png
+      :width: 800
+
+#. **Group Mappings** tab
+
+This section maps Active Directory groups to "Internal" NGINX Controller "Roles Groups".
+
+
+   .. image:: ./media/M1L1GroupMappings.png
+      :width: 800
+
+Controller "Roles Groups" can be configured under **Platform** -> **Roles**. 
+See the NGINX Controller documentation on managing `roles`_ for more information.
+
+   .. image:: ./media/M1L1RolesGroups.png
+      :width: 800
+
+The Active Directory groups used in the **Group Mapping** configuration can be viewed on the Domain Controller. 
+
+   .. NOTE::
+     The following pictures are for reference -- you don't need to login to the Domain Controller.
+
+   .. image:: ./media/M1L1ADGroups.png
+      :width: 800
+
+   .. NOTE::
+     You are currently logged in as "Peter Parker". "Peter" is member of "nginx-controller-admins".  This Active Directory group is mapped to the "admin_group" roles group in NGINX Controller. 
+
+   .. image:: ./media/M1L1ADUsers.png
+      :width: 600
+
+   .. image:: ./media/M1L1ADControllerAdmins.png
+      :width: 400
+
+Additional Reference
+--------------------
+
+The published NGINX Controller documentation walks through configuring an Active Directory authentication provider in `detail`_.
  
- 
-Review Samantha's view within Controller
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  1. Select the navigation bar in the upper left of the screen. 
-   
-        .. image:: ../../_static/navigation_root.png
-           :scale: 60 %
-
-  2. Select the `Services` menu. 
-   
-        .. image:: ../../_static/navigation_services.png
-           :scale: 60 %
-
-        - Under `Services` Samantha is restricted to three Apps supporting ACME Financial.
-    
-  3. Select the App named `trading.acmefinancial.net`
-        
-        - Note the tray that opens on the right, showing the Components that have been configured for the application.
-   
-  4. Explore each Component to familiarize yourself with the full application.
-
- 
- 
-  +-------------------------------------------------------------------------------------+
-  | Talk Track                                                                          |
-  +=====================================================================================+
-  | We can see at a glance the configuration state of the trading app and then go and   |
-  | see the various components and pieces of the app.                                   |
-  +-------------------------------------------------------------------------------------+
-  
 
 
-Explore the documentation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  +-------------------------------------------------------------------------------------+
-  | Talk Track                                                                          |
-  +=====================================================================================+
-  | Samantha is also becoming accustomed to the new Controller API. She finds the new   |
-  | UX straightforward visually, and she likes that it helps her understand the object  |
-  | structure. Not to mention how it helps her learn how to use the APIs: she can see   |
-  | the API call being built, the endpoint and how the JSON is structured.              |
-  +-------------------------------------------------------------------------------------+
-
-
-  1. From the Controller UI, select the help icon in the Navigation bar.  
-    
-        .. image:: ../../_static/navigation_help.png
-           :scale: 60 %
-
-        A new tab opens presenting the in-box documentation
-
-  2. Select `API Reference` drop down
-  3. Select the current version of the API Reference 
-    
-        .. image:: ../../_static/documentation_api.png
-           :scale: 60 %
-
-
-  +-------------------------------------------------------------------------------------+
-  | Talk Track                                                                          |
-  +=====================================================================================+
-  | Samantha now has a full API reference of the Controller endpoints. She can use this |
-  | to automate creating and deploying new servies.                                     |
-  | The two main endpoints we'll be working with a `gateway` and `component`.           |
-  +-------------------------------------------------------------------------------------+
-
-
-  4. In the left side of the API Reference select the `gateways` section and explore the object.
-  5. In the left side of the API Reference select the `components` section and explore the object.
-
-In both cases note the object-based path to interact with these objects.  For example: a *Component* is an object that is a child to an *App* which is a child to an *Environment*.
-`https://10.1.1.5/api/v1/services/environments/{environmentName}/apps/{appName}/components`
-
-| Take a moment to review the Information Architecture controller employs to make sure this makes sense to you:
-
-      .. image:: ../../_static/ia.png
-
-
-
- 
- 
- 
-Explore API actions in the GUI while editing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  1. From the Controller GUI web browser tab
-  2. Select the `trading.acmefinancial.net` App
-  3. Select Edit 
-    
-    .. image:: ../../_static/app_edit.png
-       :scale: 60 %
-
-  4. at the bottom of the edit screen select `VIEW API REQUEST` to review the API used to create or modify this App object.  
-    
-    .. image:: ../../_static/view_api_request.png
-       :scale: 60 %
-
-  5. Note the API call, the JSON body, and the copy to clipboard icon all added to enable quick and easy GUI discovery and translation to automation.
-
-   .. image:: ../../_static/view_api_req.png
-
+.. _detail: https://docs.nginx.com/nginx-controller/platform/access-management/manage-active-directory-auth-provider/
+.. _roles: https://docs.nginx.com/nginx-controller/platform/access-management/manage-roles/
