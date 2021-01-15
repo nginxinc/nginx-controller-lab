@@ -151,43 +151,20 @@ Enable the Referrals capability
     
       |configured|
       
-+---------------------------------------------------------------------------------------------+
-| Talk Track                                                                                  |
-+=============================================================================================+
-| Controller follows an *API-First* methodology, which means that what you see in the GUI is  |
-| using the very same APIs Controller provides.                                               |
-| In the pervious PUT request's body you can see the desiredState for ingress (the incoming   |
-| URI) and backend (the workload groups and servers). Through the GET request you can see the |
-| *eventually consistent* behavior of the system as the config is built and then applied to   |
-| the specified NGINX instance.                                                               |
-+---------------------------------------------------------------------------------------------+
- 
+   .. image:: ./media/M1L2K8s.png
+      :width: 1024
 
-Review the new section of the Trading application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   .. NOTE::
+      The command's output shows Controller's several pods are distributed among the three nodes (the "NODE" column).
 
-    1. Return to the trading application browser tab and *refresh the page* (from the Jumphost)
-    2. Note the new capability that has been added to the application: |referrals| 
-    3. Previously there was a placeholder: |coming_soon|
 
-.. |trading_transfer_before| image:: ../../_static/trading_transfer_before.png
-    
-.. |trading_transfer_after| image:: ../../_static/trading_transfer_after.png
-    
-.. |coming_soon| image:: ../../_static/coming_soon.png
-    :scale: 30 %
+.. _Reference:
 
-.. |referrals| image:: ../../_static/referrals.png
-    :scale: 30 %
-    
-.. |open| image:: ../../_static/postman_commontasks.png
+Additional Reference
+--------------------
+Future NGINX Controller releases will allow for the creation of a floating self-ip by adding a "load balancer" to the
+exposed API Gateway ("apigw") kubernetes service. For on-premise installations `MetalLB`_ handle L2 failover. 
+For cloud installations a k8s service with type `LoadBalancer`_, resulting in a cloud native external load balancer, will be used.
 
-.. |login| image:: ../../_static/postman_login.png
- 
-.. |trading| image:: ../../_static/postman_showtree.png
- 
-.. |body| image:: ../../_static/postman_body.png
- 
-.. |configured| image:: ../../_static/postman_configuredjson.png
-
-.. |method| image:: ../../_static/postman_changemethod.png
+.. _MetalLB: https://metallb.universe.tf/
+.. _LoadBalancer: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer

@@ -1,5 +1,3 @@
-docs/_build/*
-media
+docs/_build/**
+.vscode/settings.json
 *.docx
-pdf/*
-.vscode
