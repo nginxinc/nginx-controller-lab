@@ -1,165 +1,155 @@
-Lab 2 - NGINX Controller Resiliency
-############################################
+==============================================================================
+Extend the Trading app: add referral and upload
+==============================================================================
 
-The goal of this lab is to add another host as a third member to an NGINX Controller cluster. 
+A: Using the GUI
+================
 
-.. IMPORTANT::
-   - Estimated completion time: 10 minutes
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| Samantha owns the trading app: it's been extremely successful and rapidly adopted by retail |
+| customers. Dev teams are rolling out new parts of the app using modern app processes like   |
+| automated testing and CI/CD. We're going to deploy some new features for the app:           |
+|                                                                                             |
+|  - the ability to transfer funds,                                                           |
+|  - a referrals program, and                                                                 |
+|  - file uploads                                                                             |
++---------------------------------------------------------------------------------------------+
 
-.. IMPORTANT::
-   - NGINX Controller Resiliency and High Availability are early access features. 
-     The GUI clustering configuration may not appear in the 3.11 release and may include
-     additional functionality when reaching general availability.
+Explore the trading application
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. NOTE::
-     Lab instructions are written as if the student is executing the steps
-     from the Windows jumphost -- ``jumphost-1``. See the :ref:`overview` for connection details.
+    1. Using Google Chrome on the Jumpbox, open a new tab
+    2. Enter `https://trading.dev.acmefinancial.net` as the URL
+    3. Select `Login`
+    4. enter the credentials:
 
+      - username: `matt`
+      - password: `ilovef5`
+      
+    5. Note the dashboard. As we enable new features the dashboard will change, displaying these new capabilities.
 
-Create an additional NGINX Controller Node
-------------------------------------------
-
-#. Open Chrome Browser.
-#. Access the NGINX Controller UI through the provided bookmark.
-
-   .. image:: ./media/M1L1ControllerBookmark.png
-      :width: 400
-
-#. Login with the ``Peter Parker`` account who is an NGINX Controller admin.
-
-   +-------------------------+-----------------+
-   |      Username           |    Password     |
-   +=========================+=================+
-   | peter@acmefinancial.net | ``Peter123!@#`` |
-   +-------------------------+-----------------+
-
-   .. image:: ./media/M1L1ControllerLogin.png
-      :width: 400
-
-#. Navigate to the **Platform** section.
-
-   .. image:: ./media/M1L1Platform.png
-      :width: 200
-
-#. Open the **Cluster** tile.
-
-   .. image:: ./media/M1L2ClusterTileSmall.png
-      :width: 600
-
-#. View the current "Cluster Configuration".
-
-   .. image:: ./media/M1L2ClusterConfig.png
-      :width: 800
-
-.. NOTE::
-     The "Cluster Configuration" section indicates this Controller instance is part of a cluster.
-     The "FQDN" is used as the common name for the cert applied to API Gateway pod -- 
-     ie. the service that exposes API endpoints and the GUI.
-
-.. IMPORTANT::
-      The "load balancer" option will be configurable in a future Controller release.
-      See this lab's Additional :ref:`Reference` for more details.
-
-.. NOTE::
-      The "Nodes" section shows the cluster currently has 2 Controller instances -- 
-      "ip-10-1-1-5.us-west-2.compute.internal" (or the "controller-1" UDF instance where you are logged in)
-      and the UDF instance "controller-2". 
-
-#. Click the **Create Node** button in the upper right.
-
-   .. image:: ./media/M1L2CreateNodeButton.png
-      :width: 200
-
-#. Walk through the dialogue to add the "controller-3" UDF instance by specifying a "Name" and the "Hostname or IP Address".
-   Click the **Save** button.
-
-   +-------------------------+-------------------+
-   |        Field            |      Value        |
-   +=========================+===================+
-   |  Name                   |  ``controller-3`` |
-   +-------------------------+-------------------+
-   |  Hostname or IP         |  ``10.1.1.10``    |
-   +-------------------------+-------------------+
-
-   .. image:: ./media/M1L2CreateNodeDialogue.png
-      :width: 800
-
-#. **View** the installation instructions. Copy the install command and "join key" to your clipboard. 
-
-   .. image:: ./media/M1L2NodeViewButton.png
-      :width: 800
-
-   .. image:: ./media/M1L2NodeJoinCommand.png
-      :width: 800
-
-Run the install command to join the instance to the cluster
------------------------------------------------------------
-
-#. Login to the "controller-3" instance. Using "PuTTY" select the **controller-3** saved session and then click **Open**.
-
-   .. image:: ./media/M1L2puttyc3.png
-      :width: 400
-
-   .. IMPORTANT::
-      If you receive a PuTTY warning regarding the server's host key click **Yes** to connect.
-      This is caused by a unique host key being generated for each UDF deployment.
-
-#. Execute the install.sh command from the installer directory. Answer "y" (ie. "yes") to the prompts.
-
-   .. code-block:: bash
-
-      $ cd controller-installer/
-      $ ./install.sh --join-key {{base64 encoded key}}
-
-   .. image:: ./media/M1L2InstallCommand.png
-      :width: 800
-
-   #. The result of the command should eventually show the node was successfully joined to the cluster.
-
-   .. image:: ./media/M1L2NodeJoinSuccess.png
-      :width: 300
-
-View the results
-----------------
-
-#. View the "Cluster Configuration" from the **Cluster** tile.
-
-   .. image:: ./media/M1L2NodesConfigured.png
-      :width: 800
-
-(Optional) Explore the Kubernetes Cluster
-------------------------------------------
-
-If you're familiar with kubernetes (k8s), you can look at the k8s cluster created by NGINX Controller for resiliency purposes.  
-
-#. Use your existing PuTTY session to "controller-3" or create a new session to one of the Controller instances. 
-
-   .. image:: ./media/M1L2puttyc1.png
-      :width: 400
-
-   .. IMPORTANT::
-      If you receive a PuTTY warning regarding the server's host key click **Yes** to connect.
-      This is caused by a unique host key being generated for each UDF deployment.
+|trading_transfer_before|
 
 
-#. View the cluster nodes.
+Define a new Transfers Component of the trading.acmefinancial.net application (Withing the retail-dev environment)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   .. code-block:: shell
+    1. In the Controller GUI return to the `Apps` section
+    2. Select the App `trading.acmefinancial.net`
+    3. Select the `View` icon |icon| to see the full list of Components for the App
+    
+    .. |icon| image:: ../../_static/view.png
 
-      kubectl get nodes 
+    4. Select `Create Component` 
+    
+    .. image:: ../../_static/create_component.png
 
-   .. image:: ./media/M1L2Nodes.png
-      :width: 800
+    5. enter the name: `trading-transfers`
+    6. enter the display name: `Trading Transfers Component`
+    7. Select Next
+    8. Select the Gateway: `trading.acmefinancial.net`
+    9. Select Next
+    10. Click the `Add URI` link on the upper right. Enter the URI: `/api`
+    11. Select Next (skipping `Methods`, and `Advanced sections`)
+    12. Click the `Add Workload Group` link in the upper right and enter a new group name: `app2-servers`
+    13. Add Backend Workload URI: `http://10.1.20.21:9804`. Click `Done`.
+    14. Select `Publish` to create the transfers capability.     
+    
+    .. image:: ../../_static/publish.png
+    
+    15. Observe the Status of the Component change from `Configuring` to `Configured` to indicate it is live.     
+    
+    .. image:: ../../_static/configuring.png
+    
 
-   .. NOTE::
-      The command's output shows there are three nodes in this k8s cluster.
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| David’s team established the trading gateway for Samantha to support this new component.    |
+| The Controller UI is both flexible and powerful, whether trying to understand what an app's |
+| components are or doing app-based URI or SNI routing, or a combination.                     |
+| What we're doing here is routing to the servers running the code: the `workload` group. A   |
+| Workload Group is a section of servers or upstreams. Controller is responsible for applying |
+| the configuration entered through the GUI or API, and realizing it at the actual NGINX      |
+| instance to process traffic.                                                                |
++---------------------------------------------------------------------------------------------+
+
+Review the new section of the Trading application
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    1. Return to the trading application browser tab and refresh the page
+    2. Note the new capability that has been added to the right hand side of the application.
+
+|trading_transfer_after|
 
 
-#. View the deployed pods.
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| You were able to establish a new traffic path configuration and didn't have to directly     |
+| configure an NGINX instance or understand nginx.conf. Through Controller's monitoring and   |
+| analytics you can see this new component, ready and able to add value to the business unit  |
+| and to their customers.                                                                     |
++---------------------------------------------------------------------------------------------+
 
-   .. code-block:: shell
+B: Using the API
+================
 
-      kubectl get pods -n nginx-controller -o wide
++---------------------------------------------------------------------------------------------+
+| Talk Track                                                                                  |
++=============================================================================================+
+| Samantha explored Controller and discovered what she can do in the GUI. But she's most      |
+| likely going to go forwards by adding these steps and configurations into her pipeline.     |
+| We're now going to open a tool that Olivia might use to extend the trading app via the API. |
++---------------------------------------------------------------------------------------------+
+
+
+Login as Samantha using the API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    1. From the desktop open Postman
+    2. the Collection `NGINX Controller 3.0 UDF Demo & Lab` should already be loaded
+    3. Open the `Common Tasks` section 
+    
+ |open|
+ 
+    4. Select `Login to Controller - retail dev`
+ 
+ |login|
+    
+    5. Select `Send`
+
+      You are now logged into the API as Samantha.  Controller returned a cookie that will be used for authenticating then executing the following commands.
+
+
+Enable the Referrals capability
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    1. In Postman open the section `Retail-Dev Environment` 
+    2. open the `Application - trading.acmefinancial.com` section
+    3. Select `Create Comp - trading - referrals`
+
+     |trading|
+
+    4. In the right hand frame of Postman, select the `Body` tab
+
+     |body|
+
+    5. Review the JSON
+    6. Make sure that the method is set to "PUT"
+
+     |method|
+      
+    7. Click `Send`
+    8. Change the method to "GET" and click `Send` again
+    
+    
+    9. View the status of the configuration being applied in the `currentStatus` section and that the `selfConfigState` is in "configuring"
+    10. Repeat the GET until "configured" equals "1"
+    
+      |configured|
       
    .. image:: ./media/M1L2K8s.png
       :width: 1024
