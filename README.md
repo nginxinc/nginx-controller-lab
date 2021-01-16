@@ -6,7 +6,7 @@ NGINX Controller Lab Guide
 Introduction
 ------------
 
-This repo contains the documentation sources for the NGINX Controller 3.x UDF lab.
+This repo contains the documentation sources for the NGINX Controller 3.x UDF lab. Tarball builds of the html build output are also available as Releases. GitHub Actions builds the documentation on each Pull Request. A Push to the `main` branch will both build the documentation and create a Release.
 
 Setup
 -----
