@@ -10,8 +10,6 @@ on:
       - main
     ignore-tags:
       - "*"
-  schedule:
-    - cron: "0 0 1 * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -44,6 +42,7 @@ jobs:
           release_name: Release 1.0.${{ github.run_number }}
           draft: false
           prerelease: false
+        if: ${{ github.event_name == 'push' }
       - name: Upload Release Asset
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1
@@ -54,3 +53,4 @@ jobs:
           asset_path: ./docs.tar.gz
           asset_name: docs.tar.gz
           asset_content_type: application/gzip
+        if: ${{ github.event_name == 'push' }
