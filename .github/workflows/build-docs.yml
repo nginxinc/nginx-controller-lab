@@ -27,12 +27,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Build project # This would actually build your project, using zip for an example artifact
+      - name: Build project # This would actually build your project
         run: |
           set -x
           COMMAND="make -C docs clean html"
           . ./containthedocs-image
-          exec docker run --rm -t -v "$PWD":"$PWD" --workdir "$PWD" ${DOCKER_RUN_ARGS} -e "LOCAL_USER_ID=$(id -u)" ${DOC_IMG} ${COMMAND}
+          docker run --rm -t -v "$PWD":"$PWD" --workdir "$PWD" ${DOCKER_RUN_ARGS} -e "LOCAL_USER_ID=$(id -u)" ${DOC_IMG} ${COMMAND}
           cd docs/_build/html
           tar -zcf docs.tar.gz ./
       - name: Create Release
