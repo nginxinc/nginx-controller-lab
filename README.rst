@@ -1,7 +1,7 @@
 NGINX Controller Lab Guide
 ==========================
 
-[![Build Status](https://travis-ci.org/nginxinc/nginx-controller-lab.svg?branch=master)](https://travis-ci.org/nginxinc/nginx-controller-lab)
+![Build Docs](https://github.com/nginxinc/nginx-controller-lab/workflows/Build%20Docs/badge.svg)
 
 Introduction
 ------------
