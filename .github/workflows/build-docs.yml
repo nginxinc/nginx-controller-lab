@@ -34,7 +34,7 @@ jobs:
           . ./containthedocs-image
           docker run --rm -t -v "$PWD":"$PWD" --workdir "$PWD" ${DOCKER_RUN_ARGS} -e "LOCAL_USER_ID=$(id -u)" ${DOC_IMG} ${COMMAND}
           cd docs/_build/html
-          tar -zcf docs.tar.gz ./
+          sudo tar -zcf docs.tar.gz ./
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
