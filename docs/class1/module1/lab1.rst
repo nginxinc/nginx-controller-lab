@@ -138,7 +138,7 @@ Additional Reference
 --------------------
 
 The published NGINX Controller documentation walks through configuring an Active Directory authentication provider in `detail`_.
- 
+
 
 
 .. _detail: https://docs.nginx.com/nginx-controller/platform/access-management/manage-active-directory-auth-provider/

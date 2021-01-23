@@ -130,7 +130,7 @@ View the results
 (Optional) Explore the Kubernetes Cluster
 ------------------------------------------
 
-If you're familiar with kubernetes (k8s), you can look at the k8s cluster created by NGINX Controller for resiliency purposes.  
+If you're familiar with Kubernetes (k8s), you can look at the k8s cluster created by NGINX Controller for resiliency purposes.  
 
 #. Use your existing PuTTY session to "controller-3" or create a new session to one of the Controller instances. 
 
@@ -173,7 +173,7 @@ If you're familiar with kubernetes (k8s), you can look at the k8s cluster create
 Additional Reference
 --------------------
 Future NGINX Controller releases will allow for the creation of a floating self-ip by adding a "load balancer" to the
-exposed API Gateway ("apigw") kubernetes service. For on-premise installations `MetalLB`_ handle L2 failover. 
+exposed API Gateway ("apigw") Kubernetes service. For on-premise installations `MetalLB`_ handle L2 failover. 
 For cloud installations a k8s service with type `LoadBalancer`_, resulting in a cloud native external load balancer, will be used.
 
 .. _MetalLB: https://metallb.universe.tf/

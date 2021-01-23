@@ -5,10 +5,10 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "NGINX Controller - ISC FY21"
+classname = "NGINX Controller"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
-github_repo = "https://github.com/f5devcentral/2020-NGINX-Controller-Lab-Guide"
+github_repo = "https://github.com/nginxinc/nginx-controller-lab"
 
 # OPTIONAL: Google Analytics
 # googleanalytics_id = 'UA-85156643-4'
@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.abspath('.'))
 import f5_sphinx_theme
 
 year = time.strftime("%Y")
-eventname = "Agility %s Hands-on Lab Guide" % (year)
+eventname = "Hands-on Lab Guide"
 
 rst_prolog = """
 .. |classname| replace:: %s

@@ -77,5 +77,3 @@ Instance Analytics
    :width: 800
 .. |Lab1InstanceAnalytics| image:: media/Lab1InstanceAnalytics.png
    :width: 800
-
-

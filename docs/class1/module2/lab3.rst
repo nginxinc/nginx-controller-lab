@@ -48,7 +48,7 @@ Create a URI Rewrite
 ---------------------
 
 #. Navigate to **Components**. **Edit** the "echoappcomponent" you created earlier.
-  
+
    .. image:: ./media/M2L3echoappEdit.png
       :width: 800
 
@@ -69,7 +69,7 @@ Create a URI Rewrite
 
 .. NOTE::
      The app's JSON response confirms that the request received was to ``path: "/example"``. 
- 
+
 #. On Controller, add a "URI Rewrite" to the component. This rewrite will seamlessly modify all requests to "/example*" to "/modified*".
    Click **Add URI Rewrites** from "Programmability" dialogue.
 
@@ -117,7 +117,7 @@ Create a Request Header Modification
 -------------------------------------
 
 #. Back under the "echoapp" App in Controller, navigate to **Components**. **Edit** the "echoappcomponent" you created earlier.
-  
+
    .. image:: ./media/M2L3echoappEdit.png
       :width: 800
 
@@ -182,4 +182,3 @@ These features are powered by the NGINX `rewrite`_ module. Review the module doc
 
 
 .. _rewrite: http://nginx.org/en/docs/http/ngx_http_rewrite_module.html
-

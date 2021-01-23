@@ -24,11 +24,11 @@ View Trading App Current State
 #. Login to the application with the specified credentials. 
 
    +-------------------------+----------------------+
-   |        Username         |      Passwor         |
+   |        Username         |      Password        |
    +=========================+======================+
    |  matt                   |  ``ilovef5``         |
    +-------------------------+----------------------+
-  
+
    .. image:: ./media/M2L2tradingLogin.png
       :width: 200
 
@@ -42,7 +42,7 @@ Deploy a Component using Postman
 ---------------------------------
 
 #. On the jumphost, open **Postman**. Expand the **_NGINX Controller 3.x
-   UDF ISC (master)” Collection**.
+   UDF (master)” Collection**.
 
    .. image:: ./media/M2L2PMcoll.png
       :width: 400

@@ -175,4 +175,3 @@ Critical Analytics
    :width: 800
 .. |image16| image:: media/image16.png
    :width: 800
-   

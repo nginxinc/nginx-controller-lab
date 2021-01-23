@@ -1,12 +1,12 @@
 .. _overview:
 
-F5 ISC Labs - Index
+F5 Labs - Index
 =======================
 
 Welcome
 -------
 
-Welcome to the |classbold| lab at F5 ISC |year|.
+Welcome to the |classbold| lab.
 
 
 Getting Started
@@ -37,9 +37,9 @@ Lab Topology
 
 The following components are included in the lab environment:
 
-- 3 X NGINX Controller Instances (v3.11 early build)
+- 3 X NGINX Controller Instances (v3.x)
 - 1 X Postgres Database Instance (used for NGINX Controller)
-- 3 X NGINX Plus Instances w/ agents installed (centOS 7)
+- 3 X NGINX Plus Instances w/ agents installed (CentOS 7)
 - 1 X Application Servers (apps running in Docker on Ubuntu 18.04)
 - 1 X Windows Domain Controller (Windows 2019 Server)
 - 1 X Load Generator Instances (Ubuntu 18.04)
@@ -104,9 +104,4 @@ the following other accounts are available:
    :caption: Lab Contents:
    :glob:
 
-   index*
    class*/module*/module*
-
-
-
-   

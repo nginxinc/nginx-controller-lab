@@ -23,7 +23,7 @@ Environments
 
 An "Environment" is a logical grouping of Apps. It's used as a top-level construct for Role Based Access Control.
 Environments are organizational in nature, therefore the concept is not represented in NGINX config deployed to managed NGINX Plus instances.
-Conceptually, an environment is similar to a BIG-IP administrative partitition.
+Conceptually, an environment is similar to a BIG-IP administrative partition.
 
 Cert
 ^^^^
@@ -45,7 +45,7 @@ App
 An "App" is the logical grouping of "Components" that represent the *whole* application in a microservices architecture.
 Each "Component" in an "App" represents an individual microservice. 
 As the object is a logical grouping, it's not represented in an NGINX Plus instances config.
-Analagous BIG-IP family concepts include an AS3 tenant or a BIG-IQ "Application".
+Analogous BIG-IP family concepts include an AS3 tenant or a BIG-IQ "Application".
 
 Component
 ^^^^^^^^^
@@ -121,8 +121,8 @@ Create an Environment
    .. image:: ./media/M2L1Submit.png
       :width: 100
 
-Add a Cert
-^^^^^^^^^^
+Add a Certificate
+^^^^^^^^^^^^^^^^^
 
 #. Select the "Certs" tile.
 
