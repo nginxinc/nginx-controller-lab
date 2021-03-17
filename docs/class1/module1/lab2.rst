@@ -6,11 +6,6 @@ The goal of this lab is to add another host as a third member to an NGINX Contro
 .. IMPORTANT::
    - Estimated completion time: 10 minutes
 
-.. IMPORTANT::
-   - NGINX Controller Resiliency and High Availability are early access features. 
-     The GUI clustering configuration may not appear in the 3.11 release and may include
-     additional functionality when reaching general availability.
-
 .. NOTE::
      Lab instructions are written as if the student is executing the steps
      from the Windows jumphost -- ``jumphost-1``. See the :ref:`overview` for connection details.
@@ -122,7 +117,7 @@ Run the install command to join the instance to the cluster
 View the results
 ----------------
 
-#. View the "Cluster Configuration" from the **Cluster** tile.
+#. In Chrome, view the "Cluster Configuration" from the **Cluster** tile.
 
    .. image:: ./media/M1L2NodesConfigured.png
       :width: 800

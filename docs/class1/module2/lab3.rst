@@ -52,7 +52,7 @@ Create a URI Rewrite
    .. image:: ./media/M2L3echoappEdit.png
       :width: 800
 
-#. Under the "Advanced" section, select **Programability**.
+#. Under the "Advanced" section, select **Programmability**.
 
    .. image:: ./media/M2L3program.png
       :width: 600
@@ -121,7 +121,7 @@ Create a Request Header Modification
    .. image:: ./media/M2L3echoappEdit.png
       :width: 800
 
-#. Under the "Advanced" section, select **Programability**.
+#. Under the "Advanced" section, select **Programmability**.
 
    .. image:: ./media/M2L3program.png
       :width: 600
