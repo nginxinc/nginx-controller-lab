@@ -52,7 +52,7 @@ Critical Analytics
    |image4|
 
    .. NOTE::
-      The NGINX Controller instance used in this lab includes a license enabled "Controller Application Security" ("CAS"). 
+      The NGINX Controller instance used in this lab includes a license enabled "Controller Application Security (CAS)". 
 
 #. Navigate to the **Services** menu and select the **Apps** tile.
 
@@ -78,7 +78,7 @@ Critical Analytics
 
 #. Click the **Trading Main App** component and select
    **Critical Analytics** from the left navigation. In the **Breakout By** drop-down box (upper right)
-   select **Request Outcome**. Note the "HTTP Requests" graph (located towards the bottom). 
+   select **Request Outcome Reason**. Note the "HTTP Requests (SUM)" graph (located towards the bottom). 
    
    |image7|
 
@@ -90,7 +90,7 @@ Critical Analytics
    |image8|
 
    .. NOTE::
-      The previous views allow for DevOps/Developers to quickly make WAF insights. 
+      The previous views allow for DevOps/Developers to quickly generate insights about application security considerations. 
 
 #. Scroll down and explore the "WAF suspicious vs Normal Traffic" graph. 
    This view allows an operator to quickly see spikes in suspicious traffic over the selected time interval.
@@ -109,12 +109,15 @@ Critical Analytics
    |image11|
 
    .. NOTE::
-      Even with WAF set to monitor only mode, analytics data can be used to identify potential attacks. 
-      Data can be sent to external systems such as Splunk or Datadog (feature currently in beta). 
+      Depending on the amount of event data, the "WAF Top Threats" list may take some time to load. 
+
+   .. NOTE::
+      Even with WAF set to monitor only mode, analytics and event data can be used to identify potential attacks. 
+      Data can be sent to external systems such as Splunk or Datadog. 
 
 #. Go to **WAF Tuning** tab within the "Security Analytics" section. This
    section depicts the top signatures for the selected time range.
-   Click on one of the **signature IDs** to be taken to the "Security
+   Click on one of the **signature IDs**, then click on "View Events" to be taken to the "Security
    Events" section.
 
    |image12|

@@ -68,7 +68,7 @@ Click the tab for the relevant area.
    +--------------------+---------------------------------------------------------------------------------------+
 
    .. NOTE::
-      As of release 3.10, Active Directory is currently the only supported Auth Provider Type.
+      As of release 3.15, Active Directory is currently the only supported Auth Provider Type.
 
 
    .. image:: ./media/M1L1ProviderConfig.png

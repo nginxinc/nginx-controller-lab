@@ -42,13 +42,13 @@ Deploy a Component using Postman
 ---------------------------------
 
 #. On the jumphost, open **Postman**. Expand the **_NGINX Controller 3.x
-   UDF (master)” Collection**.
+   UDF (master)** Collection.
 
    .. image:: ./media/M2L2PMcoll.png
       :width: 400
 
-#. Expand **Common Tasks**, **Admin Logon**, and select the "Login to Controller
-   – admin – local" request.
+#. Expand **Common Tasks**, **Admin Logon**, and select the **Login to Controller
+   – admin – local** request.
 
    .. image:: ./media/M2L2PMcoll2.png
       :width: 400
@@ -59,15 +59,15 @@ Deploy a Component using Postman
       :width: 600
 
    .. NOTE::
-      Controller responds with a "204" response and an authentication cookie. 
-      Postman uses this cookie for auth in subsequent requests.
+      Controller responds with a "204 No Content" response and an authentication cookie. 
+      Postman uses this cookie for authentication in subsequent requests.
 
    .. image:: ./media/M2L2PMcookie.png
       :width: 400
 
-#. Expand the **Retail-Development Environment**, **Application trading** folder. 
-   Open the **Application trading** subfolder and select the request name "4) Create Component
-   – transfers".
+#. Expand the **Retail-Development Environment**, **Application - trading** folder. 
+   Open the **Application trading** subfolder and select the request name **4) Create Component
+   – transfers**.
 
    .. image:: ./media/M2L2PMtransfer.png
       :width: 400
@@ -85,7 +85,7 @@ Deploy a Component using Postman
       :width: 800
 
    .. NOTE::
-      Controller follows an "eventual consistency model". The API responded to the Postman request with a "202 Accepted".
+      Controller follows an "eventual consistency model". The API responded to the Postman request with a "202 Accepted" status code.
       Controller is now working to bring about the desired state. 
 
    .. image:: ./media/M2L2PMconfig.png
@@ -95,7 +95,7 @@ Verify Trading App Changes
 ---------------------------
 
 #. In Chrome, reload the ``http://trading.acmefinancial.net/trading/index.php`` site.
-   Verify the “Quick MoneyTransfer” is active and “Coming Soon” has been replace.
+   Verify the “Quick Money Transfer” is active and “Coming Soon” has been replaced.
 
    .. image:: ./media/M2L2result.png
       :width: 400

@@ -52,7 +52,6 @@ Instance Analytics
 
    |Lab1InstanceDashboard|
 
-#. Click on **Analytics** to open the instance's detailed analytics.
    This section provides a single pane with all useful graphs for the selected instance.
    Toggle the time ranges from the right most drop-down box to see the instance performance for a
    particular time range.

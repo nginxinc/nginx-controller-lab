@@ -192,13 +192,13 @@ Create a Gateway
    .. image:: ./media/M2L1GWDialogue.png
       :width: 600
 
-#. Under the **Placements** dialogue, select the "Development NGINX West 03 (CAS)” "instance ref".
+#. Under the **Placements** dialogue, select the "Development NGINX West 03 (CAS)” Instance Ref.
 
    .. image:: ./media/M2L1Place.png
       :width: 600
 
-#. Under the **Hostnames** dialogue, add the specified hostnames (``http://echoapp.net``, ``https://echoapp.net``) 
-   and select the **echoapp.net** "Cert Reference".
+#. Under the **Hostnames** dialogue, add the specified hostnames (``http://echoapp.net``, ``https://echoapp.net``). Do not specify a **Match Method** for either hostname. 
+   Select the **echoapp.net** "Cert Reference". 
 
    .. image:: ./media/M2L1Hostnames.png
       :width: 600
@@ -209,7 +209,7 @@ Create a Gateway
       :width: 100
 
 Create an App
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 #. Select the "Apps" tile.
 
@@ -260,7 +260,7 @@ Create a Component
    .. image:: ./media/M2L1CompDiag.png
       :width: 600
 
-#. Under the **URIs** dialogue, add the URI "/". 
+#. Under the **URIs** dialogue, add the URI "/". Do not specify a **Match Method**.
 
    .. image:: ./media/M2L1CompURI.png
       :width: 600
@@ -332,7 +332,7 @@ Enable NGINX App Protect WAF
       :width: 100
 
 #. In Chrome, make a new HTTP request that simulates a XSS (Cross site scripting) attack on the "echo" application
-   (``http://echoapp.net?<script>XSS</script>``). 
+   (``http://echoapp.net/?<script>XSS</script>``). 
    Verify that NGINX App Protect rejects the request and responds with a "support ID".
 
    .. image:: ./media/M2L1NAPresult.png
