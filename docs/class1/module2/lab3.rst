@@ -17,8 +17,8 @@ Access the App Component
 #. Open Chrome Browser.
 #. Access the NGINX Controller UI through the provided bookmark.
 
-   .. image:: ./media/M1L1ControllerBookmark.png
-      :width: 400
+   .. image:: ../media/ControllerBookmark.png
+      :width: 600
 
 #. Login with the ``Peter Parker`` account who is an NGINX Controller admin.
 
@@ -28,16 +28,18 @@ Access the App Component
    | peter@acmefinancial.net | ``Peter123!@#`` |
    +-------------------------+-----------------+
 
-   .. image:: ./media/M1L1ControllerLogin.png
+   .. image:: ../media/ControllerLogin-Peter.png
       :width: 400
 
-#. Navigate to the **Services** section, and select the **Apps** tile.
+#. Navigate to the **Services** section.
 
-   .. image:: ./media/M2L3ServicesTile.png
+   .. image:: ../media/Tile-Services.png
       :width: 200
 
-   .. image:: ./media/M2L3AppsTile.png
-      :width: 100
+#. Select the "Apps" tile.
+
+   .. image:: ../media/Services-Apps.png
+      :width: 200
 
 #. Select the **echoapp** from the "Echo Environment" you created in Module 2 Lab 1.
 
@@ -79,13 +81,13 @@ Create a URI Rewrite
 #. Complete the dialogue and click **Done** to save the rewrite. 
    The NGINX `rewrite`_ module, and the Controller implementation, use PCRE regular expression syntax.
 
-   +-------------------------+-----------------------+
-   |        Field            |      Value            |
-   +=========================+=======================+
-   | Incoming Pattern        |  ``~*^/example(.*)$`` |
-   +-------------------------+-----------------------+
-   | Rewrite Pattern         |  ``/modified$1``      |
-   +-------------------------+-----------------------+
+   +-------------------------+---------------------------+
+   |        Field            |      Value                |
+   +=========================+===========================+
+   | Incoming Pattern        |  ``~*^/example(.*)$``     |
+   +-------------------------+---------------------------+
+   | Rewrite Pattern         |  ``/modified$1``          |
+   +-------------------------+---------------------------+
 
    .. image:: ./media/M2L3AddRWdialogue.png
       :width: 600
@@ -98,8 +100,8 @@ Create a URI Rewrite
 
 #. Click **Submit** and verify the changes to the component are pushed to the "Gateway". The Component status should go from "Configuring" to "Configured". 
 
-   .. image:: ./media/M2L3Submit.png
-      :width: 200
+   .. image:: ../media/Submit.png
+      :width: 100
 
    .. image:: ./media/M2L3RWconfigured.png
       :width: 800
@@ -124,7 +126,7 @@ Create a Request Header Modification
 #. Under the "Advanced" section, select **Programmability**.
 
    .. image:: ./media/M2L3program.png
-      :width: 600
+      :width: 700
 
 #. In Chrome, take note of the HTTP headers in the response from the previous requests to the "echo" app.
 
@@ -135,7 +137,7 @@ Create a Request Header Modification
    Click **Add Request Header Modification** from "Programmability" dialogue.
 
    .. image:: ./media/M2L3AddHM.png
-      :width: 400
+      :width: 600
 
 #. Complete the dialogue and click **Done** to save the rewrite. 
 
@@ -157,8 +159,8 @@ Create a Request Header Modification
 
 #. Click **Submit** and verify the changes to the component are pushed to the "Gateway". The Component status should go from "Configuring" to "Configured". 
 
-   .. image:: ./media/M2L3Submit.png
-      :width: 200
+   .. image:: ../media/Submit.png
+      :width: 100
 
    .. image:: ./media/M2L3RWconfigured.png
       :width: 800

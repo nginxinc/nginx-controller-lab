@@ -64,11 +64,17 @@ In BIG-IP terminology the group would be a "pool" and the individual members "po
 
 Deploy an Application
 -----------------------
-#. Open Chrome Browser.
+#. The jumphost should already have Chrome loaded with the controller UI at the login screen:
+
+   .. image:: ../media/ControllerLogin.png
+      :width: 400
+
+#. If not, open Chrome Browser.
+
 #. Access the NGINX Controller UI through the provided bookmark.
 
-   .. image:: ./media/M1L1ControllerBookmark.png
-      :width: 400
+   .. image:: ../media/ControllerBookmark.png
+      :width: 600
 
 #. Login with the ``Peter Parker`` account who is an NGINX Controller admin.
 
@@ -78,17 +84,13 @@ Deploy an Application
    | peter@acmefinancial.net | ``Peter123!@#`` |
    +-------------------------+-----------------+
 
-   .. image:: ./media/M1L1ControllerLogin.png
+   .. image:: ../media/ControllerLogin-Peter.png
       :width: 400
 
 #. Navigate to the **Services** section. The items or "tiles" under this menu will be used to create the configuration for this lab.
 
-   .. image:: ./media/M2L1Services.png
+   .. image:: ../media/Tile-Services.png
       :width: 200
-
-
-   .. image:: ./media/M2L1ServiceTiles.png
-      :width: 100
 
 Create an Environment
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -96,30 +98,31 @@ Create an Environment
 #. Select the "Environments" tile.
 
    .. image:: ./media/M2L1EnvTile.png
-      :width: 100
+      :width: 200
 
 #. Click the "Create" button in the upper right.
 
    .. image:: ./media/M2L1EnvCreate.png
-      :width: 800
+      :width: 700
 
 #. Fill out the form.
 
-   +-------------------------+--------------------------+
-   |        Field            |      Value               |
-   +=========================+==========================+
-   |  Name                   |  ``echo``                |
-   +-------------------------+--------------------------+
-   |  Display Name           | ``Echo Environment``     |
-   +-------------------------+--------------------------+
+   +---------------------+------------------------------+
+   |        Field        |      Value                   |
+   +=====================+==============================+
+   |  Name               |  ``echo``                    |
+   +---------------------+------------------------------+
+   |  Display Name       | ``Echo Environment``         |
+   +---------------------+------------------------------+
 
    .. image:: ./media/M2L1EnvDialogue.png
-      :width: 600
+      :width: 700
 
 3. Click **Submit** to complete.
 
-   .. image:: ./media/M2L1Submit.png
+   .. image:: ../media/Submit.png
       :width: 100
+
 
 Add a Certificate
 ^^^^^^^^^^^^^^^^^
@@ -127,30 +130,30 @@ Add a Certificate
 #. Select the "Certs" tile.
 
    .. image:: ./media/M2L1Certs.png
-      :width: 100
+      :width: 200
 
 #. Click the "Create" button in the upper right.
 
    .. image:: ./media/M2L1CertCreate.png
-      :width: 600
+      :width: 800
 
 #. Fill out the form and select the appropriate **Environment** from the drop-down. 
 
-   +-------------------------+--------------------------+
-   |        Field            |      Value               |
-   +=========================+==========================+
-   |  Name                   |  ``echoapp.net``         |
-   +-------------------------+--------------------------+
-   |  Environment            | ``Echo Environment``     |
-   +-------------------------+--------------------------+
+   +-----------------+----------------------------------+
+   |        Field    |      Value                       |
+   +=================+==================================+
+   |  Name           |  ``echoapp.net``                 |
+   +-----------------+----------------------------------+
+   |  Environment    | ``Echo Environment``             |
+   +-----------------+----------------------------------+
 
    .. image:: ./media/M2L1CertDialogue1.png
-      :width: 600
+      :width: 700
 
 #. Select the **Import PEM or PKC12** radio button and **Browse** for the cert and key.
 
    .. image:: ./media/M2L1CertDialogue2.png
-      :width: 600
+      :width: 700
 
    The cert (**echoapp.net.crt**) and key (**echoapp.net.key**) can be found in **This PC -> Documents -> Certs** on "jumphost-1". 
 
@@ -158,21 +161,21 @@ Add a Certificate
       You will need to browse and upload the cert and key individually as Controller does not allow simultaneous file uploads.
 
    .. image:: ./media/M2L1Cert&Key.png
-      :width: 600
+      :width: 700
 
 #. Click **Submit** to complete.
 
-   .. image:: ./media/M2L1Submit.png
+   .. image:: ../media/Submit.png
       :width: 100
-   
+
 
 Create a Gateway
 ^^^^^^^^^^^^^^^^^
 
 #. Select the "Gateways" tile.
 
-   .. image:: ./media/M2L1Gateway.png
-      :width: 100
+   .. image:: ./media/M2L1GatewayTile.png
+      :width: 200
 
 #. Click the "Create" button in the upper right.
 
@@ -181,13 +184,13 @@ Create a Gateway
 
 #. Under the **Configuration** dialogue, fill out the form. When finished click **Next** or click the name of the next section.
 
-   +-------------------------+--------------------------+
-   |        Field            |      Value               |
-   +=========================+==========================+
-   |  Name                   |  ``echoappgw``           |
-   +-------------------------+--------------------------+
-   |  Environment            | ``Echo Environment``     |
-   +-------------------------+--------------------------+
+   +---------------------+----------------------------------+
+   |        Field        |      Value                       |
+   +=====================+==================================+
+   |  Name               |  ``echoappgw``                   |
+   +---------------------+----------------------------------+
+   |  Environment        | ``Echo Environment``             |
+   +---------------------+----------------------------------+
 
    .. image:: ./media/M2L1GWDialogue.png
       :width: 600
@@ -195,17 +198,20 @@ Create a Gateway
 #. Under the **Placements** dialogue, select the "Development NGINX West 03 (CAS)” Instance Ref.
 
    .. image:: ./media/M2L1Place.png
-      :width: 600
+      :width: 700
 
 #. Under the **Hostnames** dialogue, add the specified hostnames (``http://echoapp.net``, ``https://echoapp.net``). Do not specify a **Match Method** for either hostname. 
-   Select the **echoapp.net** "Cert Reference". 
+   Select the **echoapp.net** "Cert Reference".
+   
+   .. NOTE::
+      You will need to use the **Add Hostname** link pictured below to add multiple hostnames.
 
    .. image:: ./media/M2L1Hostnames.png
-      :width: 600
+      :width: 700
 
 #. Click **Submit** to complete.
 
-   .. image:: ./media/M2L1Submit.png
+   .. image:: ../media/Submit.png
       :width: 100
 
 Create an App
@@ -213,8 +219,8 @@ Create an App
 
 #. Select the "Apps" tile.
 
-   .. image:: ./media/M2L1Apps.png
-      :width: 100
+   .. image:: ../media/Services-Apps.png
+      :width: 200
 
 #. Click the "Create" button in the upper right.
 
@@ -223,20 +229,20 @@ Create an App
 
 #. Fill out the form and select the **Environment** from the drop-down.
 
-   +-------------------------+--------------------------+
-   |        Field            |      Value               |
-   +=========================+==========================+
-   |  Name                   |  ``echoapp``             |
-   +-------------------------+--------------------------+
-   |  Environment            | ``Echo Environment``     |
-   +-------------------------+--------------------------+
+   +---------------------+------------------------------+
+   |        Field        |      Value                   |
+   +=====================+==============================+
+   |  Name               |  ``echoapp``                 |
+   +---------------------+------------------------------+
+   |  Environment        | ``Echo Environment``         |
+   +---------------------+------------------------------+
 
    .. image:: ./media/M2L1Appdiag.png
-      :width: 600
+      :width: 800
 
 #. Click **Submit** to complete.
 
-   .. image:: ./media/M2L1Submit.png
+   .. image:: ../media/Submit.png
       :width: 100
 
 Create a Component
@@ -249,23 +255,23 @@ Create a Component
 
 #. Fill out the form and select the **Gateway Refs** from the drop-down.
 
-   +-------------------------+----------------------+
-   |        Field            |      Value           |
-   +=========================+======================+
-   |  Name                   | ``echoappcomponent`` |
-   +-------------------------+----------------------+
-   |  Gateway Refs           | ``echoappgw``        |
-   +-------------------------+----------------------+
+   +-------------------------+--------------------------+
+   |        Field            |      Value               |
+   +=========================+==========================+
+   |  Name                   | ``echoappcomponent``     |
+   +-------------------------+--------------------------+
+   |  Gateway Refs           | ``echoappgw``            |
+   +-------------------------+--------------------------+
 
    .. image:: ./media/M2L1CompDiag.png
-      :width: 600
+      :width: 700
 
 #. Under the **URIs** dialogue, add the URI "/". Do not specify a **Match Method**.
 
    .. image:: ./media/M2L1CompURI.png
-      :width: 600
+      :width: 700
 
-#. Under the **Workload Groups** dialogue, fill out the form. 
+#. Under the **Workload Groups** dialogue, fill out the form.
 
    +-------------------------+-----------------------------+
    |        Field            |      Value                  |
@@ -280,7 +286,7 @@ Create a Component
 
 #. Click **Submit** to complete.
 
-   .. image:: ./media/M2L1Submit.png
+   .. image:: ../media/Submit.png
       :width: 100
 
 Test the Echo Application
@@ -289,7 +295,7 @@ Test the Echo Application
 #. In Chrome on ``jumphost-1``, open a new tab and enable "Developer Tools". 
 
    .. image:: ./media/M2L1DevTools.png
-      :width: 800
+      :width: 900
 
 #. Browse to the App URLs you created earlier (``http://echoapp.net`` and ``https://echoapp.net``) to verify the "echo" application is functioning.
    Select the **echoapp.net** request to view the results.
@@ -299,42 +305,3 @@ Test the Echo Application
 
    .. image:: ./media/M2L1DevTools2.png
       :width: 800 
-
-Enable NGINX App Protect WAF
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-#. In Controller, navigate back to the **Services** section. Select the **Apps** tile.
-
-   .. image:: ./media/M2L1Services.png
-      :width: 200
-
-   .. image:: ./media/M2L1Apps.png
-      :width: 100
-
-#. Select the **echoapp** you created earlier and click **Edit**.
-
-   .. image:: ./media/M2L1NAP1.png
-      :width: 600
-
-#. Under the **Components** section, find the **echoappcomponent** and select **Edit**. 
-
-   .. image:: ./media/M2L1NAPcomp.png
-      :width: 800
-
-#. Under the **Security** section, click the **Enable WAF** button.
-
-   .. image:: ./media/M2L1NAP2.png
-      :width: 600
-
-#. Click **Submit** to complete.
-
-   .. image:: ./media/M2L1Submit.png
-      :width: 100
-
-#. In Chrome, make a new HTTP request that simulates a XSS (Cross site scripting) attack on the "echo" application
-   (``http://echoapp.net/?<script>XSS</script>``). 
-   Verify that NGINX App Protect rejects the request and responds with a "support ID".
-
-   .. image:: ./media/M2L1NAPresult.png
-      :width: 600
-

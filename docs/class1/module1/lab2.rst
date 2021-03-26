@@ -14,11 +14,17 @@ The goal of this lab is to add another host as a third member to an NGINX Contro
 Create an additional NGINX Controller Node
 ------------------------------------------
 
-#. Open Chrome Browser.
+#. The jumphost should already have Chrome loaded with the controller UI at the login screen:
+
+   .. image:: ../media/ControllerLogin.png
+      :width: 400
+
+#. If not, open Chrome Browser.
+
 #. Access the NGINX Controller UI through the provided bookmark.
 
-   .. image:: ./media/M1L1ControllerBookmark.png
-      :width: 400
+   .. image:: ../media/ControllerBookmark.png
+      :width: 600
 
 #. Login with the ``Peter Parker`` account who is an NGINX Controller admin.
 
@@ -28,18 +34,18 @@ Create an additional NGINX Controller Node
    | peter@acmefinancial.net | ``Peter123!@#`` |
    +-------------------------+-----------------+
 
-   .. image:: ./media/M1L1ControllerLogin.png
+   .. image:: ../media/ControllerLogin-Peter.png
       :width: 400
 
 #. Navigate to the **Platform** section.
 
-   .. image:: ./media/M1L1Platform.png
+   .. image:: ../media/Tile-Platform.png
       :width: 200
 
 #. Open the **Cluster** tile.
 
-   .. image:: ./media/M1L2ClusterTileSmall.png
-      :width: 600
+   .. image:: ./media/M1L2ClusterTile.png
+      :width: 800
 
 #. View the current "Cluster Configuration".
 
@@ -68,13 +74,13 @@ Create an additional NGINX Controller Node
 #. Walk through the dialogue to add the "controller-3" UDF instance by specifying a "Name" and the "Hostname or IP Address".
    Click the **Save** button.
 
-   +-------------------------+-------------------+
-   |        Field            |      Value        |
-   +=========================+===================+
-   |  Name                   |  ``controller-3`` |
-   +-------------------------+-------------------+
-   |  Hostname or IP         |  ``10.1.1.10``    |
-   +-------------------------+-------------------+
+   +-------------------+-----------------------+
+   |        Field      |      Value            |
+   +===================+=======================+
+   |  Name             |  ``controller-3``     |
+   +-------------------+-----------------------+
+   |  Hostname or IP   |  ``10.1.1.10``        |
+   +-------------------+-----------------------+
 
    .. image:: ./media/M1L2CreateNodeDialogue.png
       :width: 800

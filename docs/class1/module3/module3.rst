@@ -1,4 +1,4 @@
-Module 3 - Controller Analytics
+Module 3 - Analytics
 ================================
 
 In this section, students will walk through Controller Analytics from the perspective of two different personas, NetOps and DevOps.

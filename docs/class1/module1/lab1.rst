@@ -14,11 +14,17 @@ and role based access control configuration. Students will view the existing con
 Access the Authentication Providers Configuration
 --------------------------------------------------
 
-#. Open Chrome Browser.
+#. The jumphost should already have Chrome loaded with the controller UI at the login screen:
+
+   .. image:: ../media/ControllerLogin.png
+      :width: 400
+
+#. If not, open Chrome Browser.
+
 #. Access the NGINX Controller UI through the provided bookmark.
 
-   .. image:: ./media/M1L1ControllerBookmark.png
-      :width: 400
+   .. image:: ../media/ControllerBookmark.png
+      :width: 600
 
 #. Login with the ``Peter Parker`` account who is an NGINX Controller admin.
 
@@ -28,12 +34,12 @@ Access the Authentication Providers Configuration
    | peter@acmefinancial.net | ``Peter123!@#`` |
    +-------------------------+-----------------+
 
-   .. image:: ./media/M1L1ControllerLogin.png
+   .. image:: ../media/ControllerLogin-Peter.png
       :width: 400
 
 #. Select the navigation bar in the upper left of the screen then select **Platform** from the drop-down list.
 
-   .. image:: ./media/M1L1Platform.png
+   .. image:: ../media/Tile-Platform.png
       :width: 200
 
 #. Navigate to the **Auth Providers** tile.
@@ -53,7 +59,6 @@ In this section, students will walk through the "Authentication Provider Configu
 Click the tab for the relevant area.
 
 .. image:: ./media/M1L1ADwalkthrough.png
-   :width: 200
 
 #. **Configuration** tab
 
