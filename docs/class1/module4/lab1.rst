@@ -73,7 +73,8 @@ Enable Security on a Component
     .. NOTE:: 
         Since we intend to first enable the WAF in the Retail Development environment, this represents minimal risk to the Acme Financial corporation. We will leave the **Monitor Only** selector off in this component.
 
-    |image6|
+    .. image:: media/TradingMainCASComponentEnableWAF.png
+        :width: 800
 
 #. Click the **Submit** button.
     Controller will configure WAF on the component. 
@@ -102,16 +103,19 @@ Examine Security Analytics
 
 #. Select the **Last 30 minutes** dropdown for this display. Scroll down to **WAF Suspicious vs Normal Traffic**. Since traffic generation has been running against this component, you should see graph data immediately. This view allows an operator to quickly see spikes in suspicious traffic over the selected time interval. Look for a spike in security events that may be appearing when compared to previous period (**Prev day** is selected by default). Hover your cursor over the graph and note the approximate time of this spike for use in the next step. 
 
-   |image9|
+    .. image:: media/TradingMainCASSecurityAnalyticsLast30.png
+        :width: 800
 
 #. Scroll down and explore the "Top URIs Targeted" list. This list depicts the top URIs targeted with attacks. Filtering is available through options presented in the drop-down box on the right.
 
-    |image10|
+    .. image:: media/AnalyticsTopURIs.png
+        :width: 800
 
 
 #. Scroll down to explore "WAF Top Threats" list. This list shows the WAF top threats based on **Attack Types** (default selection) or based on **Signatures**. Filtering is available through options presented in the drop-down box on the right.
 
-    |image11|
+    .. image:: media/AnalyticsTopThreats.png
+        :width: 800
 
 .. NOTE::
     Depending on the amount of event data, the "WAF Top Threats" list may take some time to load. 
@@ -203,11 +207,3 @@ Tune the WAF policy
 
     .. image:: ./media/TradingMainCASComponentNotBlocked.png
 
-.. |image6| image:: media/image6.png
-   :width: 800
-.. |image9| image:: media/image9.png
-   :width: 800
-.. |image10| image:: media/image10.png
-   :width: 800
-.. |image11| image:: media/image11.png
-   :width: 800

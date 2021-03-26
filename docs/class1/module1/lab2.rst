@@ -44,8 +44,8 @@ Create an additional NGINX Controller Node
 
 #. Open the **Cluster** tile.
 
-   .. image:: ./media/M1L2ClusterTileSmall.png
-      :width: 600
+   .. image:: ./media/M1L2ClusterTile.png
+      :width: 800
 
 #. View the current "Cluster Configuration".
 
