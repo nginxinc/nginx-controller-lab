@@ -41,22 +41,21 @@ View Trading App Current State
 Deploy a Component using Postman
 ---------------------------------
 
-#. On the jumphost, open **Postman**. Expand the **_NGINX Controller 3.x
-   UDF (master)** Collection.
+#. On the jumphost, open **Postman**. Expand the **NGINX Controller 3.x** Collection.
 
-   .. image:: ./media/M2L2PMcoll.png
+   .. image:: ../media/PMcoll.png
       :width: 400
 
 #. Expand **Common Tasks**, **Admin Logon**, and select the **Login to Controller
    – admin – local** request.
 
-   .. image:: ./media/M2L2PMcoll2.png
+   .. image:: ../media/PMcoll2.png
       :width: 400
 
 #. In Postman select **Send**.
 
-   .. image:: ./media/M2L2PMsend1.png
-      :width: 600
+   .. image:: ../media/PMsend1.png
+      :width: 800
 
    .. NOTE::
       Controller responds with a "204 No Content" response and an authentication cookie. 
@@ -77,7 +76,7 @@ Deploy a Component using Postman
    should look familiar based on the Component you deployed in the previous lab.
 
    .. image:: ./media/M2L2PMbody.png
-      :width: 400
+      :width: 700
 
 #. In Postman select **Send**.
 
@@ -89,7 +88,7 @@ Deploy a Component using Postman
       Controller is now working to bring about the desired state. 
 
    .. image:: ./media/M2L2PMconfig.png
-      :width: 600
+      :width: 700
 
 Verify Trading App Changes
 ---------------------------
@@ -122,9 +121,9 @@ Start WAF Traffic Generation for Analytics
 
    .. code-block:: bash
 
-      $ sudo docker start 89
+      $ sudo docker start wrk_trading.acmefinancial.net-cas
 
-#. The result of the command should echo the container name ("89").
+#. The result of the command should echo the container name ("wrk_trading.acmefinancial.net-cas").
 
    .. image:: ./media/M2L2loadgenresult.png
       :width: 600

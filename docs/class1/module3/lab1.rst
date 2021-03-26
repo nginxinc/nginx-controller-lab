@@ -14,11 +14,17 @@ This category of analytics will be of interest to an organization's NetOps perso
 Overview Dashboard
 -------------------
 
-#. Open Chrome Browser.
+#. The jumphost should already have Chrome loaded with the controller UI at the login screen:
+
+   .. image:: ../media/ControllerLogin.png
+      :width: 400
+
+#. If not, open Chrome Browser.
+
 #. Access the NGINX Controller UI through the provided bookmark.
 
-   .. image:: ./media/M1L1ControllerBookmark.png
-      :width: 400
+   .. image:: ../media/ControllerBookmark.png
+      :width: 600
 
 #. Login with the ``Peter Parker`` account who is an NGINX Controller admin.
 
@@ -28,7 +34,7 @@ Overview Dashboard
    | peter@acmefinancial.net | ``Peter123!@#`` |
    +-------------------------+-----------------+
 
-   .. image:: ./media/M1L1ControllerLogin.png
+   .. image:: ../media/ControllerLogin-Peter.png
       :width: 400
 
 #. Notice the "Overview" dashboard is displayed on login. The "System
@@ -41,7 +47,7 @@ Instance Analytics
 
 #. Select the navigation bar in the upper left of the screen then select **Infrastructure** from the drop-down list.
 
-   .. image:: ./media/M3L1Infra.png
+   .. image:: ../media/Tile-Infrastructure.png
       :width: 200
 
 #. From the list of Instances, click on **Production NGINX East 01**. 
@@ -53,14 +59,14 @@ Instance Analytics
    |Lab1InstanceDashboard|
 
    This section provides a single pane with all useful graphs for the selected instance.
-   Toggle the time ranges from the right most drop-down box to see the instance performance for a
+   Toggle the time ranges from the drop-down boxes to see the instance performance for a
    particular time range.
 
    |Lab1InstanceAnalytics|
 
 .. IMPORTANT::
    Though out of scope for this lab, please see the custom dashboard features under **Analytics -> Dashboards**.
-   Dashboard elements can include aggregated and filtered views of the 100s of instance and application metrics collected by Controller.
+   Dashboard elements can include aggregated and filtered views of the hundreds of instance and application metrics collected by Controller.
 
 .. |Lab1MainDashboard| image:: media/Lab1MainDashboard.png
    :width: 800
