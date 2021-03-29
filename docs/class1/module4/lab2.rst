@@ -1,4 +1,4 @@
-Lab 1 - Application Security (API)
+Lab 2 - Application Security (API)
 ##################################
 
 The goal of this lab is to configure the Controller Application Security module through the API.
