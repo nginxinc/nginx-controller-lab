@@ -52,41 +52,27 @@ Enable Security on a Component
         :width: 600
 
 
-#. In this lab we want to enable the WAF on this component. Select the **Components** section, then click **Trading Main Component**.
+#. In this lab we want to ensure that WAF is enabled on this component. Select the **Components** section, then click **Trading Main Component**.
 
     .. image:: ./media/TradingMainCASComponent.png
         :width: 600
 
 #. Click the **Edit Component** button.
 
-
     .. image:: ./media/TradingMainCASEditComponent.png
         :width: 600
 
-#. Click the **Security** link. Notice the WAF has not been enabled for this component. DevOps/Developers who own the "App" have permissions to enable/disable WAF (recall you are logged in as "Natasha" -- a member of "nginx-controller-users").
+#. Click the **Security** link. Notice the WAF has already been enabled for this component. A Checkbox should appear in the toggle button. DevOps/Developers who own the "App" have permissions to enable/disable WAF (recall you are logged in as "Natasha" -- a member of "nginx-controller-users").
     
     .. NOTE:: 
         Controller allows a self-service approach for enabling WAF to protect configured apps.
-
-#. Toggle the **Enable WAF** selector to turn it on. A Checkbox should appear in the toggle button.
     
     .. NOTE:: 
-        Since we intend to first enable the WAF in the Retail Development environment, this represents minimal risk to the Acme Financial corporation. We will leave the **Monitor Only** selector off in this component.
+        Since we intend to first enable the WAF in the Retail Development environment, this represents minimal risk to the Acme Financial corporation. For this reason, the **Monitor Only** selector is off in this component.
 
     .. image:: media/TradingMainCASComponentEnableWAF.png
         :width: 800
 
-#. Click the **Submit** button.
-    Controller will configure WAF on the component. 
-
-    .. image:: ../media/Submit.png
-        :width: 100
-
-    .. NOTE::
-        When the WAF has been successfully configured on the component, you will see this:
-
-        .. image:: ./media/TradingMainCASComponentConfigured.png
-            :width: 600
 
 Examine Security Analytics
 --------------------------
@@ -155,7 +141,7 @@ Examine Security Events
     .. NOTE::
         Notice that many "Event Details" data points can be used as filters. This powerful filtering feature allows for quick pattern detection.
 
-#. You are be presented with a list of security events for a specific remote IP address. Based on the filtered list, does this look like a legitimate application user?
+#. You are now presented with a list of security events filtered by a specific remote IP address. Based on the filtered list, does this look like a legitimate application user?
 
     .. image:: ./media/TradingMainCASComponentEventsDetailsIPFiltered.png
 
@@ -169,7 +155,12 @@ Examine Security Events
     
     .. image:: ./media/TradingMainCASComponentTuningSelect.png
 
-#. Scroll down in the event details tray to the **REQUEST** section. Note the highlighted portion of the **Details** as follows. This is the request:
+#. You are now presented with a list of security events filtered by the attack signature selected in the previous step. Click on one of the rejected request events and view the details in the tray on the right.
+
+    .. image:: ./media/TradingMainCASComponentEventsDetailsSigFiltered.png
+
+
+#. Scroll down to the **REQUEST** section to view the details of that rejection. Note the highlighted portion of the **Details** as follows. This is the actual GET request that resulted in the WAF rejection:
 
     .. image:: ./media/TradingMainCASComponentEventsRequest.png
 
