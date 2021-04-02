@@ -46,8 +46,8 @@ Access the App Component
    .. image:: ./media/M2L3echoapp.png
       :width: 200
 
-Create a TCP component
----------------------
+Create a TCP Component
+----------------------
 
 #. Using the echoapp:  Select the "Components" section followed by the "Create Component" button in the top right.
 
@@ -69,7 +69,7 @@ Create a TCP component
    .. image:: ./media/M2L4CompDiag.png
       :width: 700
 
-#. Under the **URIs** dialogue, add the URI "tcp://*:9443".
+#. Under the **URIs** dialogue, add the URI ``tcp://*:9443``
 
    .. image:: ./media/M2L4CompURI.png
       :width: 700

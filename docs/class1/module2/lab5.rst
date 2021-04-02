@@ -61,7 +61,7 @@ Create a Gateway
    +---------------------+----------------------------------+
    |        Field        |      Value                       |
    +=====================+==================================+
-   |  Name               |  ``specialapp`                   |
+   |  Name               | ``specialapp``                   |
    +---------------------+----------------------------------+
    |  Environment        | ``Echo Environment``             |
    +---------------------+----------------------------------+
@@ -106,16 +106,16 @@ Create a Component
    +-------------------------+--------------------------+
    |        Field            |      Value               |
    +=========================+==========================+
-   |  Name                   | ``wildcard``     |
+   |  Name                   | ``wildcard``             |
    +-------------------------+--------------------------+
-   |  Gateway Refs           | ``specialapp``            |
+   |  Gateway Refs           | ``specialapp``           |
    +-------------------------+--------------------------+
 
    .. image:: ./media/M2L5CompDiag.png
       :width: 700
 
-#. Under the **URIs** dialogue, add the URI "http://.*:8080". Specify the ``REGEX`` **Match Method**.
-*
+#. Under the **URIs** dialogue, add the URI ``http://.*:8080`` and specify the ``REGEX`` **Match Method**.
+
    .. image:: ./media/M2L5CompURI.png
       :width: 700
 
@@ -128,7 +128,7 @@ Create a Component
    +-------------------------+-----------------------------+
    |        Field            |      Value                  |
    +=========================+=============================+
-   |  Name                   | ``wildcard Backend``            |
+   |  Name                   | ``wildcard Backend``        |
    +-------------------------+-----------------------------+
    |  Backend Workload URIs  | ``http://10.1.20.21:8001``  |
    +-------------------------+-----------------------------+
@@ -142,7 +142,7 @@ Create a Component
       :width: 100
 
 Test the Listen IP Component
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. In Chrome on ``jumphost-1``, open a new tab and enable "Developer Tools". 
 
