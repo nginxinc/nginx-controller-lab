@@ -4,7 +4,7 @@ Module 3 - Analytics
 In this section, students will walk through Controller Analytics from the perspective of two different personas, NetOps and DevOps.
 
 .. IMPORTANT::
-   - Please ensure you have started the load generator, outlined at the end of Module 2 Lab 2 (:ref:`loadgen`), so you have analytics to view in this lab.  
+   - Please ensure you have started the load generator, outlined in Module 2 Lab 6 (:ref:`loadgen`), so you have analytics to view in this lab.  
 
 .. toctree::
    :maxdepth: 1

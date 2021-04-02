@@ -1,4 +1,4 @@
-Lab 6 - Programmatic ADC App Creation
+Lab 6 - Launch Security Traffic Generation
 ################################################
 
 The goal of this lab is to launch traffic generation for the security enabled data path.
@@ -9,6 +9,8 @@ The goal of this lab is to launch traffic generation for the security enabled da
 .. NOTE::
     Lab instructions are written as if the student is executing the steps
     from the Windows jumphost -- ``jumphost-1``. See the :ref:`overview` for connection details.
+
+    .. _loadgen:
 
 Start WAF Traffic Generation for Analytics
 -------------------------------------------
