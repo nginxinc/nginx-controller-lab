@@ -98,32 +98,3 @@ Verify Trading App Changes
 
    .. image:: ./media/M2L2result.png
       :width: 400
-
-
-.. _loadgen:
-
-Start WAF Traffic Generation for Analytics
--------------------------------------------
-
-.. IMPORTANT::
-   This step **MUST** be completed for statistics to be available in Module 3. 
-
-#. Login to the "loadgen-1" instance. Using "PuTTY" select the **loadgen-1** saved session and click **Open**.
-
-   .. image:: ./media/M2L2loadgenssh.png
-      :width: 400
-
-   .. IMPORTANT::
-      If you receive a PuTTY warning regarding the server's host key click **Yes** to connect.
-      This is caused by a unique host key being generated for each UDF deployment.
-
-#. Execute the following "docker" command to generate traffic against the demo application deployed in this lab.
-
-   .. code-block:: bash
-
-      $ sudo docker start wrk_trading.acmefinancial.net-cas
-
-#. The result of the command should echo the container name ("wrk_trading.acmefinancial.net-cas").
-
-   .. image:: ./media/M2L2loadgenresult.png
-      :width: 600
