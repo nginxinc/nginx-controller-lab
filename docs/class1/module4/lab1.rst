@@ -1,7 +1,7 @@
 Lab 1 - Application Security (UI)
 #################################
 
-The goal of this lab is to explore the Controller Application Security module through the application of policy and includes the exploration of related events and metrics.
+The goal of this lab is to explore the Controller Application Security module through the application of policy aided by related events and metrics.
 
 .. IMPORTANT::
     Estimated completion time: 12 minutes

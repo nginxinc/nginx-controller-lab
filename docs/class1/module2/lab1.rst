@@ -1,4 +1,4 @@
-Lab 1 - GUI ADC App Creation
+Lab 1 - UI ADC App Creation
 #######################################
 
 The goal of this lab is to familiarize the student with the NGINX Controller object model and concepts regarding ADC services.

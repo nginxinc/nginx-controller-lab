@@ -55,7 +55,7 @@ Create an additional NGINX Controller Node
 .. NOTE::
      The "Cluster Configuration" section indicates this Controller instance is part of a cluster.
      The "FQDN" is used as the common name for the cert applied to API Gateway pod -- 
-     ie. the service that exposes API endpoints and the GUI.
+     ie. the service that exposes API endpoints and the UI.
 
 .. IMPORTANT::
       The "load balancer" option will be configurable in a future Controller release.
