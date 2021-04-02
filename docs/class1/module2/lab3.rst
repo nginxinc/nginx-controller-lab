@@ -1,4 +1,4 @@
-Lab 3 - Advanced ADC Features
+Lab 3 - Advanced ADC Programmability Features
 ######################################################
 
 The goal of this lab is to demonstrate a few "advanced ADC" features which are now included in NGINX Controller. Previously, these
