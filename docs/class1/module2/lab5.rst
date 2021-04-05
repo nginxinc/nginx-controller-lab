@@ -6,7 +6,7 @@ There are times when it is desired to segment or prioritize traffic by using a s
 This is necessary when enabling data plane high availability or when segmenting traffic via IP address on the NGINX Plus instance.
 
 .. IMPORTANT::
-    Estimated completion time: 10 minutes
+    Estimated completion time: 5 minutes
 
 .. NOTE::
     Lab instructions are written as if the student is executing the steps

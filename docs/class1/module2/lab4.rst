@@ -5,7 +5,7 @@ The goal of this lab is to demonstrate a layer 4 or TCP load balancer configurat
 Not all traffic is HTTP, and though there is a large number of ways to manipulate HTTP traffic, sometimes you also have to route TCP or UDP traffic. 
 
 .. important::
-   - Estimated completion time: 10 minutes
+   - Estimated completion time: 5 minutes
 
 .. NOTE::
      Lab instructions are written as if the student is executing the steps

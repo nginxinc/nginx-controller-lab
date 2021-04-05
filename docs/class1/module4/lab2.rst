@@ -4,7 +4,7 @@ Lab 2 - Application Security (API)
 The goal of this lab is to configure the Controller Application Security module through the API.
 
 .. IMPORTANT::
-    Estimated completion time: 10 minutes
+    Estimated completion time: 5 minutes
 
 .. NOTE::
     Lab instructions are written as if the student is executing the steps
