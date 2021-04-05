@@ -5,7 +5,7 @@ The goal of this lab is to demonstrate the rich app and WAF analytics provided b
 This category of analytics will be of interest for DevOps and Developer personas who are responsible for individual Apps/Components.
 
 .. IMPORTANT::
-    Estimated completion time: 10 minutes
+    Estimated completion time: 5 minutes
 
 .. NOTE::
     Lab instructions are written as if the student is executing the steps

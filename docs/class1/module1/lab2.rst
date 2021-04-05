@@ -4,7 +4,7 @@ Lab 2 - NGINX Controller Resiliency
 The goal of this lab is to add another host as a third member to an NGINX Controller cluster. 
 
 .. IMPORTANT::
-   - Estimated completion time: 10 minutes
+   - Estimated completion time: 15 minutes
 
 .. NOTE::
      Lab instructions are written as if the student is executing the steps

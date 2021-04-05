@@ -41,7 +41,7 @@ View Trading App Current State
 Deploy a Component using Postman
 ---------------------------------
 
-#. On the jumphost, open **Postman**. Expand the **NGINX Controller 3.x** Collection.
+#. On the jumphost, open **Postman** if it is not currently running. The icon can be found on the desktop. Expand the **NGINX Controller 3.x** Collection.
 
    .. image:: ../media/PMcoll.png
       :width: 400

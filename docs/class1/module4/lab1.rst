@@ -4,7 +4,7 @@ Lab 1 - Application Security (UI)
 The goal of this lab is to explore the Controller Application Security module through the application of policy aided by related events and metrics.
 
 .. IMPORTANT::
-    Estimated completion time: 12 minutes
+    Estimated completion time: 15 minutes
 
 .. NOTE::
     Lab instructions are written as if the student is executing the steps
@@ -113,12 +113,6 @@ Examine Security Analytics
 
 Examine Security Events
 -----------------------
-
-#. In the **Trading Application (CAS)** app's **Components** menu, Click on the **Trading Main Component** link 
-
-    .. image:: ./media/TradingMainCASComponent.png
-        :width: 700
-
 
 #. Click on **Security Events**. Here is where security events are being logged, complete with request details. 
 

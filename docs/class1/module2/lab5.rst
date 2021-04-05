@@ -6,7 +6,7 @@ There are times when it is desired to segment or prioritize traffic by using a s
 This is necessary when enabling data plane high availability or when segmenting traffic via IP address on the NGINX Plus instance.
 
 .. IMPORTANT::
-    Estimated completion time: 10 minutes
+    Estimated completion time: 5 minutes
 
 .. NOTE::
     Lab instructions are written as if the student is executing the steps
@@ -98,7 +98,7 @@ Create a Component
 
 #. Using the echoapp: Select the "Components" section followed by the "Create Component" button in the top right.
 
-   .. image:: ./media/M2L1CreateComponent.png
+   .. image:: ./media/M2L5PlusCreateComponent.png
       :width: 800
 
 #. Fill out the form and select the **Gateway Refs** from the drop-down.
@@ -120,8 +120,9 @@ Create a Component
       :width: 700
 
    .. NOTE::
-      If the port 8080 is not defined an error will be returned ``ListenIP 10.1.20.213 on Port 80 conflicts with an existing gateway``.
-      This happens because other Gateways associated with the same instance are listening on all IP Addresses because the Listen IP was not defined.
+      If the port in the URI is not defined as 8080 the error ``ListenIP 10.1.20.213 on Port 80 conflicts with an existing gateway``.
+      This conflict message occurs if the port if not unique because there are other Gateways associated with the same NGINX Plus instance listening for HTTP or HTTPS traffic on port 80 and 443 respectively.
+      If a Listen IP is not defined then all IPs will be used for a Gateway.
 
 #. Under the **Workload Groups** dialogue, fill out the form.
 
@@ -147,11 +148,11 @@ Test the Listen IP Component
 #. In Chrome on ``jumphost-1``, open a new tab and enable "Developer Tools". 
 
    .. image:: ./media/M2L1DevTools.png
-      :width: 900
+      :width: 800
 
-#. Browse to the App URLs you created earlier (``http://10.1.20.213:8080``) to verify the "echo" application is functioning.
+#. Browse to the App URLs you created earlier (``http://10.1.20.213:8080``) to verify the``wildcard`` application is functioning using the Listen IP address specified in the ``specialapp`` Gateway.
 
-   .. image:: ./media/M2L1DevTools2.png
+   .. image:: ./media/M2L5DevTools2.png
       :width: 800 
 
    .. NOTE::
