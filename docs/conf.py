@@ -5,7 +5,7 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "NGINX Controller"
+classname = "NGINX Controller - ADC (+ Security)"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
 github_repo = "https://github.com/nginxinc/nginx-controller-lab"
