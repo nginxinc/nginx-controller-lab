@@ -1,7 +1,9 @@
 Lab 2 - NGINX Controller Resiliency
 ############################################
 
-The goal of this lab is to add another host as a third member to an NGINX Controller cluster. 
+The goal of this lab is to add another host as a third member to an NGINX Controller cluster.
+
+In production it is common to want resiliency to our services. With Controller that is achieved by horizontal scaling / running multiple instances, just in the case one was to fail for any reason.  Resilient deployments can also be required as part of compliance or regulatory requirements. This capability enables running multiple Controllers with ease.
 
 .. IMPORTANT::
    - Estimated completion time: 15 minutes

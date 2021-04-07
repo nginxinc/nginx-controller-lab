@@ -181,6 +181,7 @@ Additional Reference
 The "Programmability" section allows configuration of URI redirects, URI rewrites, request Header modifications, and response header modifications.
 These features are powered by the NGINX `rewrite`_ module. Review the module documentation for more information. 
 
-
+The NGINX REGEX validator can be helpful as you construct your own expressions: `regex`_ blog.  It is also useful to understand that NGINX uses Perl Compatible Regular Expressions (PCRE).
 
 .. _rewrite: http://nginx.org/en/docs/http/ngx_http_rewrite_module.html
+.. _regex: https://www.nginx.com/blog/regular-expression-tester-nginx/

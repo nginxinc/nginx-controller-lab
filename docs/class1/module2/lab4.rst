@@ -95,7 +95,7 @@ Create a TCP Component
       :width: 100
 
 Test the TCP Component
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 #. In Chrome on ``jumphost-1``, open a new tab and enable "Developer Tools". 
 
    .. image:: ./media/M2L1DevTools.png
