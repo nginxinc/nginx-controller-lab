@@ -103,3 +103,7 @@ Verify Component Changes
 #. Click the **Components** section. 
 
     .. image:: ./media/PMTradingMainCASMonitoringVerifyComponent.png
+
+
+Congratulations! You have successfully completed the |classbold| lab. You may close your connection to the jumphost.
+--------------------------------------------------------------------------------------------------------------------

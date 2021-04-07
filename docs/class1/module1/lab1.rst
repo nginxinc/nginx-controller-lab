@@ -4,6 +4,8 @@ Lab 1 - Active Directory Authentication
 The goal of this lab is to explore the pre-configured Active Directory authentication
 and role based access control configuration. Students will view the existing configuration without making changes.
 
+This feature enables organizations to use their existing Authentication process to integrate with NGINX Controller.
+
 .. IMPORTANT::
     Estimated completion time: 5 minutes
 

@@ -3,6 +3,10 @@ Lab 6 - Launch Security Traffic Generation
 
 The goal of this lab is to launch traffic generation for the security enabled data path.
 
+.. NOTE::
+    This is less of a lab exercise and more of ensuring your deployment is prepared for the next lab.
+    This is critical to complete for the remaining exercises.
+
 .. IMPORTANT::
     Estimated completion time: 5 minutes
 
