@@ -127,7 +127,7 @@ Examine Security Events
     .. image:: ./media/TradingMainCASComponentEventsDetails.png
 
 
-#. Scroll down the details tray to the **THREAT ORIGIN** section and locate the **Remote Address** field. Hover over this field with your cursor and click on the **funnel** icon. This action creates a filter. Now the "Security Events" list is filtered on "remote address".
+#. Scroll down the details tray to the **REQUEST INFORMATION** section and locate the **Remote Address** field. Click on the **funnel** icon for this field. This action creates a filter. Now the "Security Events" list is filtered on "remote address".
 
     .. image:: ./media/TradingMainCASComponentEventsDetailsIP.png
         :width: 400
@@ -154,7 +154,7 @@ Examine Security Events
     .. image:: ./media/TradingMainCASComponentEventsDetailsSigFiltered.png
 
 
-#. Scroll down to the **THREAT TARGET** section to view the details of that rejection. Note the highlighted portion of the **Request Detail** as follows. This is the actual GET request that resulted in the WAF rejection:
+#. Scroll down to the **REQUEST** section to view the details of that rejection. Note the highlighted portion of the **Details** as follows. This is the actual GET request that resulted in the WAF rejection:
 
     .. image:: ./media/TradingMainCASComponentEventsRequest.png
 
