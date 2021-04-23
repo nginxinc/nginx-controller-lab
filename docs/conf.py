@@ -5,7 +5,7 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "NGINX Controller: Application Delivery and Security (ADC)"
+classname = "NGINX Controller: Application Delivery and Security (Lab)"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
 github_repo = "https://github.com/nginxinc/nginx-controller-lab"
@@ -138,7 +138,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = classname
-copyright = u'2020, F5 Networks, Inc.'
+copyright = u'2021, F5 Networks, Inc.'
 author = u'F5 Networks, Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
